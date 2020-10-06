@@ -66,12 +66,6 @@ h2 {
   font-family: 'Rubik', sans-serif;
   font-weight: bolder;
   color: white;
-  display: block;
-  z-index: -10;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   background: url("https://wallpaperaccess.com/full/2109482.jpg") no-repeat fixed center;
 }
 
@@ -224,7 +218,15 @@ h3{
   }
 
   .nav-link{
-    font-size: 1em;
+    font-size: 0.8em;
+  }
+
+  #sign-up{
+    background-attachment: initial;
+  }
+
+  #pseudo-element, #copyright{
+    font-size: 0.8em;
   }
 
 }
