@@ -151,6 +151,12 @@ h3{
   gap: 50px;
 }
 
+figcaption{
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+
 #footer{
   background: linear-gradient(90deg, rgb(15, 82, 87), rgb(59, 56, 56));
   width: 100%; 
