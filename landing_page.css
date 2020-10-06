@@ -67,13 +67,12 @@ h2 {
   font-weight: bolder;
   color: white;
   display: block;
-  position: fixed;
   z-index: -10;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background: url("https://wallpaperaccess.com/full/2109482.jpg") no-repeat center center;
+  background: url("https://wallpaperaccess.com/full/2109482.jpg") no-repeat fixed center;
 }
 
 #flexbox{
