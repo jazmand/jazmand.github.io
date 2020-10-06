@@ -243,7 +243,11 @@ h3{
 
   #sign-up{
     background-attachment: initial;
-    background-position-y: 10%;
+    background-position-y: 15%;
   }  
+
+  #nav-bar {  
+    padding: 10px;
+  }
 
 }
