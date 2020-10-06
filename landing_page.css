@@ -237,4 +237,8 @@ h3{
     margin: auto;
   }
 
+  #pseudo-element{
+    font-size: 0px;
+  }
+
 }
