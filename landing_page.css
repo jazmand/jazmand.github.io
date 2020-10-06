@@ -251,7 +251,6 @@ figcaption{
     /*background-attachment: initial;
     background-position-y: 15%;*/
     z-index: -999999999;
-    position: fixed;
   }  
 
   #nav-bar {  
