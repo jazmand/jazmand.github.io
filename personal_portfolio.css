@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 1em;
+}
+
+#navbar ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#navbar .nav-link {
+  text-decoration: none;
+  font-family: "Sansita Swashed", cursive;
+  font-size: 1.5em;
+}
+
+@media (max-width: 600px) {
+  #navbar .nav-link {
+    font-size: 0.8em;
+  }
+}
+
+#navbar li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#welcome-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, right top, from(#00C0FF), color-stop(20%, #51df58), color-stop(50%, #FFCF00), color-stop(80%, #FC4F4F), to(#00C0FF));
+  background-image: linear-gradient(90deg, #00C0FF 0%, #51df58 20%, #FFCF00 50%, #FC4F4F 80%, #00C0FF 100%);
+  font-size: 1.8em;
+}
+
+@media (max-width: 600px) {
+  #welcome-section {
+    font-size: 0.9em;
+  }
+}
+
+.english {
+  font-family: "Raleway", sans-serif;
+}
+
+.japanese {
+  font-family: "M PLUS 1p", sans-serif;
+}
+
+h2 {
+  font-family: "Sansita Swashed", cursive;
+  font-size: 2.5em;
+  text-align: center;
+  margin: 2em;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1em;
+  }
+}
+
+#about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  place-content: center;
+  gap: 10%;
+  margin: 0% 10%;
+  margin: 10% 10%;
+}
+
+#about p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media (max-width: 600px) {
+  #about p {
+    font-size: 0.6em;
+  }
+}
+
+#about .skill-list {
+  font-size: 1.2em;
+  list-style-position: inside;
+  list-style: none;
+}
+
+@media (max-width: 600px) {
+  #about .skill-list {
+    font-size: 0.7em;
+  }
+}
+
+#about .skill-list .category {
+  font-weight: bold;
+  font-family: "Sansita Swashed", cursive;
+}
+
+#about .skill-list .skill {
+  font-family: "Raleway", sans-serif;
+}
+
+#projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  place-content: center;
+  margin: 10% 10%;
+}
+
+#projects .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#projects .project-tile {
+  text-align: center;
+}
+
+#projects .project1 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+}
+
+#projects .project2 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / span 1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / span 1;
+}
+
+#projects .project3 {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4 / span 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / span 1;
+}
+
+figure img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+@media (max-width: 600px) {
+  figure img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+figure figcaption {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+  figure figcaption {
+    font-size: 0.6em;
+  }
+}
+
+figure a {
+  text-decoration: none;
+}
+
+figure .rainbow-code {
+  visibility: hidden;
+}
+
+figure:hover .rainbow-code {
+  background: -webkit-gradient(linear, left top, right top, from(#00C0FF), color-stop(20%, #51df58), color-stop(50%, #FFCF00), color-stop(80%, #FC4F4F), to(#00C0FF));
+  background: linear-gradient(90deg, #00C0FF 0%, #51df58 20%, #FFCF00 50%, #FC4F4F 80%, #00C0FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  visibility: visible;
+}
+
+#contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10% 10%;
+}
+
+#contact .contact-form {
+  background-color: #4caeff50;
+  width: 500px;
+  margin-bottom: 5em;
+  border-radius: 30px;
+}
+
+@media (max-width: 600px) {
+  #contact .contact-form {
+    width: 300px;
+  }
+}
+
+#contact .contact-form form {
+  margin: 35px;
+}
+
+#contact .contact-form form .form-input {
+  width: 100%;
+  height: 3em;
+  margin-bottom: 1.5em;
+  padding: 5px;
+  font-family: "Raleway", sans-serif;
+}
+
+#contact .contact-form form textarea {
+  line-height: 150%;
+  resize: vertical;
+}
+
+#contact .contact-form form #submit-button {
+  width: 100%;
+  padding: 10px;
+  font-family: "Raleway", sans-serif;
+}
+
+#contact .contact-form form #submit-button:hover {
+  background-color: white;
+  color: #35A7FF;
+}
+
+#contact .contact-form form #mailto {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #contact .contact-form form #mailto {
+    font-size: 0.6em;
+  }
+}
+
+#contact .social-media-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact .social-media-icons i {
+  padding: 10px;
+  text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+  -webkit-transition: all ease-in-out 150ms;
+  transition: all ease-in-out 150ms;
+}
+
+#contact .social-media-icons a:nth-child(1) {
+  color: gray;
+}
+
+#contact .social-media-icons a:nth-child(2) {
+  color: #dd4b39;
+}
+
+#contact .social-media-icons a:nth-child(3) {
+  color: #4867AA;
+}
+
+#contact .social-media-icons a:nth-child(4) {
+  color: #1DA1F2;
+}
+
+#contact .social-media-icons i:hover {
+  margin-top: -3px;
+  text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+}
+/*# sourceMappingURL=personal_portfolio.css.map */
