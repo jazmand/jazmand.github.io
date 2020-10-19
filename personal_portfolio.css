@@ -28,6 +28,7 @@
 
 #navbar .nav-link {
   text-decoration: none;
+  color: blue;
   font-family: "Sansita Swashed", cursive;
   font-size: 1.5em;
 }
@@ -280,6 +281,7 @@ figure:hover .rainbow-code {
 #contact .contact-form form textarea {
   line-height: 150%;
   resize: vertical;
+  font-family: "Raleway", sans-serif;
 }
 
 #contact .contact-form form #submit-button {
@@ -295,6 +297,7 @@ figure:hover .rainbow-code {
 
 #contact .contact-form form #mailto {
   text-align: center;
+  font-family: "Raleway", sans-serif;
 }
 
 @media (max-width: 600px) {

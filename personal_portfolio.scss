@@ -30,6 +30,7 @@ $japanese-font: 'M PLUS 1p', sans-serif;
 
   .nav-link{
     text-decoration: none;
+    color: rgb(0, 0, 255);
     font-family: $primary-font;
     font-size: 1.5em;
     @media (max-width: 600px){
@@ -198,11 +199,13 @@ figure{
         height: 3em;
         margin-bottom: 1.5em;
         padding: 5px;
-        font-family: $english-font
+        font-family: $english-font;
+        
         }
         textarea {
         line-height: 150%;
         resize:vertical;
+        font-family: $english-font;
       }
       #submit-button{
         width: 100%;
@@ -215,6 +218,7 @@ figure{
       }
       #mailto{
         text-align: center;
+        font-family: $english-font;
         @media (max-width: 600px){
           font-size: 0.6em;
         } 
