@@ -141,6 +141,10 @@ h3{
   display: block;
 }
 
+#characters{
+  padding-bottom: 70px;
+}
+
 #character_list{
   display: grid;
   grid-template-columns: repeat(3, 150px);
