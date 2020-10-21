@@ -13,6 +13,12 @@
   padding: 1em;
 }
 
+@media (max-width: 600px) {
+  #navbar {
+    padding: 0.5em;
+  }
+}
+
 #navbar ul {
   list-style: none;
   display: -webkit-box;
