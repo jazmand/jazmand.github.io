@@ -11,9 +11,10 @@
   width: 100%;
   background-color: white;
   padding: 1em;
+  z-index: 1;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #navbar {
     padding: 0.5em;
   }
@@ -34,12 +35,12 @@
 
 #navbar .nav-link {
   text-decoration: none;
-  color: blue;
+  color: #866fc8;
   font-family: "Sansita Swashed", cursive;
   font-size: 1.5em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #navbar .nav-link {
     font-size: 0.8em;
   }
@@ -66,12 +67,52 @@
           align-items: center;
   width: 100%;
   height: 100vh;
-  background-image: -webkit-gradient(linear, left top, right top, from(#00C0FF), color-stop(20%, #51df58), color-stop(50%, #FFCF00), color-stop(80%, #FC4F4F), to(#00C0FF));
-  background-image: linear-gradient(90deg, #00C0FF 0%, #51df58 20%, #FFCF00 50%, #FC4F4F 80%, #00C0FF 100%);
   font-size: 1.8em;
+  /* RAINBOW BACKGROUND
+  background: $rainbow-background;
+  background-size: 1000% 1000%;
+  animation: rainbow 20s ease infinite;
+
+  @keyframes rainbow { 
+    0% {
+      background-position:0% 100%;
+    }
+    50% {
+      background-position:100% 0%;
+    }
+    100% {
+      background-position:0% 100%
+    }
+}
+*/
 }
 
-@media (max-width: 600px) {
+#welcome-section #welcome-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  text-shadow: 1px 1px white;
+}
+
+#welcome-section video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 700px) {
   #welcome-section {
     font-size: 0.9em;
   }
@@ -93,7 +134,7 @@ h2 {
   white-space: nowrap;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   h2 {
     font-size: 1em;
   }
@@ -118,7 +159,7 @@ h2 {
   text-justify: inter-word;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #about p {
     font-size: 0.6em;
   }
@@ -130,7 +171,7 @@ h2 {
   list-style: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #about .skill-list {
     font-size: 0.7em;
   }
@@ -207,7 +248,7 @@ figure img {
   height: 200px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   figure img {
     width: 100px;
     height: 100px;
@@ -219,7 +260,7 @@ figure figcaption {
   font-size: 1.2em;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   figure figcaption {
     font-size: 0.6em;
   }
@@ -234,8 +275,7 @@ figure .rainbow-code {
 }
 
 figure:hover .rainbow-code {
-  background: -webkit-gradient(linear, left top, right top, from(#00C0FF), color-stop(20%, #51df58), color-stop(50%, #FFCF00), color-stop(80%, #FC4F4F), to(#00C0FF));
-  background: linear-gradient(90deg, #00C0FF 0%, #51df58 20%, #FFCF00 50%, #FC4F4F 80%, #00C0FF 100%);
+  background: linear-gradient(45deg, #da13e0 0%, #00C0FF 25%, #51df58 50%, #FFCF00 75%, #FC4F4F 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -260,13 +300,15 @@ figure:hover .rainbow-code {
 }
 
 #contact .contact-form {
-  background-color: #4caeff50;
+  background-color: #866fc8;
   width: 500px;
   margin-bottom: 5em;
   border-radius: 30px;
+  -webkit-box-shadow: 5px 10px 18px #8a8a8a;
+          box-shadow: 5px 10px 18px #8a8a8a;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #contact .contact-form {
     width: 300px;
   }
@@ -298,15 +340,16 @@ figure:hover .rainbow-code {
 
 #contact .contact-form form #submit-button:hover {
   background-color: white;
-  color: #35A7FF;
+  color: #866fc8;
 }
 
 #contact .contact-form form #mailto {
   text-align: center;
   font-family: "Raleway", sans-serif;
+  color: white;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   #contact .contact-form form #mailto {
     font-size: 0.6em;
   }
@@ -332,19 +375,15 @@ figure:hover .rainbow-code {
 }
 
 #contact .social-media-icons a:nth-child(1) {
-  color: gray;
+  color: #1DA1F2;
 }
 
 #contact .social-media-icons a:nth-child(2) {
-  color: #dd4b39;
+  color: #20f37f;
 }
 
 #contact .social-media-icons a:nth-child(3) {
-  color: #4867AA;
-}
-
-#contact .social-media-icons a:nth-child(4) {
-  color: #1DA1F2;
+  color: #f75252;
 }
 
 #contact .social-media-icons i:hover {
