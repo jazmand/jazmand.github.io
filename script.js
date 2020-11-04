@@ -1,4 +1,4 @@
-function flipFunction(){
-    let element  = document.querySelector("#myCard");
-    element.classList.toggle("flip");
-}
+$('.flip-container .flipper').click(function() {
+	$(this).closest('.flip-container').toggleClass('hover');
+    $(this).css('transform, rotateY(180deg)');
+});

@@ -9,7 +9,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.815);
   padding: 0.8em;
   z-index: 1;
 }
@@ -35,10 +35,10 @@
 
 #navbar .nav-link {
   text-decoration: none;
-  color: #807ad6;
   font-family: "Sansita Swashed", cursive;
   font-size: 1.5em;
-  text-shadow: 0px 3px 3px rgba(229, 138, 158, 0.6);
+  text-shadow: 2px 2px 3px white;
+  color: #736af3;
 }
 
 @media (max-width: 700px) {
@@ -86,7 +86,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.76);
+  color: whitesmoke;
 }
 
 #welcome-section video {
@@ -170,27 +170,16 @@ h2 {
   font-family: "Raleway", sans-serif;
 }
 
-/* entire container, keeps perspective */
-.flip-container {
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-}
-
 /* flip the pane when hovered */
-.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+.flip-container.hover .flipper {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-.flip-container, .front, .back {
-  width: 100%;
-  height: 100%;
-}
-
-/* flip speed goes here */
+/* flip speed */
 .flipper {
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   position: relative;
@@ -208,7 +197,6 @@ h2 {
 /* front pane, placed above back */
 .front {
   z-index: 2;
-  /* for firefox 31 */
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
 }
@@ -217,6 +205,19 @@ h2 {
 .back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+  background-color: #fff;
+}
+
+.flipMe {
+  position: absolute;
+  right: 0px;
+  top: -25px;
+  background: -webkit-gradient(linear, left top, right top, from(#da13e0), color-stop(25%, #00C0FF), color-stop(50%, #51df58), color-stop(75%, #FFCF00), to(#FC4F4F));
+  background: linear-gradient(90deg, #da13e0 0%, #00C0FF 25%, #51df58 50%, #FFCF00 75%, #FC4F4F 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  visibility: visible;
 }
 
 #projects {
@@ -331,12 +332,13 @@ figure:hover .rainbow-code {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: linear-gradient(30deg, #807ad6 0%, rgba(229, 138, 158, 0.6) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#736af3), to(white));
+  background: linear-gradient(90deg, #736af3 0%, white 100%);
   padding: 5% 0%;
 }
 
 #contact .contact-form {
-  background-color: #807ad6;
+  background-color: #736af3;
   width: 500px;
   margin-bottom: 5em;
   border-radius: 30px;
@@ -376,7 +378,7 @@ figure:hover .rainbow-code {
 
 #contact .contact-form form #submit-button:hover {
   background-color: white;
-  color: #807ad6;
+  color: #736af3;
 }
 
 #contact .contact-form form #mailto {
@@ -401,6 +403,10 @@ figure:hover .rainbow-code {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 30px 10px 30px 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 10px 15px #5c5c5c;
+          box-shadow: 0px 10px 15px #5c5c5c;
 }
 
 #contact .social-media-icons i {

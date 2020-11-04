@@ -25,8 +25,8 @@
 <!-- WELCOME SECTION -->
   <main>
     <section id="welcome-section">
-      <video playsinline autoplay muted loop poster="skybackground.png" id="bgvid">
-        <source src="skybackground.mp4" type="video/mp4">
+      <video playsinline autoplay muted loop poster="welcomeVideo.png" id="welcomeVideo">
+        <source src="welcomeVideo.mp4" type="video/mp4">
       </video>
       <div id="welcome-text"> 
         <h1 class="english">Hi there, I'm Jazmand</h1>
@@ -38,12 +38,14 @@
       <div class="blurb">
         <h2>Who Am I?</h2>
         <div id="myCard">
-          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flip-container">
             <div class="flipper">
                 <div class="front">
+                  <p class="english flipMe">Click me!</p>
                   <p class="english">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat laborum temporibus atque assumenda consequuntur ullam sapiente cum quod quidem quam, sequi numquam, labore blanditiis, unde voluptatum ad obcaecati facere!Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat laborum temporibus atque assumenda consequuntur ullam sapiente cum quod quidem quam, sequi numquam, labore blanditiis, unde voluptatum ad obcaecati facere!</p>
                 </div>
                 <div class="back">
+                  <p class="japanese flipMe">クリックして下さい！</p>
                   <p class="japanese">ブラウンさんをお願いします。 ２人の外国人にあったが、１人はカナダから来た人で、もう１人はイギリスから来た人だ。 「どうかしたの？」と小さい白いウサギが聞きました。 ２、３ページの英語を訳すのに２時間以上もかかりました。 いいからさっき盗ったモノを、カバンの中から出しなさい。 エコロジーのために堪え忍ぶのではなく、自然と調和した住環境の快適性が必要である。 ８ギガバイトのハードディスクがあれば十分だと思います。 １か月あまり名古屋に居たことがある</p>
                 </div>
             </div>
@@ -139,6 +141,7 @@
   </main>
 <!-- FOOTER -->
   <footer></footer> 
-  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
