@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale= 1.0">
 <!--STYLES -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
   <link href="personal_portfolio.css" rel="stylesheet" >
   <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap&family=Raleway&display=swap&family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet"" rel="stylesheet" rel="stylesheet" rel="stylesheet">
   <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
@@ -25,9 +26,9 @@
 <!-- WELCOME SECTION -->
   <main>
     <section id="welcome-section">
-      <video playsinline autoplay muted loop poster="welcomeVideo.png" id="welcomeVideo">
-        <source src="welcomeVideo.mp4" type="video/mp4">
-      </video>
+      <!-- <video playsinline autoplay muted loop poster="welcomeVideo.png" id="welcomeVideo">
+        <source src="media/welcomeVideo.mp4" type="video/mp4">
+      </video> -->
       <div id="welcome-text"> 
         <h1 class="english">Hi there, I'm Jazmand</h1>
         <h1 class="japanese">こんにちは</h1>
@@ -35,9 +36,8 @@
     </section>
 <!-- ABOUT -->
     <section id="about">
-      <div class="blurb">
+      <div class="blurb" data-aos="fade-right" data-aos-offset="300">
         <h2>Who Am I?</h2>
-        <div id="myCard">
           <div class="flip-container">
             <div class="flipper">
                 <div class="front">
@@ -51,8 +51,7 @@
             </div>
           </div>
         </div>
-      </div>  
-      <div class="skills">
+      <div class="skills" data-aos="fade-left" data-aos-offset="300">
         <h2>Skills:</h2>
             <ul class="skill-list">
               <li class="category">Markup Languages:</li>
@@ -79,8 +78,8 @@
         <h2>Some of My Work:</h2>
         <div class="container">
           <figure class="project-tile project1">
-            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Tribute Page" id="project1-img">
-            <figcaption> 
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Tribute Page" id="project1-img" data-aos="flip-up" data-aos-offset="300">
+            <figcaption data-aos="slide-up" data-aos-offset="300"> 
               <span class="rainbow-code">&lt;</span>
               <a href="https://codepen.io/jazmand/pen/qBZMqwP">Tribute Page</a>
               <span class="rainbow-code">&#47;&gt;</span>
@@ -88,8 +87,8 @@
           </figure>
           
             <figure class="project-tile project2">
-              <img src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Landing Page" id="project2-img">
-              <figcaption> 
+              <img src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="Landing Page" id="project2-img" data-aos="flip-up" data-aos-offset="300">
+              <figcaption data-aos="slide-up" data-aos-offset="300"> 
                 <span class="rainbow-code">&lt;</span>
                 <a href="arknights-landing-page/arknights-landing-page.html">Landing Page </a>
                 <span class="rainbow-code">&#47;&gt;</span>
@@ -97,8 +96,8 @@
           </figure>
           
             <figure class="project-tile project3">
-              <img src="https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1993&q=80" alt="Techincal Documentation Page" id="project3-img">
-              <figcaption> 
+              <img src="https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1993&q=80" alt="Techincal Documentation Page" id="project3-img" data-aos="flip-up" data-aos-offset="300">
+              <figcaption data-aos="slide-up" data-aos-offset="300"> 
                 <span class="rainbow-code">&lt;</span>
                 <a href="https://codepen.io/jazmand/pen/ZEWNrjL">Technical Documentation Page</a>
                 <span class="rainbow-code">&#47;&gt;</span>
@@ -141,6 +140,7 @@
   </main>
 <!-- FOOTER -->
   <footer></footer> 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
 </body>
