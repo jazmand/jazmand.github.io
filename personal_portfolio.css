@@ -6,15 +6,17 @@
 }
 
 html {
-  background: url(media/mainBackground.jpg) no-repeat center center fixed;
+  background: black no-repeat center center fixed;
   background-size: cover;
+  color: white;
 }
 
 #navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.815);
+  background: -webkit-gradient(linear, left top, right top, from(#da13e0), color-stop(25%, #00C0FF), color-stop(50%, #51df58), color-stop(75%, #FFCF00), to(#FC4F4F));
+  background: linear-gradient(90deg, #da13e0 0%, #00C0FF 25%, #51df58 50%, #FFCF00 75%, #FC4F4F 100%);
   padding: 0.8em;
   z-index: 1;
 }
@@ -42,8 +44,7 @@ html {
   text-decoration: none;
   font-family: "Sansita Swashed", cursive;
   font-size: 1.5em;
-  text-shadow: 2px 2px 3px white;
-  color: #736af3;
+  color: white;
 }
 
 @media (max-width: 700px) {
@@ -91,13 +92,19 @@ html {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  color: whitesmoke;
+  color: white;
 }
 
 @media (max-width: 700px) {
   #welcome-section {
     font-size: 0.9em;
   }
+}
+
+video {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .english {
@@ -114,6 +121,12 @@ h2 {
   text-align: center;
   margin: 2em;
   white-space: nowrap;
+  background: -webkit-gradient(linear, left top, right top, from(#da13e0), color-stop(25%, #00C0FF), color-stop(50%, #51df58), color-stop(75%, #FFCF00), to(#FC4F4F));
+  background: linear-gradient(90deg, #da13e0 0%, #00C0FF 25%, #51df58 50%, #FFCF00 75%, #FC4F4F 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  visibility: visible;
 }
 
 @media (max-width: 700px) {
@@ -301,6 +314,7 @@ figure figcaption {
 
 figure a {
   text-decoration: none;
+  color: white;
 }
 
 figure .rainbow-code {
@@ -334,12 +348,12 @@ figure:hover .rainbow-code {
 }
 
 #contact .contact-form {
-  background-color: white;
+  border: 1px dashed white;
   width: 500px;
   margin-bottom: 5em;
   border-radius: 30px;
-  -webkit-box-shadow: 0px 10px 15px #5c5c5c;
-          box-shadow: 0px 10px 15px #5c5c5c;
+  -webkit-box-shadow: 0px 4px 10px #5c5c5c;
+          box-shadow: 0px 4px 10px #5c5c5c;
 }
 
 @media (max-width: 700px) {
@@ -374,7 +388,7 @@ figure:hover .rainbow-code {
 
 #contact .contact-form form #submit-button:hover {
   background-color: white;
-  color: #736af3;
+  color: black;
 }
 
 #contact .contact-form form #mailto {
@@ -399,14 +413,14 @@ figure:hover .rainbow-code {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 30px 10px 30px 10px;
-  background-color: white;
-  -webkit-box-shadow: 0px 10px 15px #5c5c5c;
-          box-shadow: 0px 10px 15px #5c5c5c;
+  border: 1px dashed white;
+  -webkit-box-shadow: 0px 4px 10px #5c5c5c;
+          box-shadow: 0px 4px 10px #5c5c5c;
 }
 
 #contact .social-media-icons i {
   padding: 10px;
-  text-shadow: 0px 6px 8px rgba(122, 122, 122, 0.692);
+  text-shadow: 0px 6px 10px rgba(122, 122, 122, 0.692);
   -webkit-transition: all ease-in-out 150ms;
   transition: all ease-in-out 150ms;
 }
@@ -426,5 +440,11 @@ figure:hover .rainbow-code {
 #contact .social-media-icons i:hover {
   margin-top: -3px;
   text-shadow: 0px 14px 10px rgba(92, 90, 90, 0.76);
+}
+
+#arrow-up {
+  position: absolute;
+  right: 0;
+  font-size: 3rem;
 }
 /*# sourceMappingURL=personal_portfolio.css.map */

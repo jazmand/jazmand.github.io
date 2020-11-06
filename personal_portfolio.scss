@@ -1,4 +1,4 @@
-$primary-color: #736af3;
+$primary-color: black;
 $secondary-color: white;
 $rainbow-background: linear-gradient(90deg, #da13e0 0%, #00C0FF 25%, #51df58 50%, #FFCF00 75%, #FC4F4F 100%);
 $primary-font: 'Sansita Swashed', cursive;
@@ -17,18 +17,19 @@ $japanese-font: 'M PLUS 1p', sans-serif;
 }
 
 html{
-  background: url(media/mainBackground.jpg) no-repeat center center fixed; 
+  background: black no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;  
+  color: white;
 }
 
 #navbar{
   position: fixed;
   top: 0; 
   width: 100%; 
-  background-color: rgba(255, 255, 255, 0.815);
+  background: $rainbow-background;
   padding: 0.8em;
   z-index: 1;
   @media (max-width: 700px){
@@ -46,8 +47,7 @@ html{
     text-decoration: none;
     font-family: $primary-font;
     font-size: 1.5em;
-    text-shadow: 2px 2px 3px $secondary-color;
-    color: $primary-color;
+    color: white;
     @media (max-width: 700px){
       font-size: 0.8em;
     } 
@@ -73,19 +73,18 @@ html{
     justify-content: center;
     align-items: center;
     position: absolute;
-    color: whitesmoke;
+    color: white;
   }  
-
-  // video {
-  //   width: 100%;
-  //   height: 100%;
-  //   object-fit: cover; 
-  // }
 
   @media (max-width: 700px){
     font-size: 0.9em;
   } 
 }
+
+  video{
+    width: 100%;
+    object-fit: cover; 
+  }
 
 .english{
   font-family: $english-font;
@@ -101,6 +100,11 @@ h2{
   text-align: center;
   margin: 2em;
   white-space: nowrap;
+  background: $rainbow-background;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  visibility: visible;
   @media (max-width: 700px){
     font-size: 1em;
   } 
@@ -230,6 +234,7 @@ figure{
   
   a{
     text-decoration: none;
+    color: white;
   }
 
   .rainbow-code{
@@ -251,16 +256,15 @@ figure{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  // background: linear-gradient(90deg, $primary-color 0%, $secondary-color 100%); 
+  flex-direction: column; 
   padding: 5% 0%;
   
   .contact-form{
-    background-color: white;
+    border: 1px dashed white;
     width: 500px;
     margin-bottom: 5em;
     border-radius: 30px;
-    box-shadow: 0px 10px 15px #5c5c5c;
+    box-shadow: 0px 4px 10px #5c5c5c;
     @media (max-width: 700px){
       width: 300px;
     } 
@@ -303,23 +307,26 @@ figure{
     justify-content: center;
     align-items: center;
     border-radius: 30px 10px 30px 10px;
-    background-color: white;
-    box-shadow: 0px 10px 15px #5c5c5c;
+    border: 1px dashed white;
+    box-shadow: 0px 4px 10px #5c5c5c;
 
     i {
       padding: 10px;
-      text-shadow: 0px 6px 8px rgba(122, 122, 122, 0.692);
+      text-shadow: 0px 6px 10px rgba(122, 122, 122, 0.692);
       transition: all ease-in-out 150ms;
     }
     
     a:nth-child(1) {
       color: #1DA1F2;
+      // text-shadow: 0px 6px 10px #da13e0 ;
     }
     a:nth-child(2) {
       color: rgb(32, 243, 127);
+      // text-shadow: 0px 6px 10px #00C0FF ;
     }
     a:nth-child(3) {
       color: rgb(247, 82, 82);
+      // text-shadow: 0px 6px 10px #51df58 ;
     }
 
     i:hover {
@@ -329,6 +336,11 @@ figure{
   }
 }
  
+#arrow-up{
+  position: absolute;
+  right: 0;
+  font-size: 3rem;
+}
 
 
   
