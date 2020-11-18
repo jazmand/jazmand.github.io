@@ -1,21 +1,5 @@
-$primary-color: black;
-$secondary-color: white;
-$rainbow-background: linear-gradient(
-  90deg,
-  #da13e0 0%,
-  #00c0ff 25%,
-  #51df58 50%,
-  #ffcf00 75%,
-  #fc4f4f 100%
-);
-$primary-font: "Sansita Swashed", cursive;
-$english-font: "Raleway", sans-serif;
-$japanese-font: "M PLUS 1p", sans-serif;
-
-@mixin section-spacing {
-  margin: 5% 10%;
-  padding: 5%;
-}
+@import "variables";
+@import "mixins";
 
 * {
   margin: 0;
@@ -39,8 +23,11 @@ html {
   background: $rainbow-background;
   padding: 0.8em;
   z-index: 1;
-  @media (max-width: 700px) {
-    padding: 0.5em;
+  @include breakpoint-max(medium) {
+    padding: 0.7em;
+  }
+  @include breakpoint-max(small) {
+    padding: 0.6em;
   }
 
   ul {
@@ -55,7 +42,10 @@ html {
     font-family: $primary-font;
     font-size: 1.5em;
     color: white;
-    @media (max-width: 700px) {
+    @include breakpoint-max(medium) {
+      font-size: 1.2em;
+    }
+    @include breakpoint-max(small) {
       font-size: 0.8em;
     }
   }
@@ -82,8 +72,10 @@ html {
     position: absolute;
     color: white;
   }
-
-  @media (max-width: 700px) {
+  @include breakpoint-max(medium) {
+    font-size: 1.4em;
+  }
+  @include breakpoint-max(small) {
     font-size: 0.9em;
   }
 }
@@ -112,7 +104,10 @@ h2 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   visibility: visible;
-  @media (max-width: 700px) {
+  @include breakpoint-max(medium) {
+    font-size: 1.5em;
+  }
+  @include breakpoint-max(small) {
     font-size: 1em;
   }
 }
@@ -122,15 +117,93 @@ h2 {
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   place-content: center;
-  gap: 10%;
-  @include section-spacing;
+  gap: 5em;
+  padding: 10em;
 
+  .flip-container {
+    cursor: pointer;
+    perspective: 1000px;
+    &.click .flipper {
+      transform: rotateY(180deg);
+    }
+    .flipper {
+      transition: 0.8s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .front,
+    .back {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .front {
+      transform: rotateY(0deg);
+    }
+    .back {
+      transform: rotateY(180deg);
+    }
+  }
+  .flipMe {
+    position: absolute;
+    left: -70px;
+    top: -35px;
+    background: $rainbow-background;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    visibility: visible;
+    @include breakpoint-max(medium) {
+      left: -50px;
+      top: -25px;
+    }
+    @include breakpoint-max(small) {
+      left: -25px;
+      top: -15px;
+    }
+  }
+  .arrow {
+    @extend .flipMe;
+    left: -70px;
+    top: 0px;
+    font-size: 2.5em;
+    @include breakpoint-max(medium) {
+      left: -50px;
+      font-size: 2em;
+    }
+    @include breakpoint-max(small) {
+      left: -25px;
+      font-size: 1em;
+    }
+  }
+  .glow {
+    color: #fff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2a00e6,
+        0 0 40px #2a00e6, 0 0 50px #2a00e6, 0 0 60px #2a00e6, 0 0 70px #2a00e6;
+    }
+
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #4d8bff, 0 0 40px #4d8bff,
+        0 0 50px #4d8bff, 0 0 60px #4d8bff, 0 0 70px #4d8bff, 0 0 80px #4d8bff;
+    }
+  }
   p {
     font-size: 1.2em;
     line-height: 1.5em;
     text-align: justify;
     text-justify: inter-word;
-    @media (max-width: 700px) {
+    @include breakpoint-max(medium) {
+      font-size: 0.9em;
+    }
+    @include breakpoint-max(small) {
       font-size: 0.6em;
     }
   }
@@ -138,8 +211,11 @@ h2 {
     font-size: 1.2em;
     list-style-position: inside;
     list-style: none;
-    @media (max-width: 700px) {
-      font-size: 0.7em;
+    @include breakpoint-max(medium) {
+      font-size: 0.9em;
+    }
+    @include breakpoint-max(small) {
+      font-size: 0.6em;
     }
     .category {
       font-weight: bold;
@@ -151,50 +227,11 @@ h2 {
   }
 }
 
-.flip-container {
-  cursor: pointer;
-  perspective: 1000px;
-  &.click .flipper {
-    transform: rotateY(180deg);
-  }
-  .flipper {
-    transition: 0.8s;
-    transform-style: preserve-3d;
-    position: relative;
-  }
-  .front,
-  .back {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .front {
-    z-index: 2;
-    transform: rotateY(0deg);
-  }
-  .back {
-    transform: rotateY(180deg);
-  }
-}
-
-.flipMe {
-  position: absolute;
-  right: 0px;
-  top: -25px;
-  background: $rainbow-background;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  visibility: visible;
-}
-
 #projects {
   display: flex;
   flex-direction: column;
   justify-items: center;
   place-content: center;
-  @include section-spacing;
 
   .container {
     display: grid;
@@ -202,7 +239,6 @@ h2 {
     grid-template-rows: repeat(2, 1fr);
     justify-content: center;
   }
-
   .project-tile {
     text-align: center;
   }
@@ -218,43 +254,50 @@ h2 {
     grid-column: 4 / span 1;
     grid-row: 1 / span 1;
   }
-}
-
-figure {
-  img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    @media (max-width: 700px) {
-      width: 100px;
-      height: 100px;
+  figure {
+    img {
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      @include breakpoint-max(medium) {
+        width: 200px;
+        height: 200px;
+      }
+      @include breakpoint-max(small) {
+        width: 125px;
+        height: 125px;
+      }
     }
-  }
 
-  figcaption {
-    font-family: $english-font;
-    font-size: 1.2em;
-    @media (max-width: 700px) {
-      font-size: 0.6em;
+    figcaption {
+      font-family: $english-font;
+      font-size: 1.2em;
+      white-space: nowrap;
+      @include breakpoint-max(medium) {
+        font-size: 0.9em;
+      }
+      @include breakpoint-max(small) {
+        font-size: 0.6em;
+      }
     }
-  }
 
-  a {
-    text-decoration: none;
-    color: white;
-  }
+    a {
+      text-decoration: none;
+      color: white;
+    }
 
-  .rainbow-code {
-    visibility: hidden;
-  }
-
-  &:hover {
     .rainbow-code {
-      background: $rainbow-background;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      visibility: visible;
+      visibility: hidden;
+    }
+
+    &:hover {
+      .rainbow-code {
+        background: $rainbow-background;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        visibility: visible;
+      }
     }
   }
 }
@@ -264,7 +307,7 @@ figure {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 5% 0%;
+  padding: 10em;
 
   .contact-form {
     border: 1px dashed white;
@@ -272,7 +315,10 @@ figure {
     margin-bottom: 5em;
     border-radius: 30px;
     box-shadow: 0px 4px 10px #5c5c5c;
-    @media (max-width: 700px) {
+    @include breakpoint-max(medium) {
+      width: 400px;
+    }
+    @include breakpoint-max(small) {
       width: 300px;
     }
     form {
@@ -301,7 +347,10 @@ figure {
       #mailto {
         text-align: center;
         font-family: $english-font;
-        @media (max-width: 700px) {
+        @include breakpoint-max(medium) {
+          font-size: 0.8em;
+        }
+        @include breakpoint-max(small) {
           font-size: 0.6em;
         }
       }
@@ -315,6 +364,12 @@ figure {
     border-radius: 30px 10px 30px 10px;
     border: 1px dashed white;
     box-shadow: 0px 4px 10px #5c5c5c;
+    @include breakpoint-max(medium) {
+      font-size: 0.8em;
+    }
+    @include breakpoint-max(small) {
+      font-size: 0.7em;
+    }
 
     i {
       padding: 10px;
@@ -324,15 +379,12 @@ figure {
 
     a:nth-child(1) {
       color: #1da1f2;
-      // text-shadow: 0px 6px 10px #da13e0 ;
     }
     a:nth-child(2) {
       color: rgb(32, 243, 127);
-      // text-shadow: 0px 6px 10px #00C0FF ;
     }
     a:nth-child(3) {
       color: rgb(247, 82, 82);
-      // text-shadow: 0px 6px 10px #51df58 ;
     }
 
     i:hover {
