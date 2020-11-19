@@ -118,7 +118,7 @@ h2 {
   justify-items: center;
   place-content: center;
   gap: 5em;
-  padding: 10em;
+  padding: 10%;
 
   .flip-container {
     cursor: pointer;
@@ -232,6 +232,7 @@ h2 {
   flex-direction: column;
   justify-items: center;
   place-content: center;
+  padding: 10%;
 
   .container {
     display: grid;
@@ -307,7 +308,7 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 10em;
+  padding: 10%;
 
   .contact-form {
     border: 1px dashed white;
