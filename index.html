@@ -26,12 +26,15 @@
 <!-- WELCOME SECTION -->
   <main>
     <section id="welcome-section">
-      <video playsinline autoplay muted loop poster="media/welcomeVideo.png" id="welcomeVideo">
+      <div id="welcome-image">
+        <img src="media/profileImage.jpg" alt="Profile Image" id="profile-image">
+      </div>
+        <!-- <video playsinline autoplay muted loop poster="media/welcomeVideo.png" id="welcomeVideo">
         <source src="media/welcomeVideo.mp4" type="video/mp4">
-      </video>
+      </video> -->
       <div id="welcome-text"> 
-        <h1 class="english">Hi there, I'm Jazmand</h1>
-        <h1 class="japanese">こんにちは</h1>
+        <h1 class="english">Hi there, I'm Jazmand.</h1>
+        <h1 class="japanese">こんにちは。</h1>
       </div>
     </section>
 <!-- ABOUT -->
@@ -41,8 +44,8 @@
           <div class="flip-container">
             <div class="flipper">
                 <div class="front">
-                  <p class="english flipMe glow">Click me!</p>
-                  <i class="arrow glow fas fa-reply fa-rotate-180"></i>
+                  <p class="english flipMe">Click me!</p>
+                  <i class="arrow fas fa-reply fa-rotate-180"></i>
                   <p class="english">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat laborum temporibus atque assumenda consequuntur ullam sapiente cum quod quidem quam, sequi numquam, labore blanditiis, unde voluptatum ad obcaecati facere!Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat laborum temporibus atque assumenda consequuntur ullam sapiente cum quod quidem quam, sequi numquam, labore blanditiis, unde voluptatum ad obcaecati facere!</p>
                 </div>
                 <div class="back">
@@ -136,10 +139,11 @@
         <a href="https://github.com/jazmand" target="_blank"><i class="fa fa-3x fa-github"></i></a>
       </div>  
     </section>
+    <i id="arrow-up" class="far fa-arrow-alt-circle-up"></i>
   </main>
 <!-- FOOTER -->
   <footer>
-    <i id="arrow-up" class="far fa-arrow-alt-circle-up"></i>
+    
   </footer> 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
