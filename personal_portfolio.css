@@ -71,10 +71,6 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -84,24 +80,31 @@ html {
   width: 100%;
   height: 100vh;
   font-size: 1.8em;
-  background: url("media/bgImage.png") no-repeat center center;
+  background: url("media/bgImage.png") no-repeat;
   background-size: cover;
 }
 
-#welcome-section #welcome-text {
-  padding: 2em;
+#welcome-section #welcome-background {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.671);
+}
+
+#welcome-section #welcome-text {
   color: white;
   text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.76);
+  font-size: 2em;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
 }
 
 @media (max-width: 1024px) {
@@ -113,29 +116,6 @@ html {
 @media (max-width: 640px) {
   #welcome-section {
     font-size: 0.6em;
-  }
-}
-
-#welcome-section #welcome-image {
-  padding: 2em 2em 2em 0em;
-}
-
-#welcome-section #welcome-image #profile-image {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 20px;
-}
-
-@media (max-width: 1024px) {
-  #welcome-section #welcome-image #profile-image {
-    max-width: 250px;
-  }
-}
-
-@media (max-width: 640px) {
-  #welcome-section #welcome-image #profile-image {
-    max-width: 150px;
   }
 }
 
@@ -170,93 +150,35 @@ h2 {
 }
 
 #about {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  place-content: center;
-  gap: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 7%;
+}
+
+#about .blurb,
+#about .skills {
   padding: 10%;
 }
 
-#about .flip-container {
-  cursor: pointer;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-}
-
-#about .flip-container.click .flipper {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-#about .flip-container .flipper {
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  position: relative;
-}
-
-#about .flip-container .front,
-#about .flip-container .back {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#about .flip-container .front {
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-}
-
-#about .flip-container .back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-#about .flipMe, #about .arrow {
-  position: absolute;
-  left: -70px;
-  top: -35px;
-  color: #ff8062;
-  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.76);
+#about #profile-image {
+  width: 100%;
+  max-height: auto;
+  border-radius: 20px;
 }
 
 @media (max-width: 1024px) {
-  #about .flipMe, #about .arrow {
-    left: -50px;
-    top: -25px;
+  #about #profile-image {
+    max-width: 250px;
   }
 }
 
 @media (max-width: 640px) {
-  #about .flipMe, #about .arrow {
-    left: -25px;
-    top: -15px;
-  }
-}
-
-#about .arrow {
-  left: -70px;
-  top: 0px;
-  font-size: 2.5em;
-}
-
-@media (max-width: 1024px) {
-  #about .arrow {
-    left: -50px;
-    font-size: 2em;
-  }
-}
-
-@media (max-width: 640px) {
-  #about .arrow {
-    left: -25px;
-    font-size: 1em;
+  #about #profile-image {
+    max-width: 150px;
   }
 }
 
@@ -280,20 +202,20 @@ h2 {
 }
 
 #about .skill-list {
-  font-size: 1.2em;
+  font-size: 1.7em;
   list-style-position: inside;
   list-style: none;
 }
 
 @media (max-width: 1024px) {
   #about .skill-list {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 }
 
 @media (max-width: 640px) {
   #about .skill-list {
-    font-size: 0.6em;
+    font-size: 0.75em;
   }
 }
 
@@ -306,6 +228,86 @@ h2 {
 
 #about .skill-list .skill {
   font-family: "Raleway", sans-serif;
+}
+
+.flip-container {
+  cursor: pointer;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.flip-container.click .flipper {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-container .flipper {
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-container .front,
+.flip-container .back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.flip-container .front {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.flip-container .back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flipMe, .arrow {
+  position: absolute;
+  left: -70px;
+  top: -35px;
+  color: #ff8062;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.76);
+}
+
+@media (max-width: 1024px) {
+  .flipMe, .arrow {
+    left: -50px;
+    top: -25px;
+  }
+}
+
+@media (max-width: 640px) {
+  .flipMe, .arrow {
+    left: -25px;
+    top: -15px;
+  }
+}
+
+.arrow {
+  left: -70px;
+  top: 0px;
+  font-size: 2.5em;
+}
+
+@media (max-width: 1024px) {
+  .arrow {
+    left: -50px;
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 640px) {
+  .arrow {
+    left: -25px;
+    font-size: 1em;
+  }
 }
 
 #projects {
