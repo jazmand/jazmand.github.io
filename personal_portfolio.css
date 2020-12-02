@@ -6,8 +6,7 @@
 }
 
 html {
-  background: #aec7cb;
-  color: white;
+  background: white;
 }
 
 #navbar {
@@ -85,7 +84,7 @@ html {
   width: 100%;
   height: 100vh;
   font-size: 1.8em;
-  background: url("media/bgImage1.jpg") no-repeat center center;
+  background: url("media/bgImage.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -154,7 +153,7 @@ h2 {
   text-align: center;
   margin: 2em;
   white-space: nowrap;
-  color: #3784e8;
+  color: #5acef2;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.76);
 }
 
@@ -179,7 +178,6 @@ h2 {
   place-content: center;
   gap: 3em;
   padding: 10%;
-  color: white;
 }
 
 #about .flip-container {
@@ -224,7 +222,7 @@ h2 {
   position: absolute;
   left: -70px;
   top: -35px;
-  color: #3784e8;
+  color: #ff8062;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.76);
 }
 
@@ -300,6 +298,7 @@ h2 {
 }
 
 #about .skill-list .category {
+  color: #5be7c3;
   font-weight: bold;
   font-family: "Sansita Swashed", cursive;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.76);
@@ -320,7 +319,6 @@ h2 {
   justify-items: center;
   place-content: center;
   padding: 10%;
-  color: white;
 }
 
 #projects .container {
@@ -404,8 +402,8 @@ h2 {
 }
 
 #projects figure a {
+  color: black;
   text-decoration: none;
-  color: white;
 }
 
 #projects figure .rainbow-code {
@@ -439,7 +437,7 @@ h2 {
 }
 
 #contact .contact-form {
-  border: 1px dashed black;
+  border: 3px dashed #ff8062;
   width: 500px;
   margin-bottom: 5em;
   border-radius: 30px;
@@ -490,7 +488,6 @@ h2 {
 #contact .contact-form form #mailto {
   text-align: center;
   font-family: "Raleway", sans-serif;
-  color: black;
 }
 
 @media (max-width: 1024px) {
@@ -516,7 +513,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 30px 10px 30px 10px;
-  border: 1px dashed black;
+  border: 3px dashed #ff8062;
   -webkit-box-shadow: 0px 4px 10px #5c5c5c;
           box-shadow: 0px 4px 10px #5c5c5c;
 }
