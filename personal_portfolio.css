@@ -9,6 +9,11 @@ html {
   background: white;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 #navbar {
   position: fixed;
   top: 0;
