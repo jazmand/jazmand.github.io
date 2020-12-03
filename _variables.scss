@@ -1,13 +1,14 @@
 $blue-color: #5acef2;
-$red-color: #ff8062;
 $green-color: #5be7c3;
+$red-color: #ff8062;
+$orange-color: #f1b170;
 $rainbow-background: linear-gradient(
   90deg,
-  #da13e0 0%,
-  #00c0ff 25%,
-  #51df58 50%,
-  #ffcf00 75%,
-  #fc4f4f 100%
+  $blue-color 0%,
+  $green-color 25%,
+  $red-color 50%,
+  $orange-color 75%,
+  $blue-color 100%
 );
 
 $primary-font: "Sansita Swashed", cursive;

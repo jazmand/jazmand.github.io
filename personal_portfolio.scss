@@ -78,6 +78,11 @@ body {
   #welcome-text {
     color: white;
     text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.76);
+    // background: $rainbow-background;
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // visibility: visible;
     font-size: 2em;
     transform: rotate(-10deg);
   }
@@ -135,6 +140,10 @@ h2 {
     padding: 10%;
   }
 
+  #language-toggle {
+    padding-left: 6em;
+  }
+
   #profile-image {
     width: 100%;
     max-height: auto;
@@ -148,7 +157,7 @@ h2 {
   }
 
   p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     line-height: 1.5em;
     text-align: justify;
     text-justify: inter-word;
@@ -170,7 +179,7 @@ h2 {
       font-size: 0.75em;
     }
     .category {
-      color: $green-color;
+      color: $orange-color;
       font-weight: bold;
       font-family: $primary-font;
       text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.76);
@@ -279,6 +288,11 @@ h2 {
       }
     }
 
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
     figcaption {
       font-family: $english-font;
       font-size: 1.2em;
@@ -288,11 +302,6 @@ h2 {
       @include breakpoint-max(small) {
         font-size: 0.6em;
       }
-    }
-
-    a {
-      color: black;
-      text-decoration: none;
     }
 
     .rainbow-code {
@@ -316,9 +325,9 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 10%;
+  padding: 5%;
   .contact-form {
-    border: 3px dashed $red-color;
+    border: 3px dashed $green-color;
     width: 500px;
     margin-bottom: 5em;
     border-radius: 30px;
@@ -369,7 +378,7 @@ h2 {
     justify-content: center;
     align-items: center;
     border-radius: 30px 10px 30px 10px;
-    border: 3px dashed $red-color;
+    border: 3px dashed $green-color;
     box-shadow: 0px 4px 10px #5c5c5c;
     @include breakpoint-max(medium) {
       font-size: 0.8em;
