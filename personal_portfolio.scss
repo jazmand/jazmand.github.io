@@ -51,7 +51,17 @@ body {
   }
 
   li:hover {
-    transform: scale(1.2);
+    .rainbow-code {
+      background: $rainbow-background;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      visibility: visible;
+    }
+  }
+  .rainbow-code {
+    display: inline-block;
+    visibility: hidden;
   }
 }
 
@@ -274,6 +284,15 @@ h2 {
     grid-row: 1 / span 1;
   }
   figure {
+    font-family: $english-font;
+    font-size: 1.7em;
+    word-wrap: break-word;
+    @include breakpoint-max(medium) {
+      font-size: 1em;
+    }
+    @include breakpoint-max(small) {
+      font-size: 0.75em;
+    }
     img {
       border-radius: 50%;
       width: 250px;
@@ -287,34 +306,29 @@ h2 {
         height: 120px;
       }
     }
-
-    a {
-      color: black;
-      text-decoration: none;
-    }
-
     figcaption {
-      font-family: $english-font;
-      font-size: 1.2em;
-      @include breakpoint-max(medium) {
-        font-size: 0.9em;
-      }
-      @include breakpoint-max(small) {
-        font-size: 0.6em;
-      }
-    }
-
-    .rainbow-code {
-      visibility: hidden;
-    }
-
-    &:hover {
-      .rainbow-code {
-        background: $rainbow-background;
+      a {
+        text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+        background: linear-gradient(
+          to right,
+          $red-color,
+          $green-color 50%,
+          black 50%
+        );
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        visibility: visible;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+      }
+    }
+    img:hover,
+    &:hover {
+      figcaption a {
+        background-position: 0 100%;
       }
     }
   }

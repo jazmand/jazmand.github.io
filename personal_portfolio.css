@@ -67,9 +67,17 @@ body {
   }
 }
 
-#navbar li:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+#navbar li:hover .rainbow-code {
+  background: linear-gradient(60deg, #5acef2 0%, #5be7c3 25%, #ff8062 50%, #f1b170 75%, #5acef2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  visibility: visible;
+}
+
+#navbar .rainbow-code {
+  display: inline-block;
+  visibility: hidden;
 }
 
 #welcome-section {
@@ -375,6 +383,24 @@ h2 {
   grid-row: 1 / span 1;
 }
 
+#projects figure {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.7em;
+  word-wrap: break-word;
+}
+
+@media (max-width: 1024px) {
+  #projects figure {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 640px) {
+  #projects figure {
+    font-size: 0.75em;
+  }
+}
+
 #projects figure img {
   border-radius: 50%;
   width: 250px;
@@ -395,39 +421,23 @@ h2 {
   }
 }
 
-#projects figure a {
-  color: black;
+#projects figure figcaption a {
   text-decoration: none;
-}
-
-#projects figure figcaption {
-  font-family: "Raleway", sans-serif;
-  font-size: 1.2em;
-}
-
-@media (max-width: 1024px) {
-  #projects figure figcaption {
-    font-size: 0.9em;
-  }
-}
-
-@media (max-width: 640px) {
-  #projects figure figcaption {
-    font-size: 0.6em;
-  }
-}
-
-#projects figure .rainbow-code {
-  visibility: hidden;
-}
-
-#projects figure:hover .rainbow-code {
-  background: -webkit-gradient(linear, left top, right top, from(#5acef2), color-stop(25%, #5be7c3), color-stop(50%, #ff8062), color-stop(75%, #f1b170), to(#5acef2));
-  background: linear-gradient(90deg, #5acef2 0%, #5be7c3 25%, #ff8062 50%, #f1b170 75%, #5acef2 100%);
+  white-space: nowrap;
+  overflow: hidden;
+  background: -webkit-gradient(linear, left top, right top, from(#ff8062), color-stop(50%, #5be7c3), color-stop(50%, black));
+  background: linear-gradient(to right, #ff8062, #5be7c3 50%, black 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  visibility: visible;
+  background-size: 200% 100%;
+  background-position: 100%;
+  -webkit-transition: background-position 275ms ease;
+  transition: background-position 275ms ease;
+}
+
+#projects figure img:hover figcaption a, #projects figure:hover figcaption a {
+  background-position: 0 100%;
 }
 
 #contact {
