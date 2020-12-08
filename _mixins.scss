@@ -1,3 +1,4 @@
+//Screen sizes
 $breakpoints-max: (
   "small": 640px,
   "medium": 1024px,
@@ -8,4 +9,10 @@ $breakpoints-max: (
   @media (max-width: map-get($breakpoints-max, $size)) {
     @content;
   }
+}
+
+//Cube
+@mixin square($size) {
+  width: $size;
+  height: $size;
 }

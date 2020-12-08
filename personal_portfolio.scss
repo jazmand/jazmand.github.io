@@ -142,115 +142,103 @@ h2 {
 
 #about {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding-left: 7%;
+  align-items: center;
 
-  .blurb,
-  .skills {
-    padding: 10%;
+  .scene {
+    @include square($size);
+    border: 1px solid #ccc;
+    margin: 5em;
+    perspective: 1000px;
   }
 
-  #language-toggle {
-    padding-left: 6em;
-  }
-
-  #profile-image {
+  .cube {
     width: 100%;
-    max-height: auto;
-    border-radius: 20px;
-    @include breakpoint-max(medium) {
-      max-width: 250px;
-    }
-    @include breakpoint-max(small) {
-      max-width: 150px;
-    }
-  }
-
-  p {
-    font-size: 1.3em;
-    line-height: 1.5em;
-    text-align: justify;
-    text-justify: inter-word;
-    @include breakpoint-max(medium) {
-      font-size: 0.9em;
-    }
-    @include breakpoint-max(small) {
-      font-size: 0.6em;
-    }
-  }
-  .skill-list {
-    font-size: 1.7em;
-    list-style-position: inside;
-    list-style: none;
-    @include breakpoint-max(medium) {
-      font-size: 1em;
-    }
-    @include breakpoint-max(small) {
-      font-size: 0.75em;
-    }
-    .category {
-      color: $orange-color;
-      font-weight: bold;
-      font-family: $primary-font;
-    }
-    .skill {
-      font-family: $english-font;
-    }
-  }
-}
-
-.flip-container {
-  cursor: pointer;
-  perspective: 1000px;
-  &.click .flipper {
-    transform: rotateY(180deg);
-  }
-  .flipper {
-    transition: 0.8s;
+    height: 100%;
     transform-style: preserve-3d;
-    position: relative;
+    transform: translateZ(-100px);
+    transition: transform 1s;
+
+    .cube__face {
+      position: absolute;
+      @include square($size);
+      border: 2px solid black;
+      color: white;
+      text-align: center;
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+
+    .cube__face--front {
+      background: hsla(212, 100%, 50%, 0.7);
+      transform: rotateY(0deg) translateZ($size2);
+    }
+    .cube__face--right {
+      background: hsla(140, 100%, 50%, 0.7);
+      transform: rotateY(90deg) translateZ($size2);
+    }
+    .cube__face--back {
+      background: hsla(355, 100%, 50%, 0.7);
+      transform: rotateY(180deg) translateZ($size2);
+    }
+    .cube__face--left {
+      background: hsla(29, 100%, 50%, 0.7);
+      transform: rotateY(-90deg) translateZ($size2);
+    }
+    .cube__face--top {
+      background: hsla(240, 100%, 50%, 0.7);
+      transform: rotateX(90deg) translateZ($size2);
+    }
+    .cube__face--bottom {
+      background: hsla(300, 100%, 50%, 0.7);
+      transform: rotateX(-90deg) translateZ($size2);
+    }
+
+    #profile-image,
+    p,
+    .skill-list {
+      margin: 1em;
+    }
+    #profile-image {
+      width: 90%;
+      max-height: 90%;
+    }
+    p {
+      text-align: justify;
+    }
+    .skill-list {
+      list-style-position: inside;
+      list-style: none;
+
+      .category {
+        color: $orange-color;
+        font-weight: bold;
+        font-family: $primary-font;
+      }
+      .skill {
+        font-family: $english-font;
+      }
+    }
   }
-  .front,
-  .back {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
+
+  .cube.show-front {
+    transform: translateZ(-100px) rotateY(0deg);
   }
-  .front {
-    transform: rotateY(0deg);
+  .cube.show-right {
+    transform: translateZ(-100px) rotateY(-90deg);
   }
-  .back {
-    transform: rotateY(180deg);
+  .cube.show-back {
+    transform: translateZ(-100px) rotateY(-180deg);
   }
-}
-.flipMe {
-  position: absolute;
-  left: -70px;
-  top: -35px;
-  color: $red-color;
-  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.76);
-  @include breakpoint-max(medium) {
-    left: -50px;
-    top: -25px;
+  .cube.show-left {
+    transform: translateZ(-100px) rotateY(-270deg);
   }
-  @include breakpoint-max(small) {
-    left: -25px;
-    top: -15px;
+  .cube.show-top {
+    transform: translateZ(-100px) rotateX(-90deg);
   }
-}
-.arrow {
-  @extend .flipMe;
-  left: -70px;
-  top: 0px;
-  font-size: 2.5em;
-  @include breakpoint-max(medium) {
-    left: -50px;
-    font-size: 2em;
-  }
-  @include breakpoint-max(small) {
-    left: -25px;
-    font-size: 1em;
+  .cube.show-bottom {
+    transform: translateZ(-100px) rotateX(90deg);
   }
 }
 

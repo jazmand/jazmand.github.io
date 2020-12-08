@@ -41,36 +41,13 @@
     </section>
 <!-- ABOUT -->
     <section id="about">
-      <div class="blurb" data-aos="fade-right" data-aos-offset="300">
-        <h2>Who Am I?</h2>
-          <div class="flip-container">
-            <div class="flipper">
-              <!-- FRONT -->
-                <div class="front">
-                  <p class="english flipMe">Click me!</p>
-                  <i class="arrow fas fa-reply fa-rotate-180"></i>
-                    <img src="media/profileImage.jpg" alt="Profile Image" id="profile-image">
-                </div>
-                <!-- BACK -->
-                <div class="back">
-                  <!-- ENGLISH -->
-                  <div class="language">
-                    <p class="english flipMe">Click me!</p>
-                    <i class="arrow fas fa-reply fa-rotate-180"></i>
-                    <p class="english">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat laborum temporibus atque assumenda consequuntur ullam sapiente cum quod quidem quam, sequi numquam, labore blanditiis, unde voluptatum ad obcaecati facere!Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat laborum temporibus atque assumenda consequuntur ullam sapiente cum quod quidem quam, sequi numquam, labore blanditiis, unde voluptatum ad obcaecati facere!</p>
-                  </div>
-                  <!-- JAPANESE -->
-                  <div class="language" style="display:none">
-                    <p class="japanese flipMe glow">クリックして下さい！</p>
-                    <i class="arrow glow fas fa-reply fa-rotate-180"></i>
-                    <p class="japanese" id = "cardJ">ブラウンさんをお願いします。 ２人の外国人にあったが、１人はカナダから来た人で、もう１人はイギリスから来た人だ。 「どうかしたの？」と小さい白いウサギが聞きました。 ２、３ページの英語を訳すのに２時間以上もかかりました。 いいからさっき盗ったモノを、カバンの中から出しなさい。 エコロジーのために堪え忍ぶのではなく、自然と調和した住環境の快適性が必要である。 ８ギガバイトのハードディスクがあれば十分だと思います。 １か月あまり名古屋に居たことがある</p>
-                  </div>                  
-                </div>
-            </div>
-          </div>
-        </div>
-      <div class="skills" data-aos="fade-left" data-aos-offset="300">
-        <h2>Skills:</h2>
+      <h2>Who am I?</h2>
+      <div class="scene">
+        <div class="cube" >
+          <div class="cube__face cube__face--front"><img src="media/profileImage.jpg" alt="Profile Image" id="profile-image"></div>
+          <div class="cube__face cube__face--right"><p class="english">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat laborum temporibus atque assumenda consequuntur ullam sapiente cum quod quidem quam, sequi numquam, labore blanditiis, unde voluptatum ad obcaecati facere!Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime fugiat laborum temporibus atque assumenda consequuntur ullam sapiente cum quod quidem quam, sequi numquam, labore blanditiis, unde voluptatum ad obcaecati facere!</p></div>
+          <div class="cube__face cube__face--back"><p class="japanese">ブラウンさんをお願いします。 ２人の外国人にあったが、１人はカナダから来た人で、もう１人はイギリスから来た人だ。 「どうかしたの？」と小さい白いウサギが聞きました。 ２、３ページの英語を訳すのに２時間以上もかかりました。 いいからさっき盗ったモノを、カバンの中から出しなさい。 エコロジーのために堪え忍ぶのではなく、自然と調和した住環境の快適性が必要である。 ８ギガバイトのハードディスクがあれば十分だと思います。 １か月あまり名古屋に居たことがある</p></div>
+          <div class="cube__face cube__face--left">
             <ul class="skill-list">
               <li class="category">Markup Languages:</li>
               <li class="skill">HTML</li>
@@ -87,7 +64,33 @@
               <li class="category">Relational Database Management Systems:</li>
               <li class="skill">MySQL</li>
             </ul>
-      </div>
+          </div>
+          <div class="cube__face cube__face--top"><p>TOP</p></div>
+          <div class="cube__face cube__face--bottom"><p>BOTTOM</p></div>
+        </div>
+      </div> 
+
+      <p class="radio-group">
+        <label>
+          <input type="radio" name="rotate-cube-side" value="front" checked/>Picture
+        </label>
+        <label>
+          <input type="radio" name="rotate-cube-side" value="right"/>About me
+        </label>
+        <label>
+          <input type="radio" name="rotate-cube-side" value="back"/>私について
+        </label>
+        <label>
+          <input type="radio" name="rotate-cube-side" value="left"/>Skills
+        </label>
+        <label>
+          <input type="radio" name="rotate-cube-side" value="top"/>top
+        </label>
+        <label>
+          <input type="radio" name="rotate-cube-side" value="bottom"/>bottom
+        </label>
+      </p>
+      
     </section>
 <!-- PROJECTS -->
     <section id="projects">

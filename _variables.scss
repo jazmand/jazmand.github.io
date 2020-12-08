@@ -1,3 +1,4 @@
+//Color variables
 $blue-color: #5acef2;
 $green-color: #5be7c3;
 $red-color: #ff8062;
@@ -11,6 +12,11 @@ $rainbow-background: linear-gradient(
   $blue-color 100%
 );
 
+//Font variables
 $primary-font: "Sansita Swashed", cursive;
 $english-font: "Raleway", sans-serif;
 $japanese-font: "M PLUS 1p", sans-serif;
+
+//Cube variables
+$size: 400px;
+$size2: $size/2;
