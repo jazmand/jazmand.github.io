@@ -145,72 +145,101 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  .scene {
-    @include square($size);
-    border: 1px solid #ccc;
-    margin: 5em;
-    perspective: 1000px;
-  }
-
-  .cube {
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transform: translateZ(-100px);
-    transition: transform 1s;
-
-    .cube__face {
-      position: absolute;
-      @include square($size);
-      border: 2px solid black;
-      color: white;
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .perspective {
+      perspective: 76em;
+      perspective-origin: 50% 50px;
+      width: 494px;
+      font-family: $english-font;
+      font-weight: 100;
+      color: #fff;
       text-align: center;
-      font-size: 1em;
-      line-height: 1.5em;
+    }
+    input {
+      display: none;
+    }
+    .tab {
+      position: absolute;
+      width: 80px;
+      height: 70px;
+      background: pink;
+      right: 0;
+      line-height: 70px;
+      font-weight: 300;
+
+      &:nth-child(1) {
+        top: -5px;
+        background: #06d6a0;
+      }
+      &:nth-child(2) {
+        top: 69px;
+        background: #1b9aaa;
+      }
+      &:nth-child(3) {
+        top: 143px;
+        background: #ef476f;
+      }
+    }
+    .cube {
+      position: relative;
+      margin: 0px 95px 0;
+      width: 300px;
+      height: 200px;
+      transform-origin: 0 100px;
+      transform-style: preserve-3d;
+      transition: transform 0.5s ease-in;
+    }
+    .tab-content {
+      width: 300px;
+      height: 200px;
+      position: absolute;
+
+      &:nth-child(2) {
+        transform: translateZ(100px);
+        background: #1b9aaa;
+      }
+      &:nth-child(1) {
+        transform: rotateX(-270deg) translateY(-100px);
+        transform-origin: top left;
+        background: #06d6a0;
+      }
+      &:nth-child(3) {
+        transform: rotateX(-90deg) translateY(100px);
+        transform-origin: bottom center;
+        background: #ef476f;
+      }
     }
 
-    .cube__face--front {
-      background: hsla(212, 100%, 50%, 0.7);
-      transform: rotateY(0deg) translateZ($size2);
+    #tab-top:checked ~ .cube {
+      transform: rotateX(-90deg);
     }
-    .cube__face--right {
-      background: hsla(140, 100%, 50%, 0.7);
-      transform: rotateY(90deg) translateZ($size2);
+    #tab-front:checked ~ .cube {
+      transform: rotateX(0deg);
     }
-    .cube__face--back {
-      background: hsla(355, 100%, 50%, 0.7);
-      transform: rotateY(180deg) translateZ($size2);
+    #tab-bottom:checked ~ .cube {
+      transform: rotateX(90deg);
     }
-    .cube__face--left {
-      background: hsla(29, 100%, 50%, 0.7);
-      transform: rotateY(-90deg) translateZ($size2);
-    }
-    .cube__face--top {
-      background: hsla(240, 100%, 50%, 0.7);
-      transform: rotateX(90deg) translateZ($size2);
-    }
-    .cube__face--bottom {
-      background: hsla(300, 100%, 50%, 0.7);
-      transform: rotateX(-90deg) translateZ($size2);
-    }
-
-    #profile-image,
-    p,
-    .skill-list {
-      margin: 1em;
-    }
-    #profile-image {
-      width: 90%;
-      max-height: 90%;
+    .image-container {
+      width: 400px;
+      height: auto;
+      #profile-image {
+        width: 100%;
+        max-height: 100%;
+        border-radius: 20px;
+      }
     }
     p {
       text-align: justify;
+      margin: 1em;
     }
     .skill-list {
       list-style-position: inside;
       list-style: none;
-
+      margin: 1em;
       .category {
         color: $orange-color;
         font-weight: bold;
@@ -220,25 +249,6 @@ h2 {
         font-family: $english-font;
       }
     }
-  }
-
-  .cube.show-front {
-    transform: translateZ(-100px) rotateY(0deg);
-  }
-  .cube.show-right {
-    transform: translateZ(-100px) rotateY(-90deg);
-  }
-  .cube.show-back {
-    transform: translateZ(-100px) rotateY(-180deg);
-  }
-  .cube.show-left {
-    transform: translateZ(-100px) rotateY(-270deg);
-  }
-  .cube.show-top {
-    transform: translateZ(-100px) rotateX(-90deg);
-  }
-  .cube.show-bottom {
-    transform: translateZ(-100px) rotateX(90deg);
   }
 }
 

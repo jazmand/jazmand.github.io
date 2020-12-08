@@ -10,9 +10,3 @@ $breakpoints-max: (
     @content;
   }
 }
-
-//Cube
-@mixin square($size) {
-  width: $size;
-  height: $size;
-}
