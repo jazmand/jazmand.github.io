@@ -385,7 +385,6 @@ h2 {
 #projects figure {
   font-family: "Raleway", sans-serif;
   font-size: 1.7em;
-  word-wrap: break-word;
 }
 
 @media (max-width: 1024px) {
@@ -422,8 +421,6 @@ h2 {
 
 #projects figure figcaption a {
   text-decoration: none;
-  white-space: nowrap;
-  overflow: hidden;
   background: -webkit-gradient(linear, left top, right top, from(#ff8062), color-stop(50%, #5be7c3), color-stop(50%, black));
   background: linear-gradient(to right, #ff8062, #5be7c3 50%, black 50%);
   background-clip: text;

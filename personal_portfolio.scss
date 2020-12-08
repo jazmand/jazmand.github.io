@@ -285,7 +285,6 @@ h2 {
   figure {
     font-family: $english-font;
     font-size: 1.7em;
-    word-wrap: break-word;
     @include breakpoint-max(medium) {
       font-size: 1em;
     }
@@ -308,8 +307,6 @@ h2 {
     figcaption {
       a {
         text-decoration: none;
-        white-space: nowrap;
-        overflow: hidden;
         background: linear-gradient(
           to right,
           $red-color,
