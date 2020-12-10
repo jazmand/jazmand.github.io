@@ -10,3 +10,8 @@ $breakpoints-max: (
     @content;
   }
 }
+
+@mixin length($width, $height) {
+  width: $width;
+  height: $height;
+}

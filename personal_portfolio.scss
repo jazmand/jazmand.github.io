@@ -150,6 +150,14 @@ h2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    @include breakpoint-max(medium) {
+      flex-direction: column;
+      font-size: 1rem;
+    }
+    @include breakpoint-max(small) {
+      flex-direction: column;
+      font-size: 0.8rem;
+    }
     .perspective {
       perspective: 76em;
       perspective-origin: 50% 50px;
@@ -187,15 +195,13 @@ h2 {
     .cube {
       position: relative;
       margin: 0px 95px 0;
-      width: 300px;
-      height: 200px;
+      @include length($width, $height);
       transform-origin: 0 100px;
       transform-style: preserve-3d;
       transition: transform 0.5s ease-in;
     }
     .tab-content {
-      width: 300px;
-      height: 200px;
+      @include length($width, $height);
       position: absolute;
 
       &:nth-child(2) {
@@ -226,6 +232,12 @@ h2 {
     .image-container {
       width: 400px;
       height: auto;
+      @include breakpoint-max(medium) {
+        width: 300px;
+      }
+      @include breakpoint-max(small) {
+        width: 200px;
+      }
       #profile-image {
         width: 100%;
         max-height: 100%;
@@ -240,6 +252,12 @@ h2 {
       list-style-position: inside;
       list-style: none;
       margin: 1em;
+      @include breakpoint-max(medium) {
+        font-size: 0.85rem;
+      }
+      @include breakpoint-max(small) {
+        font-size: 0.65rem;
+      }
       .category {
         color: $orange-color;
         font-weight: bold;
