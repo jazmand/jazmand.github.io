@@ -1,0 +1,204 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html body {
+  font-family: "Cinzel", serif !important;
+}
+
+@media (min-width: 768px) {
+  .navbar img {
+    width: 150px;
+    height: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar img {
+    width: 180px;
+    height: 60px;
+  }
+}
+
+.navbar .navbar-brand {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .navbar .navbar-nav li {
+    font-size: 1.1em;
+  }
+  .navbar .navbar-nav li:not(:last-child) {
+    padding-right: 2em;
+    vertical-align: middle;
+    border-right: solid 1px black;
+  }
+  .navbar .navbar-nav li:not(:first-child) {
+    padding-left: 2em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar .navbar-nav {
+    font-size: 1.2em;
+  }
+}
+
+header {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+header video {
+  position: absolute;
+  bottom: -70%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .container .overlay-text i {
+  color: white;
+  padding-top: 0.5em;
+}
+
+header .container .overlay-text .store-images {
+  padding-top: 1em;
+}
+
+header .container .overlay-text .bounce {
+  -webkit-animation: bounce 2s infinite;
+          animation: bounce 2s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+
+@media (min-width: 768px) {
+  header .container .overlay-text h1 {
+    font-size: 4em;
+  }
+  header .container .overlay-text p {
+    font-size: 1.9em;
+  }
+  header .container .overlay-text i {
+    font-size: 5em;
+  }
+  header .container .overlay-text .app-store {
+    width: 185px;
+    height: 80px;
+  }
+  header .container .overlay-text .google-play {
+    width: 215px;
+    height: 118px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header .container .overlay-text h1 {
+    font-size: 6em;
+  }
+  header .container .overlay-text p {
+    font-size: 3em;
+  }
+  header .container .overlay-text i {
+    font-size: 6em;
+  }
+  header .container .overlay-text .app-store {
+    width: 220px;
+    height: 100px;
+  }
+  header .container .overlay-text .google-play {
+    width: 260px;
+    height: 148px;
+  }
+}
+
+#sign-up {
+  height: 100vh;
+}
+
+#sign-up .sign-up-container {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+@media (min-width: 768px) {
+  #sign-up .sign-up-container {
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #sign-up .sign-up-container {
+    padding-left: 35%;
+    padding-right: 35%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

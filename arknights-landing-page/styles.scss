@@ -1,0 +1,164 @@
+@import "mixins";
+html {
+  scroll-behavior: smooth;
+  body {
+    font-family: "Cinzel", serif !important;
+  }
+}
+.navbar {
+  img {
+    @include breakpoint-up(medium) {
+      width: 150px;
+      height: 50px;
+    }
+    @include breakpoint-up(large) {
+      width: 180px;
+      height: 60px;
+    }
+  }
+
+  .navbar-brand {
+    max-width: 100%;
+    height: auto;
+  }
+  .navbar-collapse {
+    text-align: center;
+  }
+  .navbar-nav {
+    @include breakpoint-up(medium) {
+      li {
+        font-size: 1.1em;
+        &:not(:last-child) {
+          padding-right: 2em;
+          vertical-align: middle;
+          border-right: solid 1px black;
+        }
+        &:not(:first-child) {
+          padding-left: 2em;
+        }
+      }
+    }
+    @include breakpoint-up(large) {
+      font-size: 1.2em;
+    }
+  }
+}
+//Welcome Section
+header {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  video {
+    position: absolute;
+    bottom: -70%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+    .overlay-text {
+      i {
+        color: white;
+        padding-top: 0.5em;
+      }
+      .store-images {
+        padding-top: 1em;
+      }
+      .bounce {
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-30px);
+        }
+        60% {
+          transform: translateY(-15px);
+        }
+      }
+      @include breakpoint-up(medium) {
+        h1 {
+          font-size: 4em;
+        }
+        p {
+          font-size: 1.9em;
+        }
+        i {
+          font-size: 5em;
+        }
+        .app-store {
+          width: 185px;
+          height: 80px;
+        }
+        .google-play {
+          width: 215px;
+          height: 118px;
+        }
+      }
+      @include breakpoint-up(large) {
+        h1 {
+          font-size: 6em;
+        }
+        p {
+          font-size: 3em;
+        }
+        i {
+          font-size: 6em;
+        }
+        .app-store {
+          width: 220px;
+          height: 100px;
+        }
+        .google-play {
+          width: 260px;
+          height: 148px;
+        }
+      }
+    }
+  }
+}
+
+#sign-up {
+  height: 100vh;
+  .sign-up-container {
+    padding-left: 20%;
+    padding-right: 20%;
+    @include breakpoint-up(medium) {
+      padding-left: 30%;
+      padding-right: 30%;
+    }
+    @include breakpoint-up(large) {
+      padding-left: 35%;
+      padding-right: 35%;
+    }
+  }
+}
