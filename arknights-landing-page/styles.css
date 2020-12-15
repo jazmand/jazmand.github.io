@@ -34,12 +34,12 @@ html body {
     font-size: 1.1em;
   }
   .navbar .navbar-nav li:not(:last-child) {
-    padding-right: 2em;
+    padding-right: 1em;
     vertical-align: middle;
     border-right: solid 1px black;
   }
   .navbar .navbar-nav li:not(:first-child) {
-    padding-left: 2em;
+    padding-left: 1em;
   }
 }
 
@@ -180,7 +180,7 @@ header .container .overlay-text .bounce {
 }
 
 #sign-up {
-  height: 100vh;
+  height: 90vh;
 }
 
 #sign-up .sign-up-container {
@@ -199,6 +199,24 @@ header .container .overlay-text .bounce {
   #sign-up .sign-up-container {
     padding-left: 35%;
     padding-right: 35%;
+  }
+}
+
+footer {
+  background-color: #212529 !important;
+}
+
+footer .copyright {
+  color: #414850 !important;
+}
+
+@media (min-width: 1200px) {
+  footer .copyright {
+    font-size: 1.5em;
+  }
+  footer .footer-logo {
+    width: 450px;
+    height: 45px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

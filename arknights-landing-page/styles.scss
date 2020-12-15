@@ -29,12 +29,12 @@ html {
       li {
         font-size: 1.1em;
         &:not(:last-child) {
-          padding-right: 2em;
+          padding-right: 1em;
           vertical-align: middle;
           border-right: solid 1px black;
         }
         &:not(:first-child) {
-          padding-left: 2em;
+          padding-left: 1em;
         }
       }
     }
@@ -148,7 +148,7 @@ header {
 }
 
 #sign-up {
-  height: 100vh;
+  height: 90vh;
   .sign-up-container {
     padding-left: 20%;
     padding-right: 20%;
@@ -159,6 +159,22 @@ header {
     @include breakpoint-up(large) {
       padding-left: 35%;
       padding-right: 35%;
+    }
+  }
+}
+
+footer {
+  background-color: #212529 !important;
+  .copyright {
+    color: #414850 !important;
+  }
+  @include breakpoint-up(large) {
+    .copyright {
+      font-size: 1.5em;
+    }
+    .footer-logo {
+      width: 450px;
+      height: 45px;
     }
   }
 }
