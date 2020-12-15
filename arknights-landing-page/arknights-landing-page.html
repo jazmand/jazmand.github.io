@@ -30,7 +30,7 @@
 
   <body>
     <!-- NAV BAR -->
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-dark pt-0 pb-0">
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark pt-0 pb-0">
       <a class="navbar-brand" href="#">
         <img src="https://i.imgur.com/XcKIkG8.png" width="120" height="40" alt="Arknights Logo">
       </a>
@@ -41,13 +41,13 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-auto mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">About</a>
+            <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">Operators</a>
+            <a class="nav-link" href="#">Operators</a>
           </li>
         </ul>
       </div>
@@ -68,10 +68,10 @@
                 <h1 class="display-5">Play Arknights</h1>
                 <p class="lead mb-0">Sign up now and fight for Rhodes Island!</p>
                 <div class="store-images">
-                  <img src="media/appStore.png" class="app-store" width="150" height="51" alt="App Store Logo">
-                  <img src="media/googlePlay.png" class="google-play" width="170" height="75" alt="Google Play Logo">
+                  <a href="https://apps.apple.com/kh/app/arknights/id1464872022" target="_blank"><img src="media/appStore.png" class="app-store" width="150" height="51" alt="App Store Logo"></a>
+                  <a href="https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights&hl=en&gl=US" target="_blank"><img src="media/googlePlay.png" class="google-play" width="170" height="75" alt="Google Play Logo"></a>
                 </div>  
-                  <a href="#sign-up-form">
+                  <a href="#sign-up">
                     <i class="fas fa-angle-down fa-3x bounce"></i>
                   </a>
               </div>
@@ -79,10 +79,11 @@
           </div>
         </header>
         <!-- SIGN UP -->
-        <section id="sign-up" style="background-image: url('https://images8.alphacoders.com/105/1056214.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <section id="sign-up" style="background-image: url('https://images6.alphacoders.com/875/875795.jpg'); background-repeat: no-repeat; background-position: center center;">
           <div class="sign-up-container d-flex h-100 align-items-center">
             <form class ="container" id="sign-up-form">
               <div class="form-group">
+                <h1 class="display-5 text-white text-center mb-4">Sign Up Now!</h1>
                 <label for="exampleInputEmail1" class="text-white">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
               </div>
@@ -92,7 +93,7 @@
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                <label class="form-check-label text-white" for="exampleCheck1">I agree to Arknight's <a href="#">Terms of Use</a>. To understand how we process your information, please refer to our <a href="#">Privacy Policy</a>.</label>
+                <label class="form-check-label text-white" for="exampleCheck1">I agree to Arknight's <a href="https://www.arknights.global/terms_of_service" target="_blank">Terms of Service</a>. To understand how we process your information, please refer to our <a href="https://www.arknights.global/privacy_policy" target="_blank" >Privacy Policy</a>.</label>
               </div>
               <button type="submit" class="btn btn-primary mt-2">Sign Up</button>
             </form>
