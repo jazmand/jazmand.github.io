@@ -71,7 +71,7 @@ header .overlay {
 
 header video {
   position: absolute;
-  top: 53.5%;
+  bottom: -70%;
   left: 50%;
   min-width: 100%;
   min-height: 100%;
