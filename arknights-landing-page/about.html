@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" 
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" 
     crossorigin="anonymous">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">    
+
     <title>Arknights</title>
   </head>
 
@@ -63,7 +66,7 @@
             <div class="container h-100">
               <div class="d-flex h-100 text-center align-items-center">
                 <div class="overlay-text w-100 text-white">
-                  <h1 class="display-5">About Arknights</h1>
+                  <h1 class="display-5"  data-aos="flip-left">About Arknights</h1>
                   <a href="#about">
                     <i class="fas fa-angle-down fa-3x bounce"></i>
                 </a>
@@ -72,26 +75,25 @@
             </div>
           </header>
         <!-- About Section-->  
-        <secction class="about text-justify">
-            <div class="row container-fluid">
-                <div class="col-sm-8">The game is set in the dystopian, post-apocalyptic future setting of the planet Terra, where humanesque lifeforms known as Ancients exhibit features of animals or mythological races. 
+        <section id="about" class="container text-justify">
+            <div class="row container-fluid ml-0 mr-0 mb-5 mt-5" data-aos="zoom-in-down">
+              <div class="col-sm-2 d-flex justify-content-center align-items-center"><i class="fas fa-mobile-alt fa-3x"></i></div>
+              <div class="col-sm-8 mt-3 border-top border-bottom border-dark">Arknights is a Chinese mobile tower defense gacha video game developed by Studio Montagne, Hypergryph. 
+                  It was first released in China on May 1st, 2019. Its global version was later released on 16 January 2020 by Yostar. 
+                  The game is available on iOS and Android platforms.</div>
+            </div>          
+            <div class="row container-fluid ml-0 mr-0 mb-5" data-aos="zoom-in-down">
+                <div class="col-sm-2 d-flex justify-content-center align-items-center"><i class="fas fa-bacteria fa-3x"></i></div>
+                <div class="col-sm-8 mt-3 border-top border-bottom border-dark">The game is set in the dystopian, post-apocalyptic future setting of the planet Terra, where humanesque lifeforms known as Ancients exhibit features of animals or mythological races. 
                     Natural disasters leave behind a valuable mineral, Originium, which enables the usage of Arts (the world's form of magic) and often infects people with a progressive disease, Oripathy. 
                     Due to the disease's 100% mortality rate, and its high infectivity at the time of death, hostility towards the Infected became widespread, leading to their mass quarantine and expulsion by governments worldwide, and sparking tensions between the Infected and non-Infected.</div>
-                <div class="col-sm-4"><i class="fas fa-bacteria fa-3x"></i></div>
             </div>
-            <div class="row container-fluid">
-                <div class="col-sm-4"><i class="fas fa-user-md fa-3x"></i></div>
-                <div class="col-sm-8">The player takes the role of the masked and amnesiac "Doctor", who had very recently recovered from cryonic sleep. The Doctor commands a team of "operators" contracted to Rhodes Island, a pharmaceutical, medical and self-defense organization. 
+            <div class="row container-fluid ml-0 mr-0 mb-5" data-aos="zoom-in-down">
+                <div class="col-sm-2 d-flex justify-content-center align-items-center"><i class="fas fa-user-md fa-3x"></i></div>
+                <div class="col-sm-8 mt-3 border-top border-bottom border-dark">The player takes the role of the masked and amnesiac "Doctor", who had very recently recovered from cryonic sleep. The Doctor commands a team of "operators" contracted to Rhodes Island, a pharmaceutical, medical and self-defense organization. 
                     As Oripathy spreads, the team must search for a cure while defending themselves against the Reunion Movement, an Infected anarchist military force bent on overthrowing the governments of Terra in revenge for persecuting Oripathy victims.</div>
             </div>
-            <div class="row container-fluid">
-                <div class="col-sm-2"><i class="fas fa-mobile-alt fa-3x"></i></div>
-                <div class="col-sm-8">Arknights is a Chinese mobile tower defense gacha video game developed by Studio Montagne, Hypergryph. 
-                    It was first released in China on May 1st, 2019. Its global version was later released on 16 January 2020 by Yostar. 
-                    The game is available on iOS and Android platforms.</div>
-                <div class="col-sm-2"><i class="fas fa-mobile-alt fa-3x"></i></div>
-            </div>
-        </secction>
+        </section>
     </main>
     <footer class="pt-1 pb-2 text-center align-items-center">
         <h6 class="copyright mb-0">A web page by Jazmand</h1>
@@ -112,5 +114,9 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

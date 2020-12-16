@@ -231,10 +231,35 @@ footer .copyright {
   }
 }
 
-.about i {
-  color: grey;
-  width: 100px !important;
-  height: 100px !important;
-  z-index: 2;
+#about {
+  padding: 2em;
+}
+
+#about .fa-mobile-alt {
+  color: orange;
+}
+
+#about .fa-bacteria {
+  color: green;
+}
+
+#about .fa-user-md {
+  color: blue;
+}
+
+#about .col-sm-8 {
+  padding: 1em;
+}
+
+@media (min-width: 768px) {
+  #about {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 1200px) {
+  #about {
+    font-size: 1.3em;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

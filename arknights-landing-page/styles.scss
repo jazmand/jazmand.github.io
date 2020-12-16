@@ -190,11 +190,24 @@ footer {
 }
 
 //about.html
-.about {
-  i {
-    color: grey;
-    width: 100px !important;
-    height: 100px !important;
-    z-index: 2;
+#about {
+  padding: 2em;
+  .fa-mobile-alt {
+    color: orange;
+  }
+  .fa-bacteria {
+    color: green;
+  }
+  .fa-user-md {
+    color: blue;
+  }
+  .col-sm-8 {
+    padding: 1em;
+  }
+  @include breakpoint-up(medium) {
+    font-size: 1.2em;
+  }
+  @include breakpoint-up(large) {
+    font-size: 1.3em;
   }
 }
