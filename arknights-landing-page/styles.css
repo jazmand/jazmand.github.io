@@ -71,7 +71,7 @@ header .overlay {
 
 header video {
   position: absolute;
-  bottom: -70%;
+  top: 53%;
   left: 50%;
   min-width: 100%;
   min-height: 100%;
@@ -208,6 +208,17 @@ footer {
 
 footer .copyright {
   color: #414850 !important;
+  font-size: 0.8em;
+}
+
+@media (min-width: 768px) {
+  footer .copyright {
+    font-size: 1.1em;
+  }
+  footer .footer-logo {
+    width: 300px;
+    height: 35px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -218,5 +229,12 @@ footer .copyright {
     width: 450px;
     height: 45px;
   }
+}
+
+.about i {
+  color: grey;
+  width: 100px !important;
+  height: 100px !important;
+  z-index: 2;
 }
 /*# sourceMappingURL=styles.css.map */
