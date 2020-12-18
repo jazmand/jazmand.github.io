@@ -1,9 +1,7 @@
-html {
+html, body {
   scroll-behavior: smooth;
-}
-
-html body {
   font-family: "Cinzel", serif !important;
+  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -255,11 +253,17 @@ footer .copyright {
   #about {
     font-size: 1.2em;
   }
+  #about .operator-set {
+    padding: 0em 2em;
+  }
 }
 
 @media (min-width: 1200px) {
   #about {
     font-size: 1.3em;
+  }
+  #about .operator-set {
+    padding: 0em 4em;
   }
 }
 /*# sourceMappingURL=styles.css.map */

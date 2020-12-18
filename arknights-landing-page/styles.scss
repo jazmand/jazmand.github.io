@@ -1,10 +1,10 @@
 @import "mixins";
-html {
+html, body{
   scroll-behavior: smooth;
-  body {
-    font-family: "Cinzel", serif !important;
-  }
+  font-family: "Cinzel", serif !important;
+  overflow-x: hidden;
 }
+
 .navbar {
   img {
     @include breakpoint-up(medium) {
@@ -206,8 +206,14 @@ footer {
   }
   @include breakpoint-up(medium) {
     font-size: 1.2em;
+    .operator-set {
+      padding: 0em 2em;
+    }
   }
   @include breakpoint-up(large) {
     font-size: 1.3em;
+    .operator-set {
+      padding: 0em 4em;
+    }
   }
 }
