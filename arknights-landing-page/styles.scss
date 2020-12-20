@@ -204,16 +204,22 @@ footer {
   .col-sm-8 {
     padding: 1em;
   }
-  #carouselExampleIndicators1 {
+  #carouselIndicators1 {
     margin-top: 10em;
   }
   .carousel-blurb {
     margin-bottom: 10em;
   }
+  .carousel-image {
+    height: 15em;
+  }
   @include breakpoint-up(medium) {
     font-size: 1.2em;
     .operator-set {
       padding: 0em 2em;
+    }
+    .carousel-image {
+      height: 23em;
     }
   }
   @include breakpoint-up(large) {
