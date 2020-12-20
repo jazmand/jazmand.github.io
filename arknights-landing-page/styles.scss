@@ -210,9 +210,6 @@ footer {
   .carousel-blurb {
     margin-bottom: 10em;
   }
-  .carousel-image {
-    height: 15em;
-  }
   @include breakpoint-up(medium) {
     font-size: 1.2em;
     .operator-set {
