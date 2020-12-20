@@ -249,6 +249,14 @@ footer .copyright {
   padding: 1em;
 }
 
+#about #carouselExampleIndicators1 {
+  margin-top: 10em;
+}
+
+#about .carousel-blurb {
+  margin-bottom: 10em;
+}
+
 @media (min-width: 768px) {
   #about {
     font-size: 1.2em;
