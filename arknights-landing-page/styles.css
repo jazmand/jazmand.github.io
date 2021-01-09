@@ -264,6 +264,9 @@ footer .copyright {
   #about .operator-set {
     padding: 0em 2em;
   }
+  #about .carousel-image {
+    height: 23em;
+  }
 }
 
 @media (min-width: 1200px) {
