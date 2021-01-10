@@ -145,98 +145,73 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10%;
   .flex-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 3em;
     @include breakpoint-max(medium) {
       flex-direction: column;
       font-size: 1rem;
+      margin-top: 1em;
     }
     @include breakpoint-max(small) {
       flex-direction: column;
       font-size: 0.8rem;
     }
-    .perspective {
-      perspective: 76em;
-      perspective-origin: 50% 50px;
-      width: 494px;
-      font-family: $english-font;
-      font-weight: 100;
-      color: #fff;
-      text-align: center;
-    }
-    input {
-      display: none;
-    }
-    .tab {
-      position: absolute;
-      width: 80px;
-      height: 70px;
-      background: pink;
-      right: 0;
-      line-height: 70px;
-      font-weight: 300;
 
-      &:nth-child(1) {
-        top: -5px;
-        background: #06d6a0;
-      }
-      &:nth-child(2) {
-        top: 69px;
-        background: #1b9aaa;
-      }
-      &:nth-child(3) {
-        top: 143px;
-        background: #ef476f;
-      }
+    //  Card flipper
+
+    .flip-container.hover .flipper {
+      transform: rotateY(180deg);
     }
-    .cube {
-      position: relative;
-      margin: 0px 95px 0;
-      @include length($width, $height);
-      transform-origin: 0 100px;
+
+    .flip-container,
+    .front,
+    .back {
+      width: 28em;
+      height: 26em;
+      margin-top: 3em;
+      padding: 2em;
+    }
+    .flipper {
+      transition: 0.8s;
       transform-style: preserve-3d;
-      transition: transform 0.5s ease-in;
-    }
-    .tab-content {
-      @include length($width, $height);
-      position: absolute;
-
-      &:nth-child(2) {
-        transform: translateZ(100px);
-        background: #1b9aaa;
+      position: relative;
+      .front,
+      .back {
+        backface-visibility: hidden;
+        position: absolute;
+        width: 100%;
+        height: 100%;
       }
-      &:nth-child(1) {
-        transform: rotateX(-270deg) translateY(-100px);
-        transform-origin: top left;
-        background: #06d6a0;
+      .front {
+        z-index: 2;
+        transform: rotateY(0deg);
       }
-      &:nth-child(3) {
-        transform: rotateX(-90deg) translateY(100px);
-        transform-origin: bottom center;
-        background: #ef476f;
+      .back {
+        transform: rotateY(180deg);
+      }
+      @include breakpoint-max(medium) {
+        flex-direction: column;
+        font-size: 1rem;
+      }
+      @include breakpoint-max(small) {
+        flex-direction: column;
+        font-size: 0.8rem;
       }
     }
-
-    #tab-top:checked ~ .cube {
-      transform: rotateX(-90deg);
-    }
-    #tab-front:checked ~ .cube {
-      transform: rotateX(0deg);
-    }
-    #tab-bottom:checked ~ .cube {
-      transform: rotateX(90deg);
-    }
+    
     .image-container {
-      width: 400px;
+      width: 300px;
       height: auto;
       @include breakpoint-max(medium) {
         width: 300px;
       }
       @include breakpoint-max(small) {
-        width: 200px;
+        width: 240px;
       }
       #profile-image {
         width: 100%;
@@ -246,17 +221,18 @@ h2 {
     }
     p {
       text-align: justify;
-      margin: 1em;
+      padding: 1em;
+      font-size: 1.2em;
     }
     .skill-list {
       list-style-position: inside;
       list-style: none;
-      margin: 1em;
-      @include breakpoint-max(medium) {
-        font-size: 0.85rem;
-      }
-      @include breakpoint-max(small) {
-        font-size: 0.65rem;
+      margin: 1rem;
+      h2 {
+        position: absolute;
+        top: -200px;
+        left: 150px;
+        margin: 0;
       }
       .category {
         color: $orange-color;
@@ -265,6 +241,15 @@ h2 {
       }
       .skill {
         font-family: $english-font;
+      }
+      @include breakpoint-max(medium) {
+        font-size: 1.1em;
+      }
+      @include breakpoint-max(small) {
+        font-size: 1em;
+        h2 {
+          top: -130px;
+        }
       }
     }
   }
