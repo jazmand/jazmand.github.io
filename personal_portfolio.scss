@@ -146,6 +146,41 @@ h2 {
   justify-content: center;
   align-items: center;
   padding: 10%;
+  .fa-reply {
+    position: absolute;
+    right: 80px;
+    transform: rotatex(180deg);
+  }
+  .fa-share {
+    position: absolute;
+    left: 80px;
+  }
+  @include breakpoint-max(medium) {
+    .fa-share {
+      position: absolute;
+      left: 120px;
+      top: 1350px;
+    }
+    .fa-reply {
+      position: absolute;
+      right: 120px;
+      top: 1800px;
+      transform: rotatex(180deg);
+    }
+  }
+  @include breakpoint-max(small) {
+    .fa-share {
+      position: absolute;
+      left: 60px;
+      top: 1200px;
+    }
+    .fa-reply {
+      position: absolute;
+      right: 60px;
+      top: 1550px;
+      transform: rotatex(180deg);
+    }
+  }
   .flex-container {
     display: flex;
     flex-direction: row;
@@ -252,7 +287,7 @@ h2 {
         }
       }
     }
-  }
+  }  
 }
 
 #projects {

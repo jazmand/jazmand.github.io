@@ -179,6 +179,48 @@ h2 {
   padding: 10%;
 }
 
+#about .fa-reply {
+  position: absolute;
+  right: 80px;
+  -webkit-transform: rotatex(180deg);
+          transform: rotatex(180deg);
+}
+
+#about .fa-share {
+  position: absolute;
+  left: 80px;
+}
+
+@media (max-width: 1024px) {
+  #about .fa-share {
+    position: absolute;
+    left: 120px;
+    top: 1350px;
+  }
+  #about .fa-reply {
+    position: absolute;
+    right: 120px;
+    top: 1800px;
+    -webkit-transform: rotatex(180deg);
+            transform: rotatex(180deg);
+  }
+}
+
+@media (max-width: 640px) {
+  #about .fa-share {
+    position: absolute;
+    left: 60px;
+    top: 1200px;
+  }
+  #about .fa-reply {
+    position: absolute;
+    right: 60px;
+    top: 1550px;
+    -webkit-transform: rotatex(180deg);
+            transform: rotatex(180deg);
+  }
+}
+
 #about .flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
