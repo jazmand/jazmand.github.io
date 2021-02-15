@@ -459,8 +459,31 @@ h2 {
   }
 }
 
-#arrow-up {
-  position: absolute;
-  right: 0;
-  font-size: 3rem;
+footer {
+  position: fixed;
+  bottom: 0px;
+  padding: 5em;
+  right: 4em;
+  #arrow-up {
+    position: absolute;
+    right: 0px;
+    font-size: 3rem;
+    cursor: pointer;
+  }
+
+  .bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }  
 }
