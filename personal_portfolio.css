@@ -176,31 +176,33 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10%;
+  padding: 5%;
 }
 
 #about .fa-reply {
   position: absolute;
-  right: 80px;
+  top: 300px;
+  right: 170px;
   -webkit-transform: rotatex(180deg);
           transform: rotatex(180deg);
 }
 
 #about .fa-share {
   position: absolute;
-  left: 80px;
+  top: -160px;
+  right: 170px;
 }
 
 @media (max-width: 1024px) {
   #about .fa-share {
     position: absolute;
-    left: 120px;
-    top: 1350px;
+    top: -50px;
+    left: -10px;
   }
   #about .fa-reply {
     position: absolute;
-    right: 120px;
-    top: 1800px;
+    top: 180px;
+    left: 350px;
     -webkit-transform: rotatex(180deg);
             transform: rotatex(180deg);
   }
@@ -209,13 +211,13 @@ h2 {
 @media (max-width: 640px) {
   #about .fa-share {
     position: absolute;
-    left: 60px;
-    top: 1200px;
+    top: -40px;
+    left: -10px;
   }
   #about .fa-reply {
     position: absolute;
-    right: 60px;
-    top: 1550px;
+    top: 140px;
+    left: 280px;
     -webkit-transform: rotatex(180deg);
             transform: rotatex(180deg);
   }

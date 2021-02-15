@@ -145,39 +145,42 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10%;
+  padding: 5%;
   .fa-reply {
     position: absolute;
-    right: 80px;
+    top: 300px;
+    right: 170px;
     transform: rotatex(180deg);
   }
   .fa-share {
     position: absolute;
-    left: 80px;
+    top: -160px;
+    right: 170px;
   }
   @include breakpoint-max(medium) {
     .fa-share {
       position: absolute;
-      left: 120px;
-      top: 1350px;
+      top: -50px;
+      left: -10px;
+
     }
     .fa-reply {
       position: absolute;
-      right: 120px;
-      top: 1800px;
+      top: 180px;
+      left: 350px;
       transform: rotatex(180deg);
     }
   }
   @include breakpoint-max(small) {
     .fa-share {
       position: absolute;
-      left: 60px;
-      top: 1200px;
+      top: -40px;
+      left: -10px;
     }
     .fa-reply {
       position: absolute;
-      right: 60px;
-      top: 1550px;
+      top: 140px;
+      left: 280px;
       transform: rotatex(180deg);
     }
   }
