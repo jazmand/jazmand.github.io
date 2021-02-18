@@ -67,6 +67,10 @@ body {
   }
 }
 
+#navbar li:hover {
+  cursor: pointer;
+}
+
 #navbar li:hover .rainbow-code {
   background: linear-gradient(60deg, #5acef2 0%, #5be7c3 25%, #ff8062 50%, #f1b170 75%, #5acef2 100%);
   background-clip: text;
@@ -176,7 +180,6 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5%;
 }
 
 #about .fa-reply {
@@ -467,6 +470,7 @@ h2 {
   border-radius: 50%;
   width: 250px;
   height: 250px;
+  z-index: 1;
 }
 
 @media (max-width: 1024px) {
@@ -514,7 +518,6 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 5%;
 }
 
 #contact .contact-form {
@@ -638,15 +641,29 @@ h2 {
 footer {
   position: fixed;
   bottom: 0px;
-  padding: 5em;
-  right: 4em;
+  right: 0px;
 }
 
 footer #arrow-up {
   position: absolute;
-  right: 0px;
-  font-size: 3rem;
+  right: 0em;
+  bottom: 0em;
+  font-size: 5rem;
   cursor: pointer;
+  z-index: 2;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  footer #arrow-up {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  footer #arrow-up {
+    font-size: 3rem;
+  }
 }
 
 footer .bounce {
