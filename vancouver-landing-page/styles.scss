@@ -154,11 +154,11 @@ header {
                     color: #4267B2;
                 }
                 .fa-instagram {
-                    background: #d6249f;
-                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-                    background-clip: text; 
+                    color: transparent;
+                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                    background-clip: text;
                     -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
                 }
             }
         }
@@ -182,7 +182,7 @@ header {
 }
 @media (max-width: 640px) {
     .showcase, header {
-        padding: 30px;
+        padding: 20px;
         .text h2 {
             font-size: 3em;
         }
