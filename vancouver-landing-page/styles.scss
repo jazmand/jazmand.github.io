@@ -24,18 +24,24 @@ header {
         cursor: pointer;
         position: relative;
         display: flex;
-        align-items: center;       
+        align-items: center;  
+        transition: 0.4s ease-out;
+        &:hover {
+            color: transparent;
+            background: linear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
+            background: -webkitlinear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }  
     }
     .toggleBlack{
         color: black;
     }  
     .logo {
         @extend .toggle;
-        text-transform: uppercase;
         transition: 0.4s ease-out;
-        font-style: italic;
         &:hover {
-            letter-spacing: 6px;
+            color: red;
         }
     }  
 }
@@ -67,7 +73,7 @@ header {
     right: 300px;
 }  
 .showcase {
-    position: absolute;
+    position: relative;
     right: 0;
     width: 100%;
     min-height: 100vh;
@@ -166,6 +172,28 @@ header {
 } 
 
 //about section
+.about {
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    color: black;
+    h2 {
+        font-size: 5em;
+        font-weight: 800;
+        line-height: 1em;
+        text-transform: uppercase;
+    }                 
+    p {
+        font-size: 1.1em;
+        margin: 20px 0;
+        font-weight: 400;
+        max-width: 700px;
+    }
+    
+}
 
 // explore section 
 
@@ -173,17 +201,17 @@ header {
 
 
 @media (max-width: 1024px) {
-    .showcase, header {
+    header, .showcase, .about {
         padding: 50px;
-        .text h2 {
+        h2 {
             font-size: 4em;
         }
     }
 }
 @media (max-width: 640px) {
-    .showcase, header {
+    header, .showcase, .about {
         padding: 20px;
-        .text h2 {
+        h2 {
             font-size: 3em;
         }
     }
