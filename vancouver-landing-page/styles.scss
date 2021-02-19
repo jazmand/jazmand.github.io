@@ -177,7 +177,7 @@ header {
     min-height: 100vh;
     padding: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
     color: black;
     h2 {
@@ -185,12 +185,15 @@ header {
         font-weight: 800;
         line-height: 1em;
         text-transform: uppercase;
+        text-align: center;
     }                 
     p {
         font-size: 1.1em;
         margin: 20px 0;
         font-weight: 400;
         max-width: 700px;
+        text-align: justify;
+        text-justify: inter-character;
     }
     
 }
@@ -198,25 +201,24 @@ header {
 // explore section 
 
 // contact section
-
-
-@media (max-width: 1024px) {
+@include breakpoint-max(medium) {
     header, .showcase, .about {
-        padding: 50px;
+        padding: 40px;
         h2 {
-            font-size: 4em;
+            font-size: 4em !important;
         }
     }
 }
-@media (max-width: 640px) {
+@include breakpoint-max(small) {
     header, .showcase, .about {
         padding: 20px;
         h2 {
-            font-size: 3em;
+            font-size: 3em !important;
         }
     }
-
 }
+
+
 
 
 
