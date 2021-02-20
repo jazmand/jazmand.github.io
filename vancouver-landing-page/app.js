@@ -1,17 +1,16 @@
-const menuToggle = document.querySelector('.toggle')
+const toggleOpen = document.querySelector('.toggle')
+const toggleClose = document.querySelector('.toggleClose')
 const logo = document.querySelector('.logo')
-const showcase = document.querySelector('.showcase')
-const icon = document.querySelector('.fa-bars')
-const aboutMenu = document.querySelector('.aboutMenu')
 
-menuToggle.addEventListener('click', () => {
-    showcase.classList.toggle('active')
-    icon.classList.toggle('fa-hamburger')
-    menuToggle.classList.toggle('toggleBlack')
+toggleOpen.addEventListener('click', () => {
+    document.getElementById("sideNav").style.width = "250px";
+});
+
+toggleClose.addEventListener('click', () => {
+    document.getElementById("sideNav").style.width = "0";
 });
 
 logo.addEventListener('click', () => {
     window.scrollTo(0, 0);
 });
-
 

@@ -37,55 +37,54 @@ header .toggle, header .logo {
           align-items: center;
   -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
-}
-
-header .toggleBlack {
-  color: black;
-}
-
-header .logo {
-  -webkit-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
-}
-
-header .logo:hover {
   color: red;
 }
 
-.menu {
-  position: absolute;
+header .logo {
+  color: red;
+}
+
+#sideNav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2000;
   top: 0;
   right: 0;
-  width: 300px;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 20em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.menu ul {
-  position: relative;
-  list-style: none;
-}
-
-.menu ul li a {
+#sideNav a {
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 24px;
-  color: #111;
+  font-size: 2em;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.menu ul li a:hover {
-  color: #52442b;
+#sideNav a:hover {
+  color: #000000;
 }
 
-.showcase.active {
-  right: 300px;
+#sideNav .toggleClose {
+  position: absolute;
+  top: 45px;
+  right: 35px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: transparent;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left bottom, left top, from(#e5cb7a), color-stop(45%, #450101), color-stop(45%, #32c704), color-stop(60%, #e5cb7a));
+  background: linear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
+  background: -webkitlinear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .showcase {

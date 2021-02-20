@@ -26,53 +26,50 @@ header {
         position: relative;
         display: flex;
         align-items: center;  
-        transition: 0.4s ease-out;
-        // &:hover {
-        //     color: transparent;
-        //     background: linear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
-        //     background: -webkitlinear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
-        //     background-clip: text;
-        //     -webkit-background-clip: text;
-        // }  
+        transition: 0.4s ease-out; 
+        color: red;
     }
-    .toggleBlack{
-        color: black;
-    }  
     .logo {
         @extend .toggle;
-        transition: 0.4s ease-out;
-        &:hover {
-            color: red;
-        }
+        color: red;
     }  
 }
-.menu {
-    position: absolute;
-    top: 0;
+#sideNav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 2000; 
+    top: 0; 
     right: 0;
-    width: 300px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    ul {
-        position: relative;
-        list-style: none;
-        li a {
+    background-color: white; 
+    overflow-x: hidden; 
+    padding-top: 20em; 
+    transition: 0.5s; 
+        a {
+            padding: 8px 8px 8px 32px;
             text-decoration: none;
-            font-size: 24px;
-            color: #111;
+            font-size: 2em;
+            color: #818181;
+            display: block;
+            transition: 0.3s;   
             &:hover {
-                color: #52442b;
-            }
+                color: #000000;
+            }    
         }
-    }
+        .toggleClose {
+            position: absolute;
+            top: 45px;
+            right: 35px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: transparent;
+            cursor: pointer;
+            background: linear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
+            background: -webkitlinear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
 }
-
-// video showcase section
-.showcase.active {
-    right: 300px;
-}  
 
 .showcase {
     position: relative;
