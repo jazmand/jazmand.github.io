@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: $libre;
+    scroll-behavior: smooth;
 }
 
 // fixed navbar + menu
@@ -26,13 +27,13 @@ header {
         display: flex;
         align-items: center;  
         transition: 0.4s ease-out;
-        &:hover {
-            color: transparent;
-            background: linear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
-            background: -webkitlinear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
-            background-clip: text;
-            -webkit-background-clip: text;
-        }  
+        // &:hover {
+        //     color: transparent;
+        //     background: linear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
+        //     background: -webkitlinear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
+        //     background-clip: text;
+        //     -webkit-background-clip: text;
+        // }  
     }
     .toggleBlack{
         color: black;
@@ -72,6 +73,7 @@ header {
 .showcase.active {
     right: 300px;
 }  
+
 .showcase {
     position: relative;
     right: 0;
@@ -172,7 +174,7 @@ header {
 } 
 
 //about section
-.about {
+#about {
     width: 100%;
     min-height: 100vh;
     padding: 100px;
@@ -202,7 +204,7 @@ header {
 
 // contact section
 @include breakpoint-max(medium) {
-    header, .showcase, .about {
+    header, .showcase, #about {
         padding: 40px;
         h2 {
             font-size: 4em !important;
@@ -210,7 +212,7 @@ header {
     }
 }
 @include breakpoint-max(small) {
-    header, .showcase, .about {
+    header, .showcase, #about {
         padding: 20px;
         h2 {
             font-size: 3em !important;

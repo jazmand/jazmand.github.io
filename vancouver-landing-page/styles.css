@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   font-family: "Libre Baskerville", serif;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -36,15 +37,6 @@ header .toggle, header .logo {
           align-items: center;
   -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
-}
-
-header .toggle:hover, header .logo:hover {
-  color: transparent;
-  background: -webkit-gradient(linear, left bottom, left top, from(#e5cb7a), color-stop(45%, #450101), color-stop(45%, #32c704), color-stop(60%, #e5cb7a));
-  background: linear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
-  background: -webkitlinear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 header .toggleBlack {
@@ -227,7 +219,7 @@ header .logo:hover {
   -webkit-background-clip: text;
 }
 
-.about {
+#about {
   width: 100%;
   min-height: 100vh;
   padding: 100px;
@@ -243,7 +235,7 @@ header .logo:hover {
   color: black;
 }
 
-.about h2 {
+#about h2 {
   font-size: 5em;
   font-weight: 800;
   line-height: 1em;
@@ -251,7 +243,7 @@ header .logo:hover {
   text-align: center;
 }
 
-.about p {
+#about p {
   font-size: 1.1em;
   margin: 20px 0;
   font-weight: 400;
@@ -261,19 +253,19 @@ header .logo:hover {
 }
 
 @media (max-width: 1024px) {
-  header, .showcase, .about {
+  header, .showcase, #about {
     padding: 40px;
   }
-  header h2, .showcase h2, .about h2 {
+  header h2, .showcase h2, #about h2 {
     font-size: 4em !important;
   }
 }
 
 @media (max-width: 640px) {
-  header, .showcase, .about {
+  header, .showcase, #about {
     padding: 20px;
   }
-  header h2, .showcase h2, .about h2 {
+  header h2, .showcase h2, #about h2 {
     font-size: 3em !important;
   }
 }
