@@ -1,3 +1,7 @@
+// smooth scrolling for safari
+import smoothscrollPolyfill from 'smoothscroll-polyfill';
+smoothscrollPolyfill.polyfill();
+
 
 // header background color change
 window.onscroll = () =>{
