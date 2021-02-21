@@ -1,4 +1,4 @@
-//Screen sizes
+//Screen sizes/breakpoints
 $breakpoints-max: (
   "small": 640px,
   "medium": 1024px,
@@ -10,3 +10,4 @@ $breakpoints-max: (
     @content;
   }
 }
+

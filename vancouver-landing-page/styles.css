@@ -45,8 +45,22 @@
   color: red;
 }
 
+#header .toggle:hover, #header .logo:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+}
+
 #header .logo {
   color: red;
+}
+
+#header .logo:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
 }
 
 #sideNav {
@@ -56,25 +70,26 @@
   z-index: 2000;
   top: 0;
   right: 0;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.568);
   overflow-x: hidden;
-  padding-top: 20em;
+  padding-top: 300px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-#sideNav a {
+#sideNav .aboutMenu, #sideNav .exploreMenu, #sideNav .contactMenu {
+  cursor: pointer;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 2em;
-  color: #818181;
+  color: white;
   display: block;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-#sideNav a:hover {
-  color: #000000;
+#sideNav .aboutMenu:hover, #sideNav .exploreMenu:hover, #sideNav .contactMenu:hover {
+  color: #52442b;
 }
 
 #sideNav .toggleClose {
@@ -90,9 +105,22 @@
   background: -webkitlinear-gradient(0deg, #e5cb7a 0%, #450101 45%, #32c704 45%, #e5cb7a 60%);
   background-clip: text;
   -webkit-background-clip: text;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
 }
 
-.showcase {
+#sideNav .toggleClose:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+}
+
+section {
+  margin-bottom: 5em;
+}
+
+#showcase {
   position: relative;
   right: 0;
   width: 100%;
@@ -114,7 +142,7 @@
   transition: 0.5s;
 }
 
-.showcase video {
+#showcase video {
   position: absolute;
   top: 0;
   left: 0;
@@ -125,7 +153,7 @@
   opacity: 0.8;
 }
 
-.showcase .overlay {
+#showcase .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -135,26 +163,27 @@
   mix-blend-mode: overlay;
 }
 
-.showcase .text {
+#showcase .text {
   position: relative;
   z-index: 10;
 }
 
-.showcase .text h2 {
+#showcase .text h2 {
   font-size: 5em;
   font-weight: 800;
   line-height: 1em;
   text-transform: uppercase;
 }
 
-.showcase .text p {
+#showcase .text p {
   font-size: 1.1em;
   margin: 20px 0;
   font-weight: 400;
   max-width: 700px;
 }
 
-.showcase .text a {
+#showcase .text a {
+  cursor: pointer;
   display: inline-block;
   font-size: 1em;
   background: #fff;
@@ -169,11 +198,11 @@
   font-weight: 600;
 }
 
-.showcase .text a:hover {
+#showcase .text a:hover {
   letter-spacing: 6px;
 }
 
-.showcase .social {
+#showcase .social {
   position: absolute;
   bottom: 20px;
   z-index: 10;
@@ -188,11 +217,11 @@
           align-items: center;
 }
 
-.showcase .social li {
+#showcase .social li {
   list-style: none;
 }
 
-.showcase .social li a {
+#showcase .social li a {
   display: inline-block;
   margin-right: 20px;
   -webkit-transform: scale(0.5);
@@ -201,21 +230,21 @@
   transition: 0.5s;
 }
 
-.showcase .social li a:hover {
+#showcase .social li a:hover {
   -webkit-transform: scale(0.5) translateY(-15px);
           transform: scale(0.5) translateY(-15px);
   cursor: pointer;
 }
 
-.showcase .social li a .fa-twitter {
+#showcase .social li a .fa-twitter {
   color: #1DA1F2;
 }
 
-.showcase .social li a .fa-facebook-square {
+#showcase .social li a .fa-facebook-square {
   color: #4267B2;
 }
 
-.showcase .social li a .fa-instagram {
+#showcase .social li a .fa-instagram {
   color: transparent;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
@@ -223,7 +252,7 @@
   -webkit-background-clip: text;
 }
 
-#about {
+#about, #explore, #contact {
   width: 100%;
   min-height: 100vh;
   padding: 100px;
@@ -239,7 +268,7 @@
   color: black;
 }
 
-#about h2 {
+#about h2, #explore h2, #contact h2 {
   font-size: 5em;
   font-weight: 800;
   line-height: 1em;
@@ -247,29 +276,160 @@
   text-align: center;
 }
 
-#about p {
+#about p, #explore p, #contact p {
   font-size: 1.1em;
   margin: 20px 0;
   font-weight: 400;
-  max-width: 700px;
   text-align: justify;
   text-justify: inter-character;
 }
 
-@media (max-width: 1024px) {
-  header, .showcase, #about {
-    padding: 40px;
+#about {
+  /* Hide the images by default */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* The dots/bullets/indicators */
+  /* Fading animation */
+}
+
+#about .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+#about .mySlides {
+  display: none;
+}
+
+#about .prev, #about .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#about .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+#about .prev:hover, #about .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#about .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+#about .active, #about .dot:hover {
+  background-color: #717171;
+}
+
+#about .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
   }
-  header h2, .showcase h2, #about h2 {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5em;
+  background-color: rgba(0, 0, 0, 0.568);
+  font-weight: 800;
+}
+
+footer .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1em;
+}
+
+footer .flex ul {
+  list-style: none;
+}
+
+footer .flex ul:nth-child(1) {
+  margin-right: 2em;
+}
+
+footer .flex ul:nth-child(2) {
+  margin-left: 2em;
+}
+
+@media (max-width: 1024px) {
+  #showcase, #about, #explore, #contact {
+    padding: 30px;
+  }
+  #showcase h2, #about h2, #explore h2, #contact h2 {
     font-size: 4em !important;
   }
 }
 
 @media (max-width: 640px) {
-  header, .showcase, #about {
+  #showcase, #about, #explore, #contact {
     padding: 20px;
   }
-  header h2, .showcase h2, #about h2 {
+  #showcase h2, #about h2, #explore h2, #contact h2 {
     font-size: 3em !important;
   }
 }
