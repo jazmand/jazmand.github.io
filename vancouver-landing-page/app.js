@@ -1,3 +1,7 @@
+//smooth scrolling for safari
+import smoothscroll from 'smoothscroll-polyfill';
+smoothscroll.polyfill();
+
 // header background color change
 window.onscroll = () =>{
     const header = document.getElementById('header');
@@ -32,7 +36,6 @@ document.querySelector('.learnMore').addEventListener('click', () => {
     const finalPosition = elementPosition - offset;
     window.scrollTo({
     top: finalPosition,
-    behavior: 'smooth'
     });
 });
 
@@ -43,7 +46,6 @@ document.querySelector('.aboutMenu').addEventListener('click', () => {
     const finalPosition = elementPosition - offset;
     window.scrollTo({
     top: finalPosition,
-    behavior: 'smooth'
     });
 });
 
@@ -53,7 +55,6 @@ document.querySelector('.exploreMenu').addEventListener('click', () => {
     const finalPosition = elementPosition - offset;
     window.scrollTo({
     top: finalPosition,
-    behavior: 'smooth'
     });
 });
 
@@ -63,7 +64,6 @@ document.querySelector('.contactMenu').addEventListener('click', () => {
     const finalPosition = elementPosition - offset;
     window.scrollTo({
     top: finalPosition,
-    behavior: 'smooth'
     });
 });
 
