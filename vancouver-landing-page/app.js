@@ -26,20 +26,28 @@ document.querySelector('.logo').addEventListener('click', () => {
 
 // Learn more scroll
 document.querySelector('.learnMore').addEventListener('click', () => {
-    document.getElementById('about').scrollIntoView();
+    document.getElementById('about').scrollIntoView({
+        behavior: "smooth"
+    });
 });
 
 // menu click scrolling
 document.querySelector('.aboutMenu').addEventListener('click', () => {
-    document.getElementById('about').scrollIntoView();
+    document.getElementById('about').scrollIntoView({
+        behavior: "smooth"
+    });
 });
 
 document.querySelector('.exploreMenu').addEventListener('click', () => {
-    document.getElementById('explore').scrollIntoView();
+    document.getElementById('explore').scrollIntoView({
+        behavior: "smooth"
+    });
 });
 
 document.querySelector('.contactMenu').addEventListener('click', () => {
-    window.scrollTo(0,document.body.scrollHeight);
+    document.getElementById('contact').scrollIntoView({
+        behavior: "smooth"
+    });
 });
 
 
