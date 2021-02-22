@@ -24,71 +24,63 @@ document.querySelector('.logo').addEventListener('click', () => {
 });
 
 
-// Learn more scroll
+// // Learn more scroll
+// document.querySelector('.learnMore').addEventListener('click', () => {
+//     document.getElementById('about').scrollIntoView();
+// });
+
+// // menu click scrolling
+// document.querySelector('.aboutMenu').addEventListener('click', () => {
+//     document.getElementById('about').scrollIntoView();
+// });
+
+// document.querySelector('.exploreMenu').addEventListener('click', () => {
+//     document.getElementById('explore').scrollIntoView();
+// });
+
+// document.querySelector('.contactMenu').addEventListener('click', () => {
+//     document.getElementById('contact').scrollIntoView();
+// });
+
+
+// learn more scroll with offset
+const offset = 78;
 document.querySelector('.learnMore').addEventListener('click', () => {
-    document.getElementById('about').scrollIntoView({
-        behavior: "smooth"
+    const element = document.getElementById('about');
+    const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+    const finalPosition = elementPosition - offset;
+    window.scrollTo({
+    top: finalPosition,
     });
 });
 
-// menu click scrolling
+// menu click scrolls with offset
 document.querySelector('.aboutMenu').addEventListener('click', () => {
-    document.getElementById('about').scrollIntoView({
-        behavior: "smooth"
+    const element = document.getElementById('about');
+    const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+    const finalPosition = elementPosition - offset;
+    window.scrollTo({
+    top: finalPosition,
     });
 });
 
 document.querySelector('.exploreMenu').addEventListener('click', () => {
-    document.getElementById('explore').scrollIntoView({
-        behavior: "smooth"
+    const element = document.getElementById('explore');
+    const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+    const finalPosition = elementPosition - offset;
+    window.scrollTo({
+    top: finalPosition,
     });
 });
 
 document.querySelector('.contactMenu').addEventListener('click', () => {
-    document.getElementById('contact').scrollIntoView({
-        behavior: "smooth"
+    const element = document.getElementById('contact');
+    const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+    const finalPosition = elementPosition - offset;
+    window.scrollTo({
+    top: finalPosition,
     });
 });
-
-
-// // learn more scroll with offset
-// const offset = 78;
-// document.querySelector('.learnMore').addEventListener('click', () => {
-//     const element = document.getElementById('about');
-//     const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-//     const finalPosition = elementPosition - offset;
-//     window.scrollTo({
-//     top: finalPosition,
-//     });
-// });
-
-// // menu click scrolls with offset
-// document.querySelector('.aboutMenu').addEventListener('click', () => {
-//     const element = document.getElementById('about');
-//     const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-//     const finalPosition = elementPosition - offset;
-//     window.scrollTo({
-//     top: finalPosition,
-//     });
-// });
-
-// document.querySelector('.exploreMenu').addEventListener('click', () => {
-//     const element = document.getElementById('explore');
-//     const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-//     const finalPosition = elementPosition - offset;
-//     window.scrollTo({
-//     top: finalPosition,
-//     });
-// });
-
-// document.querySelector('.contactMenu').addEventListener('click', () => {
-//     const element = document.getElementById('footer');
-//     const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-//     const finalPosition = elementPosition - offset;
-//     window.scrollTo({
-//     top: finalPosition,
-//     });
-// });
 
 
 // slideshow
