@@ -44,8 +44,8 @@ document.querySelector('.logo').addEventListener('click', () => {
 
 
 // learn more scroll with offset
-const offset = 78;
 document.querySelector('.learnMore').addEventListener('click', () => {
+    const offset = 30;
     const element = document.getElementById('about');
     const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
     const finalPosition = elementPosition - offset;
@@ -56,6 +56,7 @@ document.querySelector('.learnMore').addEventListener('click', () => {
 
 // menu click scrolls with offset
 document.querySelector('.aboutMenu').addEventListener('click', () => {
+    const offset = 30;
     const element = document.getElementById('about');
     const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
     const finalPosition = elementPosition - offset;
@@ -65,6 +66,7 @@ document.querySelector('.aboutMenu').addEventListener('click', () => {
 });
 
 document.querySelector('.exploreMenu').addEventListener('click', () => {
+    const offset = 78;
     const element = document.getElementById('explore');
     const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
     const finalPosition = elementPosition - offset;
@@ -74,6 +76,7 @@ document.querySelector('.exploreMenu').addEventListener('click', () => {
 });
 
 document.querySelector('.contactMenu').addEventListener('click', () => {
+    const offset = 70;
     const element = document.getElementById('contact');
     const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
     const finalPosition = elementPosition - offset;
