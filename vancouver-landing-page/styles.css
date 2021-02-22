@@ -186,10 +186,10 @@ section {
   cursor: pointer;
   display: inline-block;
   font-size: 1em;
-  background: #fff;
+  background: white;
   padding: 10px 30px;
   text-decoration: none;
-  color: #111;
+  color: black;
   margin-top: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -254,7 +254,7 @@ section {
 
 #about, #explore, #contact {
   width: 100%;
-  min-height: 100vh;
+  min-height: 85vh;
   padding: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -262,9 +262,9 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: black;
 }
 
@@ -277,20 +277,11 @@ section {
 }
 
 #about p, #explore p, #contact p {
-  font-size: 1.1em;
+  font-size: 1.5em;
   margin: 20px 0;
   font-weight: 400;
   text-align: justify;
   text-justify: inter-character;
-}
-
-#about {
-  /* Hide the images by default */
-  /* Next & previous buttons */
-  /* Position the "next button" to the right */
-  /* On hover, add a black background color with a little bit see-through */
-  /* The dots/bullets/indicators */
-  /* Fading animation */
 }
 
 #about .slideshow-container {
@@ -299,11 +290,11 @@ section {
   margin: auto;
 }
 
-#about .mySlides {
+#about .slideshow-container .mySlides {
   display: none;
 }
 
-#about .prev, #about .next {
+#about .slideshow-container .prev, #about .slideshow-container .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -322,32 +313,16 @@ section {
           user-select: none;
 }
 
-#about .next {
+#about .slideshow-container .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-#about .prev:hover, #about .next:hover {
+#about .slideshow-container .prev:hover, #about .slideshow-container .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-#about .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  -webkit-transition: background-color 0.6s ease;
-  transition: background-color 0.6s ease;
-}
-
-#about .active, #about .dot:hover {
-  background-color: #717171;
-}
-
-#about .fade {
+#about .slideshow-container .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
@@ -372,6 +347,94 @@ section {
   }
 }
 
+#about .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+#about .dot:hover, #about .active {
+  background-color: #717171;
+}
+
+#about p {
+  max-width: 60em;
+}
+
+#explore {
+  background-color: #52442bb0;
+}
+
+#explore .flex .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+#explore .flex .container .blurb {
+  font-size: 1.5em;
+}
+
+#explore .flex .container .overlay:hover {
+  background: #52442b;
+  mix-blend-mode: overlay;
+}
+
+#explore .flex .container .overlay:hover span {
+  color: white;
+}
+
+#contact .contact-form {
+  border: 3px solid #52442b;
+  margin-bottom: 5em;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 4px 10px #52442b;
+          box-shadow: 0px 4px 10px #52442b;
+}
+
+#contact .contact-form form {
+  margin: 35px;
+}
+
+#contact .contact-form form .form-input {
+  width: 100%;
+  height: 3em;
+  margin-bottom: 1.5em;
+  padding: 5px;
+}
+
+#contact .contact-form form textarea {
+  line-height: 150%;
+  resize: vertical;
+}
+
+#contact .contact-form form #submit-button {
+  width: 100%;
+  padding: 10px;
+}
+
+#contact .contact-form form #submit-button:hover {
+  background-color: rgba(250, 0, 0, 0.699);
+}
+
+#contact .contact-form form #mailto {
+  text-align: center;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,9 +449,8 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0.5em;
   background-color: rgba(0, 0, 0, 0.568);
-  font-weight: 800;
+  font-weight: 200;
 }
 
 footer .flex {
@@ -405,6 +467,7 @@ footer .flex {
 }
 
 footer .flex ul {
+  padding-top: 0.2em;
   list-style: none;
 }
 
@@ -418,19 +481,28 @@ footer .flex ul:nth-child(2) {
 
 @media (max-width: 1024px) {
   #showcase, #about, #explore, #contact {
-    padding: 30px;
+    padding: 40px;
   }
   #showcase h2, #about h2, #explore h2, #contact h2 {
     font-size: 4em !important;
+  }
+  #showcase .blurb, #about .blurb, #explore .blurb, #contact .blurb {
+    font-size: 1em !important;
+  }
+  #showcase #mailto, #about #mailto, #explore #mailto, #contact #mailto {
+    font-size: smaller;
   }
 }
 
 @media (max-width: 640px) {
   #showcase, #about, #explore, #contact {
-    padding: 20px;
+    padding: 30px;
   }
   #showcase h2, #about h2, #explore h2, #contact h2 {
     font-size: 3em !important;
+  }
+  #showcase .blurb, #about .blurb, #explore .blurb, #contact .blurb {
+    font-size: 0.8em !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */

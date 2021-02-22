@@ -24,56 +24,73 @@ document.querySelector('.logo').addEventListener('click', () => {
 });
 
 
-// learn more scroll with offset
-const offset = 64;
+// Learn more scroll
 document.querySelector('.learnMore').addEventListener('click', () => {
-    const element = document.getElementById('about');
-    const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-    const finalPosition = elementPosition - offset;
-    window.scrollTo({
-    top: finalPosition,
-    });
+    document.getElementById('about').scrollIntoView();
 });
 
-// menu click scrolls with offset
+// menu click scrolling
 document.querySelector('.aboutMenu').addEventListener('click', () => {
-    const element = document.getElementById('about');
-    const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-    const finalPosition = elementPosition - offset;
-    window.scrollTo({
-    top: finalPosition,
-    });
+    document.getElementById('about').scrollIntoView();
 });
 
 document.querySelector('.exploreMenu').addEventListener('click', () => {
-    const element = document.getElementById('explore');
-    const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-    const finalPosition = elementPosition - offset;
-    window.scrollTo({
-    top: finalPosition,
-    });
+    document.getElementById('explore').scrollIntoView();
 });
 
 document.querySelector('.contactMenu').addEventListener('click', () => {
-    const element = document.getElementById('contact');
-    const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
-    const finalPosition = elementPosition - offset;
-    window.scrollTo({
-    top: finalPosition,
-    });
+    window.scrollTo(0,document.body.scrollHeight);
 });
+
+
+// // learn more scroll with offset
+// const offset = 78;
+// document.querySelector('.learnMore').addEventListener('click', () => {
+//     const element = document.getElementById('about');
+//     const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+//     const finalPosition = elementPosition - offset;
+//     window.scrollTo({
+//     top: finalPosition,
+//     });
+// });
+
+// // menu click scrolls with offset
+// document.querySelector('.aboutMenu').addEventListener('click', () => {
+//     const element = document.getElementById('about');
+//     const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+//     const finalPosition = elementPosition - offset;
+//     window.scrollTo({
+//     top: finalPosition,
+//     });
+// });
+
+// document.querySelector('.exploreMenu').addEventListener('click', () => {
+//     const element = document.getElementById('explore');
+//     const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+//     const finalPosition = elementPosition - offset;
+//     window.scrollTo({
+//     top: finalPosition,
+//     });
+// });
+
+// document.querySelector('.contactMenu').addEventListener('click', () => {
+//     const element = document.getElementById('footer');
+//     const elementPosition = element.getBoundingClientRect().top - document.body.getBoundingClientRect().top;
+//     const finalPosition = elementPosition - offset;
+//     window.scrollTo({
+//     top: finalPosition,
+//     });
+// });
 
 
 // slideshow
 var slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
 function plusSlides(n) {
 showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
 showSlides(slideIndex = n);
 }
@@ -82,8 +99,12 @@ function showSlides(n) {
 var i;
 var slides = document.getElementsByClassName("mySlides");
 var dots = document.getElementsByClassName("dot");
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
+if (n > slides.length) {
+    slideIndex = 1
+}
+if (n < 1) {
+    slideIndex = slides.length
+}
 for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
 }
@@ -103,24 +124,7 @@ dots[slideIndex-1].className += " active";
 
 
 
-// OTHER FUNCTIONS
 
-// // Learn more scroll
-// document.querySelector('.learnMore').addEventListener('click', () => {
-//     document.getElementById('about').scrollIntoView();
-// });
 
-// // menu click scrolling
-// document.querySelector('.aboutMenu').addEventListener('click', () => {
-//     document.getElementById('about').scrollIntoView();
-// });
-
-// document.querySelector('.exploreMenu').addEventListener('click', () => {
-//     document.getElementById('explore').scrollIntoView();
-// });
-
-// document.querySelector('.contactMenu').addEventListener('click', () => {
-//     document.getElementById('contact').scrollIntoView();
-// });
 
 
