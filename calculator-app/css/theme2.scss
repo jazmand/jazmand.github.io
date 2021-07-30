@@ -1,0 +1,45 @@
+body {
+	background: hsl(0, 0%, 90%);
+}
+
+.header {
+	color: hsl(60, 10%, 19%);
+
+	.slider {
+		background-color: hsl(0, 5%, 81%);
+	}
+	.slider-ball {
+		background-color: #bbb;
+
+		background-color: hsl(6, 63%, 50%);
+	}
+}
+
+.output {
+	background-color: hsl(0, 0%, 93%);
+	.previous-input {
+		color: hsl(25, 98%, 40%);
+	}
+	.current-input {
+		color: black;
+	}
+}
+.buttons {
+	background-color: hsl(0, 5%, 81%);
+
+	.all-color {
+		background-color: hsl(45, 7%, 89%);
+		box-shadow: 0px 5px 0px 0px hsl(35, 11%, 61%);
+		color: hsl(221, 14%, 31%);
+	}
+	.single-color {
+		background-color: hsl(25, 98%, 40%);
+		box-shadow: 0px 5px 0px 0px hsl(25, 99%, 27%);
+		color: hsl(60, 10%, 19%);
+	}
+	.double-color {
+		background-color: hsl(185, 42%, 37%);
+		box-shadow: 0px 5px 0px 0px hsl(185, 58%, 25%);
+		color: hsl(0, 0, 100%);
+	}
+}

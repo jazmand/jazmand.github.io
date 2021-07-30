@@ -1,0 +1,54 @@
+body {
+  background: #e6e6e6;
+}
+
+.header {
+  color: #35352c;
+}
+
+.header .slider {
+  background-color: #d1cccc;
+}
+
+.header .slider-ball {
+  background-color: #bbb;
+  background-color: #d03f2f;
+}
+
+.output {
+  background-color: #ededed;
+}
+
+.output .previous-input {
+  color: #ca5502;
+}
+
+.output .current-input {
+  color: black;
+}
+
+.buttons {
+  background-color: #d1cccc;
+}
+
+.buttons .all-color {
+  background-color: #e5e4e1;
+  -webkit-box-shadow: 0px 5px 0px 0px #a69d91;
+          box-shadow: 0px 5px 0px 0px #a69d91;
+  color: #444b5a;
+}
+
+.buttons .single-color {
+  background-color: #ca5502;
+  -webkit-box-shadow: 0px 5px 0px 0px #893901;
+          box-shadow: 0px 5px 0px 0px #893901;
+  color: #35352c;
+}
+
+.buttons .double-color {
+  background-color: #377f86;
+  -webkit-box-shadow: 0px 5px 0px 0px #1b5f65;
+          box-shadow: 0px 5px 0px 0px #1b5f65;
+  color: white;
+}
+/*# sourceMappingURL=theme2.css.map */

@@ -1,0 +1,54 @@
+body {
+  background: #160628;
+}
+
+.header {
+  color: #ffe53d;
+}
+
+.header .slider {
+  background-color: #1d0934;
+}
+
+.header .slider-ball {
+  background-color: #bbb;
+  background-color: #d03f2f;
+}
+
+.output {
+  background-color: #1d0934;
+}
+
+.output .previous-input {
+  color: #00e0d1;
+}
+
+.output .current-input {
+  color: #ffe53d;
+}
+
+.buttons {
+  background-color: #1d0934;
+}
+
+.buttons .all-color {
+  background-color: #341c4f;
+  -webkit-box-shadow: 0px 5px 0px 0px #871c9c;
+          box-shadow: 0px 5px 0px 0px #871c9c;
+  color: #ffe53d;
+}
+
+.buttons .single-color {
+  background-color: #00e0d1;
+  -webkit-box-shadow: 0px 5px 0px 0px #6cf9f2;
+          box-shadow: 0px 5px 0px 0px #6cf9f2;
+  color: #1b2428;
+}
+
+.buttons .double-color {
+  background-color: #58077d;
+  -webkit-box-shadow: 0px 5px 0px 0px #bc15f4;
+          box-shadow: 0px 5px 0px 0px #bc15f4;
+  color: white;
+}
+/*# sourceMappingURL=theme3.css.map */

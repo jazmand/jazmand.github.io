@@ -1,0 +1,181 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: normal;
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.calculator {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  min-height: 100vh;
+  row-gap: 1rem;
+}
+
+.calculator .header {
+  grid-column: 1/-1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-bottom: 0.5rem;
+}
+
+.calculator .header .title {
+  font-size: 2rem;
+}
+
+.calculator .header .theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.calculator .header .theme .theme-title {
+  font-size: 0.7rem;
+}
+
+.calculator .header .theme .theme-chooser {
+  padding-left: 1.2rem;
+}
+
+.calculator .header .theme .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 6px 3px;
+}
+
+.calculator .header .theme .options p {
+  margin: 0;
+  font-size: 0.6rem;
+}
+
+.calculator .header .theme .slider {
+  border-radius: 40px;
+  width: 55px;
+  height: 20px;
+  padding: 0 3px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.calculator .header .theme .slider-ball {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+
+.calculator .output {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 0.5rem;
+  border-radius: 10px;
+  min-height: 120px;
+  max-width: 536px;
+}
+
+.calculator .output .current-input {
+  font-size: 2.5rem;
+}
+
+.calculator .buttons {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-columns: (110px)[4];
+      grid-template-columns: repeat(4, 110px);
+  -ms-grid-rows: minmax(90px, auto) (90px)[4];
+      grid-template-rows: minmax(90px, auto) repeat(4, 90px);
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+  border-radius: 10px;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
+.calculator .buttons button {
+  height: 65px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.calculator .buttons button:active {
+  -webkit-box-shadow: 0px 0px 4px 0px black;
+          box-shadow: 0px 0px 4px 0px black;
+  -webkit-transition: -webkit-box-shadow 0.15s ease-in-out;
+  transition: -webkit-box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.calculator .buttons .span-2 {
+  grid-column: span 2;
+}
+
+.calculator .buttons .all-color {
+  font-size: 32px;
+}
+
+.calculator .buttons .single-color {
+  font-size: 1.2rem;
+}
+
+.calculator .buttons .double-color {
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=styles.css.map */

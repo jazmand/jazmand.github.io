@@ -1,0 +1,54 @@
+body {
+  background: #3a4764;
+}
+
+.header {
+  color: white;
+}
+
+.header .slider {
+  background-color: #232c43;
+}
+
+.header .slider-ball {
+  background-color: #bbb;
+  background-color: #d03f2f;
+}
+
+.output {
+  background-color: #182034;
+}
+
+.output .previous-input {
+  color: #d03f2f;
+}
+
+.output .current-input {
+  color: white;
+}
+
+.buttons {
+  background-color: #232c43;
+}
+
+.buttons .all-color {
+  background-color: #eae3dc;
+  -webkit-box-shadow: 0px 5px 0px 0px #b4a597;
+          box-shadow: 0px 5px 0px 0px #b4a597;
+  color: #444b5a;
+}
+
+.buttons .single-color {
+  background-color: #d03f2f;
+  -webkit-box-shadow: 0px 5px 0px 0px #93261a;
+          box-shadow: 0px 5px 0px 0px #93261a;
+  color: white;
+}
+
+.buttons .double-color {
+  background-color: #637097;
+  -webkit-box-shadow: 0px 5px 0px 0px #404e72;
+          box-shadow: 0px 5px 0px 0px #404e72;
+  color: white;
+}
+/*# sourceMappingURL=theme1.css.map */
