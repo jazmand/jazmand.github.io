@@ -4,7 +4,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-weight: normal;
-  font-family: "Spartan", sans-serif;
+  font-family: 'Spartan', sans-serif;
 }
 
 body {
@@ -168,7 +168,7 @@ body {
 }
 
 .calculator .buttons .all-color {
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 .calculator .buttons .single-color {
@@ -177,5 +177,36 @@ body {
 
 .calculator .buttons .double-color {
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .calculator .buttons {
+    -ms-grid-columns: (70px)[4];
+        grid-template-columns: repeat(4, 70px);
+    -ms-grid-rows: minmax(85px, auto) (85px)[4];
+        grid-template-rows: minmax(85px, auto) repeat(4, 85px);
+  }
+  .calculator .output {
+    min-height: 100px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .calculator .buttons {
+    -ms-grid-columns: (50px)[4];
+        grid-template-columns: repeat(4, 50px);
+    -ms-grid-rows: minmax(50px, auto) (50px)[4];
+        grid-template-rows: minmax(50px, auto) repeat(4, 50px);
+    row-gap: 2rem;
+  }
+  .calculator .buttons .all-color {
+    font-size: 1.5rem;
+  }
+  .calculator .buttons .single-color {
+    font-size: 0.9rem;
+  }
+  .calculator .buttons .double-color {
+    font-size: 0.9rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
