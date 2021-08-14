@@ -298,12 +298,11 @@ h2 {
 	flex-direction: column;
 	justify-items: center;
 	place-content: center;
-	padding: 10%;
 
 	.container {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
 		justify-content: center;
 	}
 	.project-tile {
@@ -322,12 +321,12 @@ h2 {
 		grid-row: 1 / span 1;
 	}
 	.project4 {
-		grid-column: 1 / span 1;
-		grid-row: 2 / span 1;
+		grid-column: 2 / span 1;
+		grid-row: 3 / span 1;
 	}
 	.project5 {
-		grid-column: 5 / span 1;
-		grid-row: 2 / span 1;
+		grid-column: 4 / span 1;
+		grid-row: 3 / span 1;
 	}
 	figure {
 		font-family: $english-font;
