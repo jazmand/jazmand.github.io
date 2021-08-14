@@ -146,6 +146,7 @@ h2 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin: 5%;
 
 	.fa-reply {
 		position: absolute;
@@ -382,6 +383,7 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	margin: 5%;
 	.contact-form {
 		border: 3px dashed $green-color;
 		width: 500px;
