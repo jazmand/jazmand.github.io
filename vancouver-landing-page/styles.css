@@ -83,7 +83,9 @@ body {
   transition: 0.5s;
 }
 
-#sideNav .aboutMenu, #sideNav .exploreMenu, #sideNav .contactMenu {
+#sideNav .aboutMenu,
+#sideNav .exploreMenu,
+#sideNav .contactMenu {
   cursor: pointer;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -94,7 +96,9 @@ body {
   transition: 0.3s;
 }
 
-#sideNav .aboutMenu:hover, #sideNav .exploreMenu:hover, #sideNav .contactMenu:hover {
+#sideNav .aboutMenu:hover,
+#sideNav .exploreMenu:hover,
+#sideNav .contactMenu:hover {
   color: #52442b;
 }
 
@@ -243,22 +247,24 @@ section {
 }
 
 #showcase .social li a .fa-twitter {
-  color: #1DA1F2;
+  color: #1da1f2;
 }
 
 #showcase .social li a .fa-facebook-square {
-  color: #4267B2;
+  color: #4267b2;
 }
 
 #showcase .social li a .fa-instagram {
   color: transparent;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
   background-clip: text;
   -webkit-background-clip: text;
 }
 
-#about, #explore, #contact {
+#about,
+#explore,
+#contact {
   width: 100%;
   min-height: 100vh;
   padding: 100px;
@@ -274,7 +280,9 @@ section {
   color: black;
 }
 
-#about h2, #explore h2, #contact h2 {
+#about h2,
+#explore h2,
+#contact h2 {
   font-size: 5em;
   font-weight: 800;
   line-height: 1em;
@@ -282,7 +290,9 @@ section {
   text-align: center;
 }
 
-#about p, #explore p, #contact p {
+#about p,
+#explore p,
+#contact p {
   font-size: 1.5em;
   margin: 20px 0;
   font-weight: 400;
@@ -300,7 +310,8 @@ section {
   display: none;
 }
 
-#about .slideshow-container .prev, #about .slideshow-container .next {
+#about .slideshow-container .prev,
+#about .slideshow-container .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -324,7 +335,8 @@ section {
   border-radius: 3px 0 0 3px;
 }
 
-#about .slideshow-container .prev:hover, #about .slideshow-container .next:hover {
+#about .slideshow-container .prev:hover,
+#about .slideshow-container .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -337,7 +349,7 @@ section {
 
 @-webkit-keyframes fade {
   from {
-    opacity: .4;
+    opacity: 0.4;
   }
   to {
     opacity: 1;
@@ -346,7 +358,7 @@ section {
 
 @keyframes fade {
   from {
-    opacity: .4;
+    opacity: 0.4;
   }
   to {
     opacity: 1;
@@ -375,6 +387,7 @@ section {
 
 #explore {
   background-color: #52442bb0;
+  border-radius: 100px;
 }
 
 #explore .flex .container {
@@ -486,28 +499,49 @@ footer .flex ul:nth-child(2) {
 }
 
 @media (max-width: 1024px) {
-  #showcase, #about, #explore, #contact {
+  #showcase,
+  #about,
+  #explore,
+  #contact {
     padding: 40px;
   }
-  #showcase h2, #about h2, #explore h2, #contact h2 {
+  #showcase h2,
+  #about h2,
+  #explore h2,
+  #contact h2 {
     font-size: 4em !important;
   }
-  #showcase .blurb, #about .blurb, #explore .blurb, #contact .blurb {
+  #showcase .blurb,
+  #about .blurb,
+  #explore .blurb,
+  #contact .blurb {
     font-size: 1em !important;
   }
-  #showcase #mailto, #about #mailto, #explore #mailto, #contact #mailto {
+  #showcase #mailto,
+  #about #mailto,
+  #explore #mailto,
+  #contact #mailto {
     font-size: smaller;
   }
 }
 
 @media (max-width: 640px) {
-  #showcase, #about, #explore, #contact {
+  #showcase,
+  #about,
+  #explore,
+  #contact {
     padding: 30px;
   }
-  #showcase h2, #about h2, #explore h2, #contact h2 {
+  #showcase h2,
+  #about h2,
+  #explore h2,
+  #contact h2 {
     font-size: 3em !important;
   }
-  #showcase .blurb, #about .blurb, #explore .blurb, #contact .blurb {
+  #showcase .blurb,
+  #about .blurb,
+  #explore .blurb,
+  #contact .blurb {
     font-size: 0.8em !important;
   }
 }

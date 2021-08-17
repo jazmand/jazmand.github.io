@@ -1,143 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"> 
-    <title>Visit Vancouver</title>
-
-</head>
-<body>
-    <div id="header">
-        <div class="logo"><i class="fab fa-canadian-maple-leaf fa-3x"></i></div>
-        <div class="toggle"><i class="fas fa-bars fa-2x"></i></div>
-    </div>
-    <div id="sideNav">
-        <ul>
-            <li><i class="toggleClose fas fa-hamburger fa-2x"></i></li>
-            <li class="aboutMenu">About</li>
-            <li class="exploreMenu">Explore</li>
-            <li class="contactMenu">Contact</li>
-        </ul>
-    </div>
-    <section id="showcase">
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="media/bgVideo.mp4" type="video/mp4">
-        </video>
-        <div class="overlay"></div>
-        <div class="text">
-            <h2>Visit</h2>
-            <h2>Vancouver</h2>
-            <p><i> "By Sea Land and Air We Prosper."</i></p>
-            <a class="learnMore">Learn More</a>
-        </div>
-        <ul class="social">
-            <li><a href="https://twitter.com/CityofVancouver/" target="_blank"><i class="fab fa-twitter fa-5x"></i></a></li>
-            <li><a href="https://www.facebook.com/CityofVancouver/" target="_blank"><i class="fab fa-facebook-square fa-5x"></i></a></li>
-            <li><a href="https://www.instagram.com/cityofvancouver/" target="_blank"><i class="fab fa-instagram fa-5x"></i></a></li>
-        </ul>
-    </section>
-    <section id="about">
-        <div>
-            <h2>About</h2>
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="media/flag.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="media/stanley-park.jpg" style="width:100%">
-                </div>
-                <div class="mySlides fade">
-                    <img src="media/nightView.jpg" style="width:100%">
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-            <p class="blurb">Vancouver is a major city in western Canada, located in the Lower Mainland region of British Columbia. 
-                It is the most populous city in the province and the third-largest metropolitan area in Canada. 
-                Vancouver has the highest population density in Canada, with over 5,400 people per square kilometre.
-            </p>
-        </div>
-    </section>
-    <section id="explore">
-        <div>
-            <h2>Explore</h2>
-            <div class="flex">
-                <div class="container">
-                    <div class="image">
-                        <a href="https://www.translink.ca/" target="_blank"><img src="media/skytrain.jpg" style="width:100%" class="overlay"></a>
-                        <span class="overlayText">Visit Translink <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                    <div class="blurb">
-                        TransLink is Metro Vancouver's transportation network, serving residents and visitors with public transit, major roads, bridges and Trip Planning.
-                    </div>
-                    <div>
-                        <a href="https://www.scienceworld.ca/" target="_blank"><img src="media/scienceworld.jpg" style="width:100%" class="overlay"></a>
-                        <span class="overlayText">Visit Science World <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                    <div class="blurb">
-                        Science World is a science centre run by a not-for-profit organization of the same name in Vancouver, British Columbia, Canada.
-                    </div>
-                    <div>
-                        <a href="https://gastown.org/" target="_blank"><img src="media/gastown.jpg" style="width:100%" class="overlay"></a>
-                        <span class="overlayText">Visit Gastown <i class="fas fa-external-link-alt"></i></span>
-                    </div>
-                    <div class="blurb">
-                        Gastown is the original settlement that became the core of the creation of Vancouver, British Columbia, Canada. It is a national historic site and a neighbourhood in the northwest section of the Downtown Eastside, adjacent to Downtown Vancouver.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <div>
-            <h2>Contact</h2>
-            <div class="contact-form">
-                <form>
-                    <p>
-                        <input name="name" type="text" class="form-input" placeholder="Name" id="name" required/>
-                    </p>  
-                    <p>
-                        <input name="email" type="email" class="form-input" placeholder="Email" id="email" required/>
-                    </p>
-                    <p>  
-                        <textarea name="text" class="form-input" placeholder="Content" id="content" required></textarea>
-                    </p>
-                    <div class="submit">
-                        <input type="submit" value="Send" id="submit-button"/>
-                    </div>
-                    <br>
-                    <p id="mailto">
-                    Alternatively, you can click <a href="mailto:SomeEmail@hotmail.com" target="_blank" rel="noopener noreferrer">here</a> for the mailto link.
-                    </p>
-                </form>
-            </div>
-        </div>
-    </section>
-    <footer id="footer">
-        <div class="flex">
-            <ul class="ql1">
-                <li><a href="https://www.tourismvancouver.com/" target="_blank">Vancouver Tourism</a></li>
-                <li><a href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/office-of-the-premier/intergovernmental-relations-secretariat/protocol/consular-corps/directory" target="_blank">Embassies B.C.</a></li>
-                <li><a href="https://www.canada.ca/en.html" target="_blank">Canada Official</a></li>
-            </ul>
-            <ul class="ql2">
-                <li><a href="https://www.translink.ca/" target="_blank">Translink</a></li>
-                <li><a href="https://www.scienceworld.ca/" target="_blank">Science World</a></li>
-                <li><a href="https://gastown.org/" target="_blank">Gastown</a></li>
-            </ul>
-        </div>
-        <p class="copyright">
-            Website made by Jazmand
-        </p>
-    </footer>
-    <script src="app.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+			integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+		/>
+		<title>Visit Vancouver</title>
+	</head>
+	<body>
+		<div id="header">
+			<div class="logo"><i class="fab fa-canadian-maple-leaf fa-3x"></i></div>
+			<div class="toggle"><i class="fas fa-bars fa-2x"></i></div>
+		</div>
+		<div id="sideNav">
+			<ul>
+				<li><i class="toggleClose fas fa-hamburger fa-2x"></i></li>
+				<li class="aboutMenu">About</li>
+				<li class="exploreMenu">Explore</li>
+				<li class="contactMenu">Contact</li>
+			</ul>
+		</div>
+		<section id="showcase">
+			<video
+				playsinline="playsinline"
+				autoplay="autoplay"
+				muted="muted"
+				loop="loop"
+			>
+				<source src="media/bgVideo.mp4" type="video/mp4" />
+			</video>
+			<div class="overlay"></div>
+			<div class="text">
+				<h2>Visit</h2>
+				<h2>Vancouver</h2>
+				<p><i> "By Sea Land and Air We Prosper."</i></p>
+				<a class="learnMore">Learn More</a>
+			</div>
+			<ul class="social">
+				<li>
+					<a href="https://twitter.com/CityofVancouver/" target="_blank"
+						><i class="fab fa-twitter fa-5x"></i
+					></a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/CityofVancouver/" target="_blank"
+						><i class="fab fa-facebook-square fa-5x"></i
+					></a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/cityofvancouver/" target="_blank"
+						><i class="fab fa-instagram fa-5x"></i
+					></a>
+				</li>
+			</ul>
+		</section>
+		<section id="about">
+			<div>
+				<h2>About</h2>
+				<hr />
+				<br>
+				<div class="slideshow-container">
+					<div class="mySlides fade">
+						<img src="media/flag.jpg" style="width: 100%" />
+					</div>
+					<div class="mySlides fade">
+						<img src="media/stanley-park.jpg" style="width: 100%" />
+					</div>
+					<div class="mySlides fade">
+						<img src="media/nightView.jpg" style="width: 100%" />
+					</div>
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+				<div style="text-align: center">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+				</div>
+				<p class="blurb">
+					Vancouver is a major city in western Canada, located in the Lower
+					Mainland region of British Columbia. It is the most populous city in
+					the province and the third-largest metropolitan area in Canada.
+					Vancouver has the highest population density in Canada, with over
+					5,400 people per square kilometre.
+				</p>
+			</div>
+		</section>
+		<section id="explore">
+			<div>
+				<h2>Explore</h2>
+				<hr />
+				<br>
+				<div class="flex">
+					<div class="container">
+						<div class="image">
+							<a href="https://www.translink.ca/" target="_blank"
+								><img
+									src="media/skytrain.jpg"
+									style="width: 100%"
+									class="overlay"
+							/></a>
+							<a href="https://www.translink.ca/" target="_blank"
+								><span class="overlayText"
+								>Visit Translink <i class="fas fa-external-link-alt"></i
+							></span></a>
+						</div>
+						<div class="blurb">
+							<p>SkyTrain</p>
+							<hr />
+							<br />
+							<div>
+								TransLink is Metro Vancouver's transportation network, serving
+								residents and visitors with public transit, major roads, bridges
+								and Trip Planning.
+							</div>
+						</div>
+						<div>
+							<a href="https://www.scienceworld.ca/" target="_blank"
+								><img
+									src="media/scienceworld.jpg"
+									style="width: 100%"
+									class="overlay"
+							/></a>
+							<a href="https://www.scienceworld.ca/" target="_blank"
+								><span class="overlayText"
+								>Visit Science World <i class="fas fa-external-link-alt"></i
+							></span></a>
+						</div>
+						<div class="blurb">
+							<p>Science World</p>
+							<hr />
+							<br />
+							Science World is a science centre run by a not-for-profit
+							organization of the same name in Vancouver, British Columbia,
+							Canada.
+						</div>
+						<div>
+							<a href="https://gastown.org/" target="_blank"
+								><img
+									src="media/gastown.jpg"
+									style="width: 100%"
+									class="overlay"
+							/></a>
+							<a href="https://gastown.org/" target="_blank"<span class="overlayText"
+								>Visit Gastown <i class="fas fa-external-link-alt"></i
+							></span></a>
+						</div>
+						<div class="blurb">
+							<p>Gastown</p>
+							<hr />
+							<br />
+							Gastown is the original settlement that became the core of the
+							creation of Vancouver, British Columbia, Canada. It is a national
+							historic site and a neighbourhood in the northwest section of the
+							Downtown Eastside, adjacent to Downtown Vancouver.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="contact">
+			<div>
+				<h2>Contact</h2>
+				<div class="contact-form">
+					<form>
+						<p>
+							<input
+								name="name"
+								type="text"
+								class="form-input"
+								placeholder="Name"
+								id="name"
+								required
+							/>
+						</p>
+						<p>
+							<input
+								name="email"
+								type="email"
+								class="form-input"
+								placeholder="Email"
+								id="email"
+								required
+							/>
+						</p>
+						<p>
+							<textarea
+								name="text"
+								class="form-input"
+								placeholder="Content"
+								id="content"
+								required
+							></textarea>
+						</p>
+						<div class="submit">
+							<input type="submit" value="Send" id="submit-button" />
+						</div>
+						<br />
+						<p id="mailto">
+							Alternatively, you can click
+							<a
+								href="mailto:SomeEmail@hotmail.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								>here</a
+							>
+							for the mailto link.
+						</p>
+					</form>
+				</div>
+			</div>
+		</section>
+		<footer id="footer">
+			<div class="flex">
+				<ul class="ql1">
+					<li>
+						<a href="https://www.tourismvancouver.com/" target="_blank"
+							>Vancouver Tourism</a
+						>
+					</li>
+					<li>
+						<a
+							href="https://www2.gov.bc.ca/gov/content/governments/organizational-structure/office-of-the-premier/intergovernmental-relations-secretariat/protocol/consular-corps/directory"
+							target="_blank"
+							>Embassies B.C.</a
+						>
+					</li>
+					<li>
+						<a href="https://www.canada.ca/en.html" target="_blank"
+							>Canada Official</a
+						>
+					</li>
+				</ul>
+				<ul class="ql2">
+					<li>
+						<a href="https://www.translink.ca/" target="_blank">Translink</a>
+					</li>
+					<li>
+						<a href="https://www.scienceworld.ca/" target="_blank"
+							>Science World</a
+						>
+					</li>
+					<li><a href="https://gastown.org/" target="_blank">Gastown</a></li>
+				</ul>
+			</div>
+			<p class="copyright">Website made by Jazmand</p>
+		</footer>
+		<script src="app.js"></script>
+	</body>
 </html>
