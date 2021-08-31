@@ -8,7 +8,7 @@
 }
 
 html {
-	background: white;
+	background: black;
 }
 
 html,
@@ -34,7 +34,7 @@ body {
 		list-style: none;
 		display: flex;
 		flex-direction: row;
-		justify-content: space-around;
+		justify-content: flex-end;
 	}
 
 	.nav-link {
@@ -42,6 +42,7 @@ body {
 		font-family: $primary-font;
 		font-size: 1.5em;
 		color: white;
+		margin: 1em;
 		@include breakpoint-max(medium) {
 			font-size: 1.2em;
 		}
@@ -89,13 +90,36 @@ body {
 	#welcome-text {
 		color: white;
 		text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.76);
-		// background: $rainbow-background;
-		// background-clip: text;
-		// -webkit-background-clip: text;
-		// -webkit-text-fill-color: transparent;
-		// visibility: visible;
 		font-size: 2em;
-		transform: rotate(-10deg);
+		.social-media-icons {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 0.5em;
+			i {
+				padding: 10px;
+				text-shadow: 0px 6px 10px rgba(122, 122, 122, 0.692);
+				transition: all ease-in-out 150ms;
+			}
+
+			a:nth-child(1) {
+				color: #1da1f2;
+			}
+			a:nth-child(2) {
+				color: rgb(32, 243, 127);
+			}
+			a:nth-child(3) {
+				color: rgb(247, 82, 82);
+			}
+			a:nth-child(4) {
+				color: rgb(247, 170, 82);
+			}
+
+			i:hover {
+				margin-top: -15px;
+				text-shadow: 0px 14px 10px rgba(92, 90, 90, 0.76);
+			}
+		}
 	}
 
 	@include breakpoint-max(medium) {
@@ -116,8 +140,12 @@ body {
 	font-family: $english-font;
 }
 
-.japanese {
-	font-family: $japanese-font;
+.typing {
+	background: $rainbow-background;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	visibility: visible;
 }
 
 h2 {
@@ -147,6 +175,7 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	margin: 5%;
+	color: white;
 
 	.fa-reply {
 		position: absolute;
@@ -299,6 +328,10 @@ h2 {
 	flex-direction: column;
 	justify-items: center;
 	place-content: center;
+	margin: 2%;
+	h2 {
+		color: $orange-color;
+	}
 
 	.container {
 		display: grid;
@@ -359,7 +392,7 @@ h2 {
 					to right,
 					$red-color,
 					$green-color 50%,
-					black 50%
+					white 50%
 				);
 				background-clip: text;
 				-webkit-background-clip: text;
@@ -378,102 +411,13 @@ h2 {
 	}
 }
 
-#contact {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin: 5%;
-	.contact-form {
-		border: 3px dashed $green-color;
-		width: 500px;
-		margin-bottom: 5em;
-		border-radius: 30px;
-		box-shadow: 0px 4px 10px #5c5c5c;
-		@include breakpoint-max(medium) {
-			width: 400px;
-		}
-		@include breakpoint-max(small) {
-			width: 300px;
-		}
-		form {
-			margin: 35px;
-			.form-input {
-				width: 100%;
-				height: 3em;
-				margin-bottom: 1.5em;
-				padding: 5px;
-				font-family: $english-font;
-			}
-			textarea {
-				line-height: 150%;
-				resize: vertical;
-				font-family: $english-font;
-			}
-			#submit-button {
-				width: 100%;
-				padding: 10px;
-				font-family: $english-font;
-			}
-			#submit-button:hover {
-				background-color: rgb(255, 255, 255);
-			}
-			#mailto {
-				text-align: center;
-				font-family: $english-font;
-				@include breakpoint-max(medium) {
-					font-size: 0.8em;
-				}
-				@include breakpoint-max(small) {
-					font-size: 0.6em;
-				}
-			}
-		}
-	}
-
-	.social-media-icons {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-radius: 30px 10px 30px 10px;
-		border: 3px dashed $green-color;
-		box-shadow: 0px 4px 10px #5c5c5c;
-		@include breakpoint-max(medium) {
-			font-size: 0.8em;
-		}
-		@include breakpoint-max(small) {
-			font-size: 0.7em;
-		}
-
-		i {
-			padding: 10px;
-			text-shadow: 0px 6px 10px rgba(122, 122, 122, 0.692);
-			transition: all ease-in-out 150ms;
-		}
-
-		a:nth-child(1) {
-			color: #1da1f2;
-		}
-		a:nth-child(2) {
-			color: rgb(32, 243, 127);
-		}
-		a:nth-child(3) {
-			color: rgb(247, 82, 82);
-		}
-
-		i:hover {
-			margin-top: -3px;
-			text-shadow: 0px 14px 10px rgba(92, 90, 90, 0.76);
-		}
-	}
-}
-
 footer {
 	position: fixed;
 	bottom: 0px;
 	right: 0px;
 
 	#arrow-up {
+		color: $green-color;
 		position: absolute;
 		right: 0em;
 		bottom: 0em;

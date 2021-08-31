@@ -6,7 +6,7 @@
 }
 
 html {
-  background: white;
+  background: black;
 }
 
 html,
@@ -44,8 +44,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 #navbar .nav-link {
@@ -53,6 +54,7 @@ body {
   font-family: "Sansita Swashed", cursive;
   font-size: 1.5em;
   color: white;
+  margin: 1em;
 }
 
 @media (max-width: 1024px) {
@@ -120,8 +122,47 @@ body {
   color: white;
   text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.76);
   font-size: 2em;
-  -webkit-transform: rotate(-10deg);
-          transform: rotate(-10deg);
+}
+
+#welcome-section #welcome-text .social-media-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.5em;
+}
+
+#welcome-section #welcome-text .social-media-icons i {
+  padding: 10px;
+  text-shadow: 0px 6px 10px rgba(122, 122, 122, 0.692);
+  -webkit-transition: all ease-in-out 150ms;
+  transition: all ease-in-out 150ms;
+}
+
+#welcome-section #welcome-text .social-media-icons a:nth-child(1) {
+  color: #1da1f2;
+}
+
+#welcome-section #welcome-text .social-media-icons a:nth-child(2) {
+  color: #20f37f;
+}
+
+#welcome-section #welcome-text .social-media-icons a:nth-child(3) {
+  color: #f75252;
+}
+
+#welcome-section #welcome-text .social-media-icons a:nth-child(4) {
+  color: #f7aa52;
+}
+
+#welcome-section #welcome-text .social-media-icons i:hover {
+  margin-top: -15px;
+  text-shadow: 0px 14px 10px rgba(92, 90, 90, 0.76);
 }
 
 @media (max-width: 1024px) {
@@ -140,8 +181,12 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
-.japanese {
-  font-family: "M PLUS 1p", sans-serif;
+.typing {
+  background: linear-gradient(60deg, #5acef2 0%, #5be7c3 25%, #ff8062 50%, #f1b170 75%, #5acef2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  visibility: visible;
 }
 
 h2 {
@@ -181,6 +226,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   margin: 5%;
+  color: white;
 }
 
 #about .fa-reply {
@@ -404,6 +450,11 @@ h2 {
           flex-direction: column;
   justify-items: center;
   place-content: center;
+  margin: 2%;
+}
+
+#projects h2 {
+  color: #f1b170;
 }
 
 #projects .container {
@@ -507,8 +558,8 @@ h2 {
 
 #projects figure figcaption a {
   text-decoration: none;
-  background: -webkit-gradient(linear, left top, right top, from(#ff8062), color-stop(50%, #5be7c3), color-stop(50%, black));
-  background: linear-gradient(to right, #ff8062, #5be7c3 50%, black 50%);
+  background: -webkit-gradient(linear, left top, right top, from(#ff8062), color-stop(50%, #5be7c3), color-stop(50%, white));
+  background: linear-gradient(to right, #ff8062, #5be7c3 50%, white 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -522,141 +573,6 @@ h2 {
   background-position: 0 100%;
 }
 
-#contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 5%;
-}
-
-#contact .contact-form {
-  border: 3px dashed #5be7c3;
-  width: 500px;
-  margin-bottom: 5em;
-  border-radius: 30px;
-  -webkit-box-shadow: 0px 4px 10px #5c5c5c;
-          box-shadow: 0px 4px 10px #5c5c5c;
-}
-
-@media (max-width: 1024px) {
-  #contact .contact-form {
-    width: 400px;
-  }
-}
-
-@media (max-width: 640px) {
-  #contact .contact-form {
-    width: 300px;
-  }
-}
-
-#contact .contact-form form {
-  margin: 35px;
-}
-
-#contact .contact-form form .form-input {
-  width: 100%;
-  height: 3em;
-  margin-bottom: 1.5em;
-  padding: 5px;
-  font-family: "Raleway", sans-serif;
-}
-
-#contact .contact-form form textarea {
-  line-height: 150%;
-  resize: vertical;
-  font-family: "Raleway", sans-serif;
-}
-
-#contact .contact-form form #submit-button {
-  width: 100%;
-  padding: 10px;
-  font-family: "Raleway", sans-serif;
-}
-
-#contact .contact-form form #submit-button:hover {
-  background-color: white;
-}
-
-#contact .contact-form form #mailto {
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-}
-
-@media (max-width: 1024px) {
-  #contact .contact-form form #mailto {
-    font-size: 0.8em;
-  }
-}
-
-@media (max-width: 640px) {
-  #contact .contact-form form #mailto {
-    font-size: 0.6em;
-  }
-}
-
-#contact .social-media-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 30px 10px 30px 10px;
-  border: 3px dashed #5be7c3;
-  -webkit-box-shadow: 0px 4px 10px #5c5c5c;
-          box-shadow: 0px 4px 10px #5c5c5c;
-}
-
-@media (max-width: 1024px) {
-  #contact .social-media-icons {
-    font-size: 0.8em;
-  }
-}
-
-@media (max-width: 640px) {
-  #contact .social-media-icons {
-    font-size: 0.7em;
-  }
-}
-
-#contact .social-media-icons i {
-  padding: 10px;
-  text-shadow: 0px 6px 10px rgba(122, 122, 122, 0.692);
-  -webkit-transition: all ease-in-out 150ms;
-  transition: all ease-in-out 150ms;
-}
-
-#contact .social-media-icons a:nth-child(1) {
-  color: #1da1f2;
-}
-
-#contact .social-media-icons a:nth-child(2) {
-  color: #20f37f;
-}
-
-#contact .social-media-icons a:nth-child(3) {
-  color: #f75252;
-}
-
-#contact .social-media-icons i:hover {
-  margin-top: -3px;
-  text-shadow: 0px 14px 10px rgba(92, 90, 90, 0.76);
-}
-
 footer {
   position: fixed;
   bottom: 0px;
@@ -664,6 +580,7 @@ footer {
 }
 
 footer #arrow-up {
+  color: #5be7c3;
   position: absolute;
   right: 0em;
   bottom: 0em;
