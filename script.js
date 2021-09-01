@@ -5,9 +5,6 @@ $(document).ready(function () {
 	$('#projectsNav').click(function () {
 		$('html, body').animate({scrollTop: $('#projects').offset().top}, 1000);
 	});
-	$('#contactNav').click(function () {
-		$('html, body').animate({scrollTop: $('#contact').offset().top}, 1000);
-	});
 
 	$(document).scroll(function () {
 		if ($(this).scrollTop() > 100) {
@@ -21,17 +18,12 @@ $(document).ready(function () {
 		$('html, body').animate({scrollTop: 0}, 1000);
 	});
 
-	$('.flip-container .flipper').click(function () {
-		$(this).closest('.flip-container').toggleClass('hover');
-		$(this).css('transform, rotateY(180deg)');
-	});
-
 	AOS.init({
 		easing: 'ease',
 		duration: 1800,
 	});
 
-	var TxtRotate = function (el, toRotate, period) {
+	const TxtRotate = function (el, toRotate, period) {
 		this.toRotate = toRotate;
 		this.el = el;
 		this.loopNum = 0;
@@ -42,8 +34,8 @@ $(document).ready(function () {
 	};
 
 	TxtRotate.prototype.tick = function () {
-		var i = this.loopNum % this.toRotate.length;
-		var fullTxt = this.toRotate[i];
+		const i = this.loopNum % this.toRotate.length;
+		const fullTxt = this.toRotate[i];
 
 		if (this.isDeleting) {
 			this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -53,8 +45,8 @@ $(document).ready(function () {
 
 		this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-		var that = this;
-		var delta = 300 - Math.random() * 100;
+		const that = this;
+		let delta = 300 - Math.random() * 100;
 
 		if (this.isDeleting) {
 			delta /= 2;
@@ -74,15 +66,15 @@ $(document).ready(function () {
 		}, delta);
 	};
 
-	var elements = document.getElementsByClassName('txt-rotate');
-	for (var i = 0; i < elements.length; i++) {
-		var toRotate = elements[i].getAttribute('data-rotate');
-		var period = elements[i].getAttribute('data-period');
+	const elements = document.getElementsByClassName('txt-rotate');
+	for (let i = 0; i < elements.length; i++) {
+		const toRotate = elements[i].getAttribute('data-rotate');
+		const period = elements[i].getAttribute('data-period');
 		if (toRotate) {
 			new TxtRotate(elements[i], JSON.parse(toRotate), period);
 		}
 	}
-	var css = document.createElement('style');
+	const css = document.createElement('style');
 	css.innerHTML = '.txt-rotate > .wrap { border-right: 0.08em solid #666 }';
 	document.body.appendChild(css);
 });
