@@ -165,75 +165,77 @@ h2 {
 }
 
 #projects {
-	display: flex;
-	flex-direction: column;
-	justify-items: center;
-	place-content: center;
-	margin: 2%;
-	h2 {
-		color: $orange-color;
-	}
-
 	.container {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
-		grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(auto, 1fr);
 		justify-content: center;
-	}
-	.project-tile {
-		text-align: center;
-	}
-	.project1 {
-		grid-column: 2 / span 1;
-		grid-row: 1 / span 1;
-	}
-	.project2 {
-		grid-column: 3 / span 1;
-		grid-row: 2 / span 1;
-	}
-	.project3 {
-		grid-column: 4 / span 1;
-		grid-row: 1 / span 1;
-	}
-	.project4 {
-		grid-column: 2 / span 1;
-		grid-row: 3 / span 1;
-	}
-	.project5 {
-		grid-column: 4 / span 1;
-		grid-row: 3 / span 1;
-	}
-	figure {
-		font-family: $english-font;
-		font-size: 1.7em;
-		img {
-			border-radius: 50%;
-			width: 250px;
-			height: 250px;
+
+		// Wrapper
+		.showcase {
+			position: relative;
+			width: 90%;
+			height: 17em;
+			margin: 1em auto;
+			overflow: hidden;
+			background: transparent;
+		}
+
+		// Thumbnails
+		.thumbnail {
+			position: absolute;
+			height: 100%;
+			top: 0;
+			left: 0;
+			width: 100%;
 			z-index: 1;
+			background-position: 50% 50%;
+			background-size: cover;
+			transition: right 250ms ease, left 250ms ease;
 		}
-		figcaption {
-			a {
-				text-decoration: none;
-				background: linear-gradient(
-					to right,
-					$red-color,
-					$green-color 50%,
-					white 50%
-				);
-				background-clip: text;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-size: 200% 100%;
-				background-position: 100%;
-				transition: background-position 275ms ease;
+
+		.thumbnail--animal-crossing {
+			background-image: url('https://images.unsplash.com/photo-1496430598224-bfe65f200517?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80');
+		}
+
+		.thumbnail--calculator {
+			background-image: url('https://images.unsplash.com/photo-1496430598224-bfe65f200517?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80');
+		}
+		.thumbnail--arknights {
+			background-image: url('https://images.unsplash.com/photo-1496430598224-bfe65f200517?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80');
+		}
+		.thumbnail--gairaigo {
+			background-image: url('https://images.unsplash.com/photo-1496430598224-bfe65f200517?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80');
+		}
+
+		// Overlay
+		.description {
+			position: absolute;
+			width: 300px;
+			height: 100%;
+			top: 0;
+			right: 0;
+			padding: 20px;
+			z-index: 2;
+			background: #202426;
+			text-align: center;
+			transition: background 250ms ease, color 250ms, width 250ms ease,
+				padding 250ms ease;
+			visibility: hidden;
+		}
+
+		.showcase:hover {
+			.description {
+				width: 100%;
+				color: #fff;
+				visibility: visible;
 			}
 		}
-		img:hover,
-		&:hover {
-			figcaption a {
-				background-position: 0 100%;
-			}
+
+		// Inverted Project
+		.showcase--inverted .description {
+			left: 0;
+			right: auto;
 		}
 	}
 }
@@ -242,6 +244,7 @@ footer {
 	position: fixed;
 	bottom: 0px;
 	right: 0px;
+	z-index: 999;
 
 	#arrow-up {
 		color: $green-color;
@@ -304,19 +307,21 @@ footer {
 			left: 350px;
 			transform: rotatex(180deg);
 		}
+		.flex-container {
+			font-size: 1rem;
+			display: flex;
+			flex-direction: column;
+			justify-items: center;
+			place-content: center;
+		}
 	}
 
-	.flex-container {
-		flex-direction: column;
-		font-size: 1rem;
-	}
 	#projects {
-		figure {
-			font-size: 1em;
-		}
-		img {
-			width: 200px;
-			height: 200px;
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-items: center;
+			place-content: center;
 		}
 	}
 	footer {
@@ -350,18 +355,8 @@ footer {
 			left: 280px;
 			transform: rotatex(180deg);
 		}
-	}
-
-	.flex-container {
-		font-size: 0.8rem;
-	}
-	#projects {
-		figure {
-			font-size: 0.75em;
-		}
-		img {
-			width: 120px;
-			height: 120px;
+		.flex-container {
+			font-size: 0.8rem;
 		}
 	}
 	footer {
