@@ -23,12 +23,6 @@ body {
 	background: rgba(0, 0, 0, 0.671);
 	padding: 0.8em;
 	z-index: 2;
-	@include breakpoint-max(medium) {
-		padding: 0.7em;
-	}
-	@include breakpoint-max(small) {
-		padding: 0.6em;
-	}
 
 	ul {
 		list-style: none;
@@ -43,12 +37,6 @@ body {
 		font-size: 1.5em;
 		color: white;
 		margin: 1em;
-		@include breakpoint-max(medium) {
-			font-size: 1.2em;
-		}
-		@include breakpoint-max(small) {
-			font-size: 0.8em;
-		}
 	}
 
 	li:hover {
@@ -121,20 +109,7 @@ body {
 			}
 		}
 	}
-
-	@include breakpoint-max(medium) {
-		font-size: 1.1em;
-	}
-	@include breakpoint-max(small) {
-		font-size: 0.6em;
-	}
 }
-
-// video {
-//   min-width: 100%;
-//   min-height: 100%;
-//   object-fit: cover;
-// }
 
 .english {
 	font-family: $english-font;
@@ -156,17 +131,6 @@ h2 {
 	white-space: nowrap;
 	color: $blue-color;
 	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.76);
-	// background: $rainbow-background;
-	// background-clip: text;
-	// -webkit-background-clip: text;
-	// -webkit-text-fill-color: transparent;
-	// visibility: visible;
-	@include breakpoint-max(medium) {
-		font-size: 1.5em;
-	}
-	@include breakpoint-max(small) {
-		font-size: 1em;
-	}
 }
 
 #about {
@@ -188,137 +152,14 @@ h2 {
 		top: -160px;
 		right: 170px;
 	}
-	@include breakpoint-max(medium) {
-		.fa-share {
-			position: absolute;
-			top: -50px;
-			left: -10px;
-		}
-		.fa-reply {
-			position: absolute;
-			top: 180px;
-			left: 350px;
-			transform: rotatex(180deg);
-		}
-	}
-	@include breakpoint-max(small) {
-		.fa-share {
-			position: absolute;
-			top: -40px;
-			left: -10px;
-		}
-		.fa-reply {
-			position: absolute;
-			top: 140px;
-			left: 280px;
-			transform: rotatex(180deg);
-		}
-	}
 	.flex-container {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
 		margin-top: 3em;
-		@include breakpoint-max(medium) {
-			flex-direction: column;
-			font-size: 1rem;
-			margin-top: 1em;
-		}
-		@include breakpoint-max(small) {
-			flex-direction: column;
-			font-size: 0.8rem;
-		}
-
-		//  Card flipper
-
-		.flip-container.hover .flipper {
-			transform: rotateY(180deg);
-		}
-
-		.flip-container,
-		.front,
-		.back {
-			width: 28em;
-			height: 26em;
-			margin-top: 3em;
-			padding: 2em;
-		}
-		.flipper {
-			transition: 0.8s;
-			transform-style: preserve-3d;
-			position: relative;
-			.front,
-			.back {
-				backface-visibility: hidden;
-				position: absolute;
-				width: 100%;
-				height: 100%;
-			}
-			.front {
-				z-index: 2;
-				transform: rotateY(0deg);
-			}
-			.back {
-				transform: rotateY(180deg);
-			}
-			@include breakpoint-max(medium) {
-				flex-direction: column;
-				font-size: 1rem;
-			}
-			@include breakpoint-max(small) {
-				flex-direction: column;
-				font-size: 0.8rem;
-			}
-		}
-
-		.image-container {
-			width: 300px;
-			height: auto;
-			@include breakpoint-max(medium) {
-				width: 300px;
-			}
-			@include breakpoint-max(small) {
-				width: 240px;
-			}
-			#profile-image {
-				width: 100%;
-				max-height: 100%;
-				border-radius: 20px;
-			}
-		}
 		p {
-			text-align: justify;
-			padding: 1em;
 			font-size: 1.2em;
-		}
-		.skill-list {
-			list-style-position: inside;
-			list-style: none;
-			margin: 1rem;
-			h2 {
-				position: absolute;
-				top: -200px;
-				left: 150px;
-				margin: 0;
-			}
-			.category {
-				color: $orange-color;
-				font-weight: bold;
-				font-family: $primary-font;
-			}
-			.skill {
-				font-family: $english-font;
-			}
-			@include breakpoint-max(medium) {
-				font-size: 1.1em;
-			}
-			@include breakpoint-max(small) {
-				font-size: 1em;
-				h2 {
-					top: -130px;
-				}
-			}
 		}
 	}
 }
@@ -365,25 +206,11 @@ h2 {
 	figure {
 		font-family: $english-font;
 		font-size: 1.7em;
-		@include breakpoint-max(medium) {
-			font-size: 1em;
-		}
-		@include breakpoint-max(small) {
-			font-size: 0.75em;
-		}
 		img {
 			border-radius: 50%;
 			width: 250px;
 			height: 250px;
 			z-index: 1;
-			@include breakpoint-max(medium) {
-				width: 200px;
-				height: 200px;
-			}
-			@include breakpoint-max(small) {
-				width: 120px;
-				height: 120px;
-			}
 		}
 		figcaption {
 			a {
@@ -425,12 +252,6 @@ footer {
 		cursor: pointer;
 		z-index: 2;
 		display: none;
-		@include breakpoint-max(medium) {
-			font-size: 4rem;
-		}
-		@include breakpoint-max(small) {
-			font-size: 3rem;
-		}
 	}
 
 	.bounce {
@@ -450,6 +271,102 @@ footer {
 		}
 		60% {
 			transform: translateY(-15px);
+		}
+	}
+}
+
+// media queries
+@include breakpoint-max(medium) {
+	.nav-link {
+		font-size: 1.2em;
+	}
+	#navbar {
+		padding: 0.7em;
+		.nav-link {
+			font-size: 1.2em;
+		}
+	}
+	#welcome-section {
+		font-size: 1.1em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	#about {
+		.fa-share {
+			position: absolute;
+			top: -50px;
+			left: -10px;
+		}
+		.fa-reply {
+			position: absolute;
+			top: 180px;
+			left: 350px;
+			transform: rotatex(180deg);
+		}
+	}
+
+	.flex-container {
+		flex-direction: column;
+		font-size: 1rem;
+	}
+	#projects {
+		figure {
+			font-size: 1em;
+		}
+		img {
+			width: 200px;
+			height: 200px;
+		}
+	}
+	footer {
+		#arrow-up {
+			font-size: 4rem;
+		}
+	}
+}
+@include breakpoint-max(small) {
+	#navbar {
+		padding: 0.6em;
+		.nav-link {
+			font-size: 0.8em;
+		}
+	}
+	#welcome-section {
+		font-size: 0.6em;
+	}
+	h2 {
+		font-size: 1em;
+	}
+	#about {
+		.fa-share {
+			position: absolute;
+			top: -40px;
+			left: -10px;
+		}
+		.fa-reply {
+			position: absolute;
+			top: 140px;
+			left: 280px;
+			transform: rotatex(180deg);
+		}
+	}
+
+	.flex-container {
+		font-size: 0.8rem;
+	}
+	#projects {
+		figure {
+			font-size: 0.75em;
+		}
+		img {
+			width: 120px;
+			height: 120px;
+		}
+	}
+	footer {
+		#arrow-up {
+			font-size: 3rem;
 		}
 	}
 }

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	// Nav re-position
 	$('#aboutNav').click(function () {
 		$('html, body').animate({scrollTop: $('#about').offset().top}, 1000);
 	});
@@ -14,10 +15,12 @@ $(document).ready(function () {
 		}
 	});
 
+	// Top re-position
 	$('#arrow-up').click(function () {
 		$('html, body').animate({scrollTop: 0}, 1000);
 	});
 
+	// AOS
 	AOS.init({
 		easing: 'ease',
 		duration: 1800,
@@ -33,6 +36,7 @@ $(document).ready(function () {
 		this.isDeleting = false;
 	};
 
+	// Typing text
 	TxtRotate.prototype.tick = function () {
 		const i = this.loopNum % this.toRotate.length;
 		const fullTxt = this.toRotate[i];
