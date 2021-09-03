@@ -139,10 +139,7 @@ h2 {
 }
 
 #about {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	@include flex(column);
 	color: white;
 
 	.fa-reply {
@@ -157,11 +154,7 @@ h2 {
 		right: 170px;
 	}
 	.flex-container {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-		margin-top: 3em;
+		@include flex(column);
 		p {
 			font-size: 1.2em;
 		}
@@ -185,6 +178,7 @@ h2 {
 				height: auto;
 			}
 			.description {
+				@include flex(column);
 				color: white;
 				font-size: 20px;
 				position: absolute;
@@ -194,6 +188,12 @@ h2 {
 				-ms-transform: translate(-50%, -50%);
 				transform: translate(-50%, -50%);
 				white-space: nowrap;
+				.projectLinks {
+					@include flex(row);
+					a {
+						margin: 0.5em;
+					}
+				}
 			}
 		}
 		.showcase {
@@ -350,10 +350,7 @@ footer {
 
 	#projects {
 		.container {
-			display: flex;
-			flex-direction: column;
-			justify-items: center;
-			place-content: center;
+			@include flex(column);
 		}
 	}
 	footer {
