@@ -158,7 +158,6 @@ h2 {
 			}
 			.description {
 				@include flex(column);
-				@include rainbow-text();
 				font-size: 1em;
 				position: absolute;
 				top: 50%;
@@ -171,6 +170,7 @@ h2 {
 					@include flex(row);
 					a {
 						margin: 0.5em;
+						color: white;
 						padding: 0.25em 0.5em;
 						text-decoration: none;
 						border: 1px solid white;
