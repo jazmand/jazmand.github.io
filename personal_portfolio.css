@@ -243,6 +243,7 @@ h2 .rainbow-code {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   visibility: visible;
+  z-index: 100;
   font-size: 20px;
   position: absolute;
   top: 50%;

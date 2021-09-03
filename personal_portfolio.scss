@@ -160,6 +160,7 @@ h2 {
 			.description {
 				@include flex(column);
 				@include rainbow-text();
+				z-index: 100;
 				font-size: 20px;
 				position: absolute;
 				top: 50%;
