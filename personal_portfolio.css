@@ -22,7 +22,7 @@ body {
   width: 100%;
   background: rgba(0, 0, 0, 0.671);
   padding: 0.8em;
-  z-index: 2;
+  z-index: 999;
 }
 
 #navbar ul {
@@ -238,13 +238,7 @@ h2 .rainbow-code {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: linear-gradient(60deg, #5acef2 0%, #5be7c3 25%, #ff8062 50%, #f1b170 75%, #5acef2 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  visibility: visible;
-  z-index: 100;
-  font-size: 20px;
+  font-size: 1em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -272,6 +266,7 @@ h2 .rainbow-code {
 
 #projects .flex-container .showcase .description .projectLinks a,
 #projects .flex-container .showcase--inverted .description .projectLinks a {
+  color: white;
   margin: 0.5em;
   padding: 0.25em 0.5em;
   text-decoration: none;
@@ -283,6 +278,11 @@ h2 .rainbow-code {
 #projects .flex-container .showcase .description .projectLinks a:hover,
 #projects .flex-container .showcase--inverted .description .projectLinks a:hover {
   background: rgba(0, 0, 0, 0.6);
+}
+
+#projects .flex-container .showcase .description .tool-icons,
+#projects .flex-container .showcase--inverted .description .tool-icons {
+  font-size: 1.5em;
 }
 
 #projects .flex-container .showcase .overlay {
@@ -336,7 +336,6 @@ footer #arrow-up {
   bottom: 0em;
   font-size: 5rem;
   cursor: pointer;
-  z-index: 2;
   display: none;
 }
 
@@ -422,6 +421,9 @@ footer .bounce {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
+  #projects .description {
+    font-size: 0.8em;
+  }
   footer #arrow-up {
     font-size: 4rem;
   }
@@ -469,6 +471,9 @@ footer .bounce {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  #projects .description {
+    font-size: 0.5em;
   }
   footer #arrow-up {
     font-size: 3rem;
