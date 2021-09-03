@@ -158,10 +158,12 @@ h2 {
 	}
 	.flex-container {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin-top: 3em;
+		width: 80%;
+		text-align: justify;
+		text-justify: inter-word;
 		p {
 			font-size: 1.2em;
 		}
