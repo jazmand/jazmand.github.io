@@ -133,16 +133,12 @@ h2 {
 	font-size: 2.5em;
 	text-align: center;
 	margin: 2em;
-	white-space: nowrap;
 	color: $blue-color;
 	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.76);
 }
 
 #about {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	@include flex(column);
 	color: white;
 
 	.fa-reply {
@@ -157,13 +153,7 @@ h2 {
 		right: 170px;
 	}
 	.flex-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		width: 80%;
-		text-align: justify;
-		text-justify: inter-word;
+		@include flex(column);
 		p {
 			font-size: 1.2em;
 		}
@@ -187,6 +177,7 @@ h2 {
 				height: auto;
 			}
 			.description {
+				@include flex(column);
 				color: white;
 				font-size: 20px;
 				position: absolute;
@@ -196,6 +187,12 @@ h2 {
 				-ms-transform: translate(-50%, -50%);
 				transform: translate(-50%, -50%);
 				white-space: nowrap;
+				.projectLinks {
+					@include flex(row);
+					a {
+						margin: 0.5em;
+					}
+				}
 			}
 		}
 		.showcase {
@@ -205,7 +202,7 @@ h2 {
 				bottom: 0;
 				left: 100%;
 				right: 0;
-				background-color: #008cba;
+				background-color: rgba(0, 0, 0, 0.671);
 				overflow: hidden;
 				width: 0;
 				height: 100%;
@@ -225,7 +222,7 @@ h2 {
 				bottom: 0;
 				left: 0;
 				right: 0;
-				background-color: #008cba;
+				background-color: rgba(0, 0, 0, 0.671);
 				overflow: hidden;
 				width: 0;
 				height: 100%;
@@ -352,10 +349,7 @@ footer {
 
 	#projects {
 		.container {
-			display: flex;
-			flex-direction: column;
-			justify-items: center;
-			place-content: center;
+			@include flex(column);
 		}
 	}
 	footer {

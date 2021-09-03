@@ -1,17 +1,19 @@
 //Screen sizes
 $breakpoints-max: (
-  "small": 640px,
-  "medium": 1024px,
-  "large": 1400px,
+	'small': 640px,
+	'medium': 1024px,
+	'large': 1400px,
 );
 
 @mixin breakpoint-max($size) {
-  @media (max-width: map-get($breakpoints-max, $size)) {
-    @content;
-  }
+	@media (max-width: map-get($breakpoints-max, $size)) {
+		@content;
+	}
 }
 
-@mixin length($width, $height) {
-  width: $width;
-  height: $height;
+@mixin flex($direction) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: center;
+	align-items: center;
 }

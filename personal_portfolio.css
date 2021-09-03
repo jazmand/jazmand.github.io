@@ -163,7 +163,6 @@ h2 {
   font-size: 2.5em;
   text-align: center;
   margin: 2em;
-  white-space: nowrap;
   color: #5acef2;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.76);
 }
@@ -213,9 +212,6 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
-  text-align: justify;
-  text-justify: inter-word;
 }
 
 #about .flex-container p {
@@ -250,6 +246,19 @@ h2 {
 
 #projects .container .showcase .description,
 #projects .container .showcase--inverted .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
   font-size: 20px;
   position: absolute;
@@ -260,13 +269,35 @@ h2 {
   white-space: nowrap;
 }
 
+#projects .container .showcase .description .projectLinks,
+#projects .container .showcase--inverted .description .projectLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#projects .container .showcase .description .projectLinks a,
+#projects .container .showcase--inverted .description .projectLinks a {
+  margin: 0.5em;
+}
+
 #projects .container .showcase .overlay {
   border-radius: 20px;
   position: absolute;
   bottom: 0;
   left: 100%;
   right: 0;
-  background-color: #008cba;
+  background-color: rgba(0, 0, 0, 0.671);
   overflow: hidden;
   width: 0;
   height: 100%;
@@ -285,7 +316,7 @@ h2 {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #008cba;
+  background-color: rgba(0, 0, 0, 0.671);
   overflow: hidden;
   width: 0;
   height: 100%;
@@ -434,8 +465,12 @@ footer .bounce {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    justify-items: center;
-    place-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   footer #arrow-up {
     font-size: 3rem;
