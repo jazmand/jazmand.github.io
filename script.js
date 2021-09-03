@@ -1,10 +1,13 @@
 $(document).ready(function () {
 	// Nav re-position
 	$('#aboutNav').click(function () {
-		$('html, body').animate({scrollTop: $('#about').offset().top}, 1000);
+		$('html, body').animate({scrollTop: $('.about-header').offset().top}, 1000);
 	});
 	$('#projectsNav').click(function () {
-		$('html, body').animate({scrollTop: $('#projects').offset().top}, 1000);
+		$('html, body').animate(
+			{scrollTop: $('.projects-header').offset().top},
+			1000
+		);
 	});
 
 	$(document).scroll(function () {
