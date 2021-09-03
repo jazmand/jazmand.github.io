@@ -1,3 +1,5 @@
+@import 'variables';
+
 //Screen sizes
 $breakpoints-max: (
 	'small': 640px,
@@ -16,4 +18,12 @@ $breakpoints-max: (
 	flex-direction: $direction;
 	justify-content: center;
 	align-items: center;
+}
+
+@mixin rainbow-text() {
+	background: $rainbow-background;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	visibility: visible;
 }

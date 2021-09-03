@@ -9,16 +9,13 @@
 
 html {
 	background: black;
+	color: white;
 }
 
 html,
 body {
 	overflow-x: hidden;
-}
-
-#about,
-#projects {
-	margin: 5%;
+	font-family: $primary-font;
 }
 
 #navbar {
@@ -37,9 +34,10 @@ body {
 	}
 
 	.nav-link {
+		font-family: $header-font;
+		font-weight: 900;
 		text-decoration: none;
-		font-family: $primary-font;
-		font-size: 1.5em;
+		font-size: 2em;
 		color: white;
 		margin: 1em;
 	}
@@ -47,11 +45,7 @@ body {
 	li:hover {
 		cursor: pointer;
 		.rainbow-code {
-			background: $rainbow-background;
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			visibility: visible;
+			@include rainbow-text();
 		}
 	}
 	.rainbow-code {
@@ -116,42 +110,29 @@ body {
 	}
 }
 
-.english {
-	font-family: $english-font;
-}
-
 .typing {
-	background: $rainbow-background;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	visibility: visible;
+	@include rainbow-text();
 }
 
 h2 {
-	font-family: $primary-font;
-	font-size: 2.5em;
-	text-align: center;
-	margin: 2em;
-	color: $blue-color;
+	padding-top: 2em;
+	font-family: $header-font;
+	font-size: 3em;
+	margin: 2em 0;
 	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.76);
+	.rainbow-code {
+		@include rainbow-text();
+	}
+}
+
+#about,
+#projects {
+	margin: 5%;
 }
 
 #about {
-	@include flex(column);
 	color: white;
 
-	.fa-reply {
-		position: absolute;
-		top: 300px;
-		right: 170px;
-		transform: rotatex(180deg);
-	}
-	.fa-share {
-		position: absolute;
-		top: -160px;
-		right: 170px;
-	}
 	.flex-container {
 		@include flex(column);
 		p {
@@ -161,10 +142,10 @@ h2 {
 }
 
 #projects {
-	.container {
+	.flex-container {
 		display: grid;
 		gap: 5em;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(auto, 1fr);
 		justify-content: center;
 		.showcase,
@@ -178,7 +159,7 @@ h2 {
 			}
 			.description {
 				@include flex(column);
-				color: white;
+				@include rainbow-text();
 				font-size: 20px;
 				position: absolute;
 				top: 50%;
@@ -191,6 +172,13 @@ h2 {
 					@include flex(row);
 					a {
 						margin: 0.5em;
+						padding: 0.25em 0.5em;
+						text-decoration: none;
+						border: 1px solid white;
+						transition: background 250ms;
+						&:hover {
+							background: rgba(0, 0, 0, 0.6);
+						}
 					}
 				}
 			}
@@ -290,7 +278,7 @@ footer {
 		font-size: 1.1em;
 	}
 	h2 {
-		font-size: 1.5em;
+		font-size: 2.5em;
 	}
 	#about {
 		.fa-share {
@@ -310,7 +298,11 @@ footer {
 			display: flex;
 		}
 	}
-
+	#projects {
+		.flex-container {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 	footer {
 		#arrow-up {
 			font-size: 4rem;
@@ -328,7 +320,7 @@ footer {
 		font-size: 0.6em;
 	}
 	h2 {
-		font-size: 1em;
+		font-size: 1.7em;
 	}
 	#about {
 		.fa-share {
@@ -348,7 +340,7 @@ footer {
 	}
 
 	#projects {
-		.container {
+		.flex-container {
 			@include flex(column);
 		}
 	}

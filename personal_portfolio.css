@@ -7,16 +7,13 @@
 
 html {
   background: black;
+  color: white;
 }
 
 html,
 body {
   overflow-x: hidden;
-}
-
-#about,
-#projects {
-  margin: 5%;
+  font-family: "Raleway", cursive;
 }
 
 #navbar {
@@ -43,9 +40,10 @@ body {
 }
 
 #navbar .nav-link {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
   text-decoration: none;
-  font-family: "Sansita Swashed", cursive;
-  font-size: 1.5em;
+  font-size: 2em;
   color: white;
   margin: 1em;
 }
@@ -146,10 +144,6 @@ body {
   text-shadow: 0px 14px 10px rgba(92, 90, 90, 0.76);
 }
 
-.english {
-  font-family: "Raleway", sans-serif;
-}
-
 .typing {
   background: linear-gradient(60deg, #5acef2 0%, #5be7c3 25%, #ff8062 50%, #f1b170 75%, #5acef2 100%);
   background-clip: text;
@@ -159,43 +153,28 @@ body {
 }
 
 h2 {
-  font-family: "Sansita Swashed", cursive;
-  font-size: 2.5em;
-  text-align: center;
-  margin: 2em;
-  color: #5acef2;
+  padding-top: 2em;
+  font-family: "Playfair Display", serif;
+  font-size: 3em;
+  margin: 2em 0;
   text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.76);
 }
 
+h2 .rainbow-code {
+  background: linear-gradient(60deg, #5acef2 0%, #5be7c3 25%, #ff8062 50%, #f1b170 75%, #5acef2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  visibility: visible;
+}
+
+#about,
+#projects {
+  margin: 5%;
+}
+
 #about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: white;
-}
-
-#about .fa-reply {
-  position: absolute;
-  top: 300px;
-  right: 170px;
-  -webkit-transform: rotatex(180deg);
-          transform: rotatex(180deg);
-}
-
-#about .fa-share {
-  position: absolute;
-  top: -160px;
-  right: 170px;
 }
 
 #about .flex-container {
@@ -218,12 +197,12 @@ h2 {
   font-size: 1.2em;
 }
 
-#projects .container {
+#projects .flex-container {
   display: -ms-grid;
   display: grid;
   gap: 5em;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[auto];
       grid-template-rows: repeat(auto, 1fr);
   -webkit-box-pack: center;
@@ -231,21 +210,21 @@ h2 {
           justify-content: center;
 }
 
-#projects .container .showcase,
-#projects .container .showcase--inverted {
+#projects .flex-container .showcase,
+#projects .flex-container .showcase--inverted {
   position: relative;
 }
 
-#projects .container .showcase .image,
-#projects .container .showcase--inverted .image {
+#projects .flex-container .showcase .image,
+#projects .flex-container .showcase--inverted .image {
   border-radius: 20px;
   display: block;
   width: 100%;
   height: auto;
 }
 
-#projects .container .showcase .description,
-#projects .container .showcase--inverted .description {
+#projects .flex-container .showcase .description,
+#projects .flex-container .showcase--inverted .description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,7 +238,11 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
+  background: linear-gradient(60deg, #5acef2 0%, #5be7c3 25%, #ff8062 50%, #f1b170 75%, #5acef2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  visibility: visible;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -269,8 +252,8 @@ h2 {
   white-space: nowrap;
 }
 
-#projects .container .showcase .description .projectLinks,
-#projects .container .showcase--inverted .description .projectLinks {
+#projects .flex-container .showcase .description .projectLinks,
+#projects .flex-container .showcase--inverted .description .projectLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,12 +269,22 @@ h2 {
           align-items: center;
 }
 
-#projects .container .showcase .description .projectLinks a,
-#projects .container .showcase--inverted .description .projectLinks a {
+#projects .flex-container .showcase .description .projectLinks a,
+#projects .flex-container .showcase--inverted .description .projectLinks a {
   margin: 0.5em;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  border: 1px solid white;
+  -webkit-transition: background 250ms;
+  transition: background 250ms;
 }
 
-#projects .container .showcase .overlay {
+#projects .flex-container .showcase .description .projectLinks a:hover,
+#projects .flex-container .showcase--inverted .description .projectLinks a:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+#projects .flex-container .showcase .overlay {
   border-radius: 20px;
   position: absolute;
   bottom: 0;
@@ -305,12 +298,12 @@ h2 {
   transition: 0.5s ease;
 }
 
-#projects .container .showcase:hover .overlay {
+#projects .flex-container .showcase:hover .overlay {
   width: 100%;
   left: 0;
 }
 
-#projects .container .showcase--inverted .overlay {
+#projects .flex-container .showcase--inverted .overlay {
   border-radius: 20px;
   position: absolute;
   bottom: 0;
@@ -324,7 +317,7 @@ h2 {
   transition: 0.5s ease;
 }
 
-#projects .container .showcase--inverted:hover .overlay {
+#projects .flex-container .showcase--inverted:hover .overlay {
   width: 100%;
 }
 
@@ -403,7 +396,7 @@ footer .bounce {
     font-size: 1.1em;
   }
   h2 {
-    font-size: 1.5em;
+    font-size: 2.5em;
   }
   #about .fa-share {
     position: absolute;
@@ -424,6 +417,10 @@ footer .bounce {
     display: -ms-flexbox;
     display: flex;
   }
+  #projects .flex-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
   footer #arrow-up {
     font-size: 4rem;
   }
@@ -440,7 +437,7 @@ footer .bounce {
     font-size: 0.6em;
   }
   h2 {
-    font-size: 1em;
+    font-size: 1.7em;
   }
   #about .fa-share {
     position: absolute;
@@ -457,7 +454,7 @@ footer .bounce {
   #about .flex-container {
     font-size: 0.8rem;
   }
-  #projects .container {
+  #projects .flex-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
