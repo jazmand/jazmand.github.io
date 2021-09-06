@@ -158,7 +158,8 @@ h2 {
 			}
 			.description {
 				@include flex(column);
-				font-size: 1em;
+				color: white;
+				font-size: 20px;
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -169,6 +170,7 @@ h2 {
 				.projectLinks {
 					@include flex(row);
 					a {
+						color: white;
 						margin: 0.5em;
 						color: white;
 						padding: 0.25em 0.5em;
