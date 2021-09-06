@@ -3,6 +3,9 @@ $(document).ready(function () {
 	$('#aboutNav').click(function () {
 		$('html, body').animate({scrollTop: $('.about-header').offset().top}, 1000);
 	});
+	$('#workNav').click(function () {
+		$('html, body').animate({scrollTop: $('.work-header').offset().top}, 1000);
+	});
 	$('#projectsNav').click(function () {
 		$('html, body').animate(
 			{scrollTop: $('.projects-header').offset().top},

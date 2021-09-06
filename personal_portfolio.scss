@@ -130,6 +130,7 @@ h2 {
 }
 
 #about,
+#work,
 #projects {
 	margin: 5%;
 }
@@ -147,6 +148,21 @@ h2 {
 		.about-me-blurb {
 			font-size: 1.8em;
 			padding: 0 2em;
+		}
+	}
+}
+
+#work {
+	font-size: 1.5em;
+	.flex-container {
+		margin: 0 4em;
+		ul {
+			li {
+				padding: 1em;
+				a {
+					color: white;
+				}
+			}
 		}
 	}
 }
@@ -303,6 +319,9 @@ footer {
 			}
 		}
 	}
+	#work {
+		font-size: 1.3em;
+	}
 	#projects {
 		.flex-container {
 			grid-template-columns: repeat(2, 1fr);
@@ -339,6 +358,9 @@ footer {
 				font-size: 1em;
 			}
 		}
+	}
+	#work {
+		font-size: 1em;
 	}
 
 	#projects {
