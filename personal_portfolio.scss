@@ -24,7 +24,7 @@ body {
 	width: 100%;
 	background: rgba(0, 0, 0, 0.671);
 	padding: 0.8em;
-	z-index: 2;
+	z-index: 999;
 
 	ul {
 		list-style: none;
@@ -132,7 +132,6 @@ h2 {
 
 #about {
 	color: white;
-
 	.flex-container {
 		@include flex(column);
 		p {
@@ -173,6 +172,7 @@ h2 {
 					a {
 						color: white;
 						margin: 0.5em;
+						color: white;
 						padding: 0.25em 0.5em;
 						text-decoration: none;
 						border: 1px solid white;
@@ -181,6 +181,9 @@ h2 {
 							background: rgba(0, 0, 0, 0.6);
 						}
 					}
+				}
+				.tool-icons {
+					font-size: 1.5em;
 				}
 			}
 		}
@@ -239,7 +242,6 @@ footer {
 		bottom: 0em;
 		font-size: 5rem;
 		cursor: pointer;
-		z-index: 2;
 		display: none;
 	}
 
@@ -303,6 +305,9 @@ footer {
 		.flex-container {
 			grid-template-columns: repeat(2, 1fr);
 		}
+		.description {
+			font-size: 0.8em;
+		}
 	}
 	footer {
 		#arrow-up {
@@ -343,6 +348,9 @@ footer {
 	#projects {
 		.flex-container {
 			@include flex(column);
+		}
+		.description {
+			font-size: 0.5em;
 		}
 	}
 	footer {
