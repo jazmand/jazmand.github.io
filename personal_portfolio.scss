@@ -159,7 +159,7 @@ h2 {
 			}
 			.description {
 				@include flex(column);
-				@include rainbow-text();
+				color: white;
 				font-size: 20px;
 				position: absolute;
 				top: 50%;
@@ -171,6 +171,7 @@ h2 {
 				.projectLinks {
 					@include flex(row);
 					a {
+						color: white;
 						margin: 0.5em;
 						padding: 0.25em 0.5em;
 						text-decoration: none;
