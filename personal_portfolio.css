@@ -98,9 +98,22 @@ body {
 }
 
 #welcome-section #welcome-text {
-  color: white;
   text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.76);
   font-size: 2em;
+  text-align: center;
+}
+
+#welcome-section #welcome-text .welcome-text-name {
+  font-size: 3.5em;
+  font-family: "Caveat", cursive;
+}
+
+#welcome-section #welcome-text .typing {
+  background: linear-gradient(60deg, #5acef2 0%, #5be7c3 25%, #ff8062 50%, #f1b170 75%, #5acef2 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  visibility: visible;
 }
 
 #welcome-section #welcome-text .social-media-icons {
@@ -144,14 +157,6 @@ body {
   text-shadow: 0px 14px 10px rgba(92, 90, 90, 0.76);
 }
 
-.typing {
-  background: linear-gradient(60deg, #5acef2 0%, #5be7c3 25%, #ff8062 50%, #f1b170 75%, #5acef2 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  visibility: visible;
-}
-
 h2 {
   padding-top: 2em;
   font-family: "Playfair Display", serif;
@@ -173,18 +178,19 @@ h2 .rainbow-code {
   margin: 5%;
 }
 
-#about {
-  color: white;
+#about h1 {
+  font-family: "Caveat", cursive;
+  font-size: 5rem;
 }
 
 #about .flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -193,8 +199,13 @@ h2 .rainbow-code {
           align-items: center;
 }
 
-#about .flex-container p {
-  font-size: 1.2em;
+#about .flex-container img {
+  width: 20%;
+}
+
+#about .flex-container .about-me-blurb {
+  font-size: 1.8em;
+  padding: 0 2em;
 }
 
 #projects .flex-container {
@@ -238,7 +249,6 @@ h2 .rainbow-code {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
   font-size: 1em;
   position: absolute;
   top: 50%;
@@ -400,24 +410,11 @@ footer .bounce {
   h2 {
     font-size: 2.5em;
   }
-  #about .fa-share {
-    position: absolute;
-    top: -50px;
-    left: -10px;
+  #about h1 {
+    font-size: 3em;
   }
-  #about .fa-reply {
-    position: absolute;
-    top: 180px;
-    left: 350px;
-    -webkit-transform: rotatex(180deg);
-            transform: rotatex(180deg);
-  }
-  #about .flex-container {
-    margin: 0;
-    font-size: 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  #about .flex-container .about-me-blurb {
+    font-size: 1.4em;
   }
   #projects .flex-container {
     -ms-grid-columns: (1fr)[2];
@@ -444,20 +441,11 @@ footer .bounce {
   h2 {
     font-size: 1.7em;
   }
-  #about .fa-share {
-    position: absolute;
-    top: -40px;
-    left: -10px;
+  #about h1 {
+    font-size: 2em;
   }
-  #about .fa-reply {
-    position: absolute;
-    top: 140px;
-    left: 280px;
-    -webkit-transform: rotatex(180deg);
-            transform: rotatex(180deg);
-  }
-  #about .flex-container {
-    font-size: 0.8rem;
+  #about .flex-container .about-me-blurb {
+    font-size: 1em;
   }
   #projects .flex-container {
     display: -webkit-box;
