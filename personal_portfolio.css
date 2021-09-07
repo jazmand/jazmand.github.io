@@ -514,6 +514,9 @@ footer .bounce {
   #projects .description {
     font-size: 0.5em;
   }
+  .made-by-text {
+    font-size: 0.8em;
+  }
   footer #arrow-up {
     font-size: 3rem;
   }
