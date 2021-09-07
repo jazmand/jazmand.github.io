@@ -179,11 +179,6 @@ h2 .rainbow-code {
   margin: 5%;
 }
 
-#about h1 {
-  font-family: "Caveat", cursive;
-  font-size: 5rem;
-}
-
 #about .flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,12 +197,17 @@ h2 .rainbow-code {
 
 #about .flex-container img {
   width: 20%;
-  padding: 1em 0;
+  margin-bottom: 2em;
 }
 
 #about .flex-container .about-me-blurb {
   font-size: 1.8em;
   padding: 0 2em;
+}
+
+#about .flex-container .about-me-blurb h1 {
+  font-family: "Caveat", cursive;
+  font-size: 5rem;
 }
 
 #work {
@@ -432,13 +432,13 @@ footer .bounce {
     font-size: 1.1em;
   }
   h2 {
-    font-size: 2.5em;
-  }
-  #about h1 {
-    font-size: 3em;
+    font-size: 2.2em;
   }
   #about .flex-container .about-me-blurb {
     font-size: 1.4em;
+  }
+  #about .flex-container .about-me-blurb h1 {
+    font-size: 2.2em;
   }
   #work {
     font-size: 1.3em;
@@ -472,9 +472,6 @@ footer .bounce {
   h2 {
     font-size: 1.7em;
   }
-  #about h1 {
-    font-size: 2em;
-  }
   #about .flex-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -492,6 +489,9 @@ footer .bounce {
   }
   #about .flex-container .about-me-blurb {
     font-size: 1em;
+  }
+  #about .flex-container .about-me-blurb h1 {
+    font-size: 2em;
   }
   #work {
     font-size: 1em;

@@ -136,19 +136,19 @@ h2 {
 }
 
 #about {
-	h1 {
-		font-family: $handwriting-font;
-		font-size: 5rem;
-	}
 	.flex-container {
 		@include flex(row);
 		img {
 			width: 20%;
-			padding: 1em 0;
+			margin-bottom: 2em;
 		}
 		.about-me-blurb {
 			font-size: 1.8em;
 			padding: 0 2em;
+			h1 {
+				font-family: $handwriting-font;
+				font-size: 5rem;
+			}
 		}
 	}
 }
@@ -312,15 +312,15 @@ footer {
 		font-size: 1.1em;
 	}
 	h2 {
-		font-size: 2.5em;
+		font-size: 2.2em;
 	}
 	#about {
-		h1 {
-			font-size: 3em;
-		}
 		.flex-container {
 			.about-me-blurb {
 				font-size: 1.4em;
+				h1 {
+					font-size: 2.2em;
+				}
 			}
 		}
 	}
@@ -358,13 +358,13 @@ footer {
 		font-size: 1.7em;
 	}
 	#about {
-		h1 {
-			font-size: 2em;
-		}
 		.flex-container {
 			@include flex(column);
 			.about-me-blurb {
 				font-size: 1em;
+				h1 {
+					font-size: 2em;
+				}
 			}
 		}
 	}
