@@ -1,13 +1,4 @@
 $(document).ready(function () {
-	window.onscroll = () => {
-		const navBar = document.getElementById('navbar');
-		if (window.pageYOffset > 10) {
-			navBar.classList.add('navbar-background');
-		} else {
-			navBar.classList.remove('navbar-background');
-		}
-	};
-
 	// Nav re-position
 	$('#aboutNav').click(function () {
 		$('html, body').animate({scrollTop: $('.about-header').offset().top}, 1000);
