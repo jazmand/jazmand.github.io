@@ -16,11 +16,16 @@ body {
   font-family: "Raleway", cursive;
 }
 
+.navbar-background {
+  background-color: rgba(0, 0, 0, 0.671);
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+
 #navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.671);
   padding: 0.8em;
   z-index: 999;
 }
@@ -37,7 +42,6 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  white-space: nowrap;
 }
 
 #navbar .nav-link {
@@ -353,6 +357,12 @@ h2 .rainbow-code {
   width: 100%;
 }
 
+.made-by-text {
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
 footer {
   position: fixed;
   bottom: 0px;
@@ -454,7 +464,11 @@ footer .bounce {
   #navbar {
     padding: 0.6em;
   }
-  #navbar .nav-link {
+  #navbar ul {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  #navbar ul .nav-link {
     font-size: 0.8em;
   }
   #welcome-section {

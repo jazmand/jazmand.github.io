@@ -17,12 +17,15 @@ body {
 	overflow-x: hidden;
 	font-family: $primary-font;
 }
+.navbar-background {
+	background-color: rgba(0, 0, 0, 0.671);
+	transition: 0.6s ease-out;
+}
 
 #navbar {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background: rgba(0, 0, 0, 0.671);
 	padding: 0.8em;
 	z-index: 999;
 
@@ -31,7 +34,6 @@ body {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
-		white-space: nowrap;
 	}
 
 	.nav-link {
@@ -256,13 +258,17 @@ h2 {
 		}
 	}
 }
+.made-by-text {
+	font-family: $header-font;
+	text-align: center;
+	margin-bottom: 1em;
+}
 
 footer {
 	position: fixed;
 	bottom: 0px;
 	right: 0px;
 	z-index: 999;
-
 	#arrow-up {
 		color: $green-color;
 		position: absolute;
@@ -341,8 +347,11 @@ footer {
 @include breakpoint-max(small) {
 	#navbar {
 		padding: 0.6em;
-		.nav-link {
-			font-size: 0.8em;
+		ul {
+			justify-content: space-around;
+			.nav-link {
+				font-size: 0.8em;
+			}
 		}
 	}
 	#welcome-section {
