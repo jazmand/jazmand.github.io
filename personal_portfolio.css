@@ -37,6 +37,7 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  white-space: nowrap;
 }
 
 #navbar .nav-link {
@@ -202,6 +203,7 @@ h2 .rainbow-code {
 
 #about .flex-container img {
   width: 20%;
+  padding: 1em 0;
 }
 
 #about .flex-container .about-me-blurb {
@@ -213,15 +215,15 @@ h2 .rainbow-code {
   font-size: 1.5em;
 }
 
-#work .flex-container {
-  margin: 0 4em;
+#work .container ul {
+  margin-left: 1em;
 }
 
-#work .flex-container ul li {
+#work .container ul li {
   padding: 1em;
 }
 
-#work .flex-container ul li a {
+#work .container ul li a {
   color: white;
 }
 
@@ -463,6 +465,21 @@ footer .bounce {
   }
   #about h1 {
     font-size: 2em;
+  }
+  #about .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   #about .flex-container .about-me-blurb {
     font-size: 1em;

@@ -31,6 +31,7 @@ body {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
+		white-space: nowrap;
 	}
 
 	.nav-link {
@@ -144,6 +145,7 @@ h2 {
 		@include flex(row);
 		img {
 			width: 20%;
+			padding: 1em 0;
 		}
 		.about-me-blurb {
 			font-size: 1.8em;
@@ -154,9 +156,9 @@ h2 {
 
 #work {
 	font-size: 1.5em;
-	.flex-container {
-		margin: 0 4em;
+	.container {
 		ul {
+			margin-left: 1em;
 			li {
 				padding: 1em;
 				a {
@@ -354,6 +356,7 @@ footer {
 			font-size: 2em;
 		}
 		.flex-container {
+			@include flex(column);
 			.about-me-blurb {
 				font-size: 1em;
 			}
