@@ -145,9 +145,13 @@ h2 {
 		.about-me-blurb {
 			font-size: 1.8em;
 			padding: 0 2em;
-			h1 {
-				font-family: $handwriting-font;
+			h1.handwritten-text{
 				font-size: 5rem;
+				font-family: $handwriting-font;
+			}
+			p.handwritten-text {
+				font-size: 3rem;
+				font-family: $handwriting-font;
 			}
 		}
 	}
@@ -318,8 +322,11 @@ footer {
 		.flex-container {
 			.about-me-blurb {
 				font-size: 1.4em;
-				h1 {
+				h1.handwritten-text {
 					font-size: 2.2em;
+				}
+				p.handwritten-text {
+					font-size: 1.8em;
 				}
 			}
 		}
@@ -362,8 +369,11 @@ footer {
 			@include flex(column);
 			.about-me-blurb {
 				font-size: 1em;
-				h1 {
+				h1.handwritten-text {
 					font-size: 2em;
+				}
+				p.handwritten-text {
+					font-size: 1.6em;
 				}
 			}
 		}

@@ -1,54 +1,43 @@
 body {
-  background: #e6e6e6;
+  background: hsl(0deg, 0%, 90%);
 }
 
 .header {
-  color: #35352c;
+  color: hsl(60deg, 10%, 19%);
 }
-
 .header .slider {
-  background-color: #d1cccc;
+  background-color: hsl(0deg, 5%, 81%);
 }
-
 .header .slider-ball {
   background-color: #bbb;
-  background-color: #d03f2f;
+  background-color: hsl(6deg, 63%, 50%);
 }
 
 .output {
-  background-color: #ededed;
+  background-color: hsl(0deg, 0%, 93%);
 }
-
 .output .previous-input {
-  color: #ca5502;
+  color: hsl(25deg, 98%, 40%);
 }
-
 .output .current-input {
   color: black;
 }
 
 .buttons {
-  background-color: #d1cccc;
+  background-color: hsl(0deg, 5%, 81%);
 }
-
 .buttons .all-color {
-  background-color: #e5e4e1;
-  -webkit-box-shadow: 0px 5px 0px 0px #a69d91;
-          box-shadow: 0px 5px 0px 0px #a69d91;
-  color: #444b5a;
+  background-color: hsl(45deg, 7%, 89%);
+  box-shadow: 0px 5px 0px 0px hsl(35deg, 11%, 61%);
+  color: hsl(221deg, 14%, 31%);
 }
-
 .buttons .single-color {
-  background-color: #ca5502;
-  -webkit-box-shadow: 0px 5px 0px 0px #893901;
-          box-shadow: 0px 5px 0px 0px #893901;
-  color: #35352c;
+  background-color: hsl(25deg, 98%, 40%);
+  box-shadow: 0px 5px 0px 0px hsl(25deg, 99%, 27%);
+  color: hsl(60deg, 10%, 19%);
 }
-
 .buttons .double-color {
-  background-color: #377f86;
-  -webkit-box-shadow: 0px 5px 0px 0px #1b5f65;
-          box-shadow: 0px 5px 0px 0px #1b5f65;
-  color: white;
-}
-/*# sourceMappingURL=theme2.css.map */
+  background-color: hsl(185deg, 42%, 37%);
+  box-shadow: 0px 5px 0px 0px hsl(185deg, 58%, 25%);
+  color: hsl(0deg, 0%, 100%);
+}/*# sourceMappingURL=theme2.css.map */

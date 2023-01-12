@@ -1,54 +1,43 @@
 body {
-  background: #160628;
+  background: hsl(268deg, 75%, 9%);
 }
 
 .header {
-  color: #ffe53d;
+  color: hsl(52deg, 100%, 62%);
 }
-
 .header .slider {
-  background-color: #1d0934;
+  background-color: hsl(268deg, 71%, 12%);
 }
-
 .header .slider-ball {
   background-color: #bbb;
-  background-color: #d03f2f;
+  background-color: hsl(6deg, 63%, 50%);
 }
 
 .output {
-  background-color: #1d0934;
+  background-color: hsl(268deg, 71%, 12%);
 }
-
 .output .previous-input {
-  color: #00e0d1;
+  color: hsl(176deg, 100%, 44%);
 }
-
 .output .current-input {
-  color: #ffe53d;
+  color: hsl(52deg, 100%, 62%);
 }
 
 .buttons {
-  background-color: #1d0934;
+  background-color: hsl(268deg, 71%, 12%);
 }
-
 .buttons .all-color {
-  background-color: #341c4f;
-  -webkit-box-shadow: 0px 5px 0px 0px #871c9c;
-          box-shadow: 0px 5px 0px 0px #871c9c;
-  color: #ffe53d;
+  background-color: hsl(268deg, 47%, 21%);
+  box-shadow: 0px 5px 0px 0px hsl(290deg, 70%, 36%);
+  color: hsl(52deg, 100%, 62%);
 }
-
 .buttons .single-color {
-  background-color: #00e0d1;
-  -webkit-box-shadow: 0px 5px 0px 0px #6cf9f2;
-          box-shadow: 0px 5px 0px 0px #6cf9f2;
-  color: #1b2428;
+  background-color: hsl(176deg, 100%, 44%);
+  box-shadow: 0px 5px 0px 0px hsl(177deg, 92%, 70%);
+  color: hsl(198deg, 20%, 13%);
 }
-
 .buttons .double-color {
-  background-color: #58077d;
-  -webkit-box-shadow: 0px 5px 0px 0px #bc15f4;
-          box-shadow: 0px 5px 0px 0px #bc15f4;
-  color: white;
-}
-/*# sourceMappingURL=theme3.css.map */
+  background-color: hsl(281deg, 89%, 26%);
+  box-shadow: 0px 5px 0px 0px hsl(285deg, 91%, 52%);
+  color: hsl(0deg, 0%, 100%);
+}/*# sourceMappingURL=theme3.css.map */
